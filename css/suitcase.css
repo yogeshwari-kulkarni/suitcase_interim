@@ -1675,6 +1675,18 @@ nav.navigation .secondary-menu>li a.active-trail {
     margin-bottom: 16px;
 }
 
+.zone-footer>.region:not(:last-child) {
+    border-bottom: 1px solid #444;
+    margin-bottom: 16px;
+}
+
+@media (min-device-width: 740px) and (min-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation: landscape) {
+    .zone-footer>.region:not(:last-child) {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+}
+
 .node-type-people h1.title {
     float: left;
     border-bottom: none;
