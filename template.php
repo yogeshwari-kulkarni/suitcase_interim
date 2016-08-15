@@ -62,6 +62,9 @@ function suitcase_interim_preprocess_region(&$vars) {
     // Get the uploaded wordmark if is exists
     $vars['site_wordmark'] = variable_get('site_wordmark', $default = NULL);
 
+    // The type of header that we need to output, default to show all
+    $vars['suitcase_config_header_type'] = variable_get('suitcase_config_header_type', 1);
+
     if (!$vars['site_wordmark']) {
       // If a wordmark hasn't been uploaded, create a var for the default wordmark
       $vars['default_wordmark'] = file_create_url(path_to_theme() . '/images/sprite.png');
