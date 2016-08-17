@@ -59,15 +59,16 @@ function suitcase_interim_preprocess_region(&$vars) {
     // Level that is site name
     $vars['level_that_is_site_name'] = variable_get('suitcase_config_level_that_is_site_name', NULL);
 
-    // Get the uploaded wordmark if is exists
-    $vars['site_wordmark'] = variable_get('site_wordmark', $default = NULL);
-
     // The type of header that we need to output, default to show all
     $vars['suitcase_config_header_type'] = variable_get('suitcase_config_header_type', 1);
 
-    if (!$vars['site_wordmark']) {
+    // Get the uploaded wordmark if is exists and the header type allows
+    $vars['site_wordmark'] = variable_get('site_wordmark', $default = NULL);
+
+    if (!$vars['site_wordmark'] || $vars['suitcase_config_header_type'] != '4') {
       // If a wordmark hasn't been uploaded, create a var for the default wordmark
       $vars['default_wordmark'] = file_create_url(path_to_theme() . '/images/sprite.png');
+      $vars['site_wordmark'] = NULL;
     } else {
       $vars['site_wordmark'] = file_create_url($vars['site_wordmark']);
     }
@@ -96,6 +97,9 @@ function suitcase_interim_preprocess_region(&$vars) {
 
     // Levels to show
     $vars['levels_to_show'] = variable_get('suitcase_config_levels_to_show');
+
+    // The type of header that we need to output, default to show all
+    $vars['suitcase_config_header_type'] = variable_get('suitcase_config_header_type', 1);
 
   } else if($vars['region'] == 'secondary_menu') {
     $theme = alpha_get_theme();
