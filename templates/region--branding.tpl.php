@@ -35,7 +35,7 @@
             <?php endif; ?>
           <?php endif; ?>
         <?php endif; ?>
-        <?php if ($suitcase_config_header_type == 1 || $suitcase_config_header_type > 2): ?><?/* We show the lab name for cases 3 & 4 */?>
+        <?php if ($suitcase_config_header_type == 1 || $suitcase_config_header_type == 3 || $suitcase_config_header_type == 4): ?><?/* We show the lab name for cases 1, 3 & 4 */?>
           <hr>
           <?php $class = $site_name_hidden && $site_slogan_hidden ? ' element-invisible' : ''; ?>
           <hgroup class="site-name-slogan<?php print $class; ?>">
