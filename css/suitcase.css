@@ -1473,19 +1473,11 @@ nav.navigation .secondary-menu>li a.active-trail {
 .panel-pane > h2.pane-title,
 .region-sidebar-first .block-title,
 .region-sidebar-second .block-title {
-  /*color: #cc0000;*/
-  /* background-color: #fafafa; */
-  /*margin-bottom: 10px;
-  padding: 0 5px 10px;*/
-  /* margin: 0 10px; */
-  /*border-bottom: 2px solid #f1be48;*/
-  
 	font-size: 25px;
 	font-weight: 300;
-	margin: 0 0 16px 0;
+	margin: 0;
 	padding: 0 0 13px 0;
 	border-bottom: solid 1px #ccc;
-}
 }
 
 .panel-pane>.pane-content {
