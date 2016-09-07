@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     margin-top: 20px;
     margin-bottom: 10px;
-    line-height: 1;
+    line-height: 1.25;
     /* margin-top: 0; */
     /* margin-bottom: 8px; */
     letter-spacing: 0;
@@ -52,12 +52,12 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 }
 
 h2 {
-    font-size: 1.429em;
-    font-weight: 500;
+    font-size: 26px;
+    font-weight: 300;
 }
 
 h2.block-title {
-	font-size: 25px;
+	font-size: 26px;
 	font-weight: 300;
 	margin: 0 0 16px 0;
 	padding: 0 0 13px 0;
@@ -66,18 +66,14 @@ h2.block-title {
 
 section h2.node-title {
     color: inherit;
-    font-size: 20px;
     margin-bottom: 8px;
     letter-spacing: 0;
+    font-size: 26px;
 }
 
 .node-title>a, .node-title>a:link, .node-title>a:visited {
     color: #333;
     text-decoration: none;
-}
-
-.page-search .node-title {
-    font-weight: 500;
 }
 
 section section h1,
@@ -275,8 +271,8 @@ tr:hover td {
 
 .title {
   color: #333;
-  font-size: 32px;
-  font-weight: bold;
+  font-size: 36px;
+  font-weight: 300;
   margin-bottom: 32px;
 }
 
@@ -664,6 +660,7 @@ h3.site-name-level-3 {
 
 .site-name-level-2 {
     margin-bottom: 0;
+    margin-top: 0;
     font-weight: 500;
     font-size: 18px;
     text-decoration: none;
@@ -1507,6 +1504,7 @@ nav.navigation .secondary-menu>li a.active-trail {
     margin-bottom: 1px;
     overflow: hidden;
     transition: all .1s ease;
+    border-bottom: none;
 }
 
 .panel-pane .views-field-title a:hover,
@@ -1515,6 +1513,17 @@ nav.navigation .secondary-menu>li a.active-trail {
 .region-sidebar-second .block .content .item-list li a:hover {
     border-color: #f4b859;
     text-decoration: none;
+}
+
+.panel-pane .views-field-title a.facetapi-active,
+.panel-pane .pane-content .item-list li a.facetapi-active,
+.region-sidebar-first .block .content .item-list li a.facetapi-active,
+.region-sidebar-second .block .content .item-list li a.facetapi-active {
+    display: inline;
+    background: none;
+    padding: 0;
+    margin-right: 12px;
+    vertical-align: text-bottom;
 }
 
 .panel-pane .views-field-created>.field-content {
@@ -2470,4 +2479,13 @@ footer {
 
 .region-content-inner>.tabs>.tabs.primary>li:not(.active)>a:hover {
     background-color: #eee;
+}
+
+.read-more {
+    display: block;
+    clear: both;
+}
+
+.read-more>a {
+    float: right;
 }

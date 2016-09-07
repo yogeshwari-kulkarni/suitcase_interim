@@ -19,19 +19,17 @@
         <?php endif; ?>
         <?php if ($suitcase_config_header_type < 3): ?><?/* We show the dept name for cases 1 & 2 */?>
           <?php $class = $site_slogan_hidden ? ' element-invisible' : ''; ?>
-          <?php if ($site_name_level_3): ?>
-            <?php if ($is_front): ?>
-              <?php if ($level_that_is_site_name == '2' || $levels_to_show['3'] == 0 || !$level_that_is_site_name || !$levels_to_show): ?>
-                <h1 class="site-name-level-2<?php print $class; ?>"><?php print $linked_site_name_level_2; ?></h1>
-              <?php else: ?>
-                <h2 class="site-name-level-2<?php print $class; ?>"><?php print $linked_site_name_level_2; ?></h2>
-              <?php endif; ?>
+          <?php if ($is_front): ?>
+            <?php if ($level_that_is_site_name == '2' || $levels_to_show['3'] == 0 || !$level_that_is_site_name || !$levels_to_show): ?>
+              <h1 class="site-name-level-2<?php print $class; ?>"><?php print $linked_site_name_level_2; ?></h1>
             <?php else: ?>
-              <?php if ($level_that_is_site_name == '2' || $levels_to_show['3'] == 0): ?>
-                <h2 class="site-name-level-2<?php print $class; ?>"><?php print $linked_site_name_level_2; ?></h2>
-              <?php else: ?>
-                <h3 class="site-name-level-2<?php print $class; ?>"><?php print $linked_site_name_level_2; ?></h3>
-              <?php endif; ?>
+              <h2 class="site-name-level-2<?php print $class; ?>"><?php print $linked_site_name_level_2; ?></h2>
+            <?php endif; ?>
+          <?php else: ?>
+            <?php if ($level_that_is_site_name == '2' || $levels_to_show['3'] == 0): ?>
+              <h2 class="site-name-level-2<?php print $class; ?>"><?php print $linked_site_name_level_2; ?></h2>
+            <?php else: ?>
+              <h3 class="site-name-level-2<?php print $class; ?>"><?php print $linked_site_name_level_2; ?></h3>
             <?php endif; ?>
           <?php endif; ?>
         <?php endif; ?>
