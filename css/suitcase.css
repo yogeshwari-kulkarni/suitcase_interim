@@ -54,21 +54,16 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 h2 {
     font-size: 26px;
     font-weight: 300;
+    padding: 0 0 13px 0;
+    border-bottom: solid 1px #ccc;
 }
 
-h2.block-title {
-	font-size: 26px;
-	font-weight: 300;
-	margin: 0 0 16px 0;
-	padding: 0 0 13px 0;
-	border-bottom: solid 1px #ccc;
-}
-
-section h2.node-title {
-    color: inherit;
-    margin-bottom: 8px;
-    letter-spacing: 0;
+h2.node-title {
     font-size: 26px;
+}
+
+h2>a {
+    border-bottom: none !important;
 }
 
 .node-title>a, .node-title>a:link, .node-title>a:visited {
@@ -256,6 +251,10 @@ thead th, th {
 
 tr:hover td {
     background-color: transparent;
+}
+
+a>.fa {
+    margin-right: 10px;
 }
 
 @media print {
@@ -702,14 +701,9 @@ h3.site-name-level-3 {
 
 /*////////////////////////////////////*/
 /* Views */
-
 .zone-content .views-row {
     margin-top: 16px;
     padding-bottom: 16px;
-}
-
-.zone-content .views-row:not(:last-child) {
-    border-bottom: 1px dotted #999;
 }
 
 /*////////////////////////////////////*/
@@ -1478,10 +1472,6 @@ nav.navigation .secondary-menu>li a.active-trail {
 	margin: 0;
 	padding: 0 0 13px 0;
 	border-bottom: solid 1px #ccc;
-}
-
-.panel-pane>.pane-content {
-  padding: 5px;
 }
 
 .panel-pane-nostyle>.pane-content {
