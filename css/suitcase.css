@@ -67,7 +67,6 @@ h2>a {
 }
 
 .node-title>a, .node-title>a:link, .node-title>a:visited {
-    color: #333;
     text-decoration: none;
 }
 
@@ -664,7 +663,8 @@ h3.site-name-level-3 {
     font-size: 18px;
     text-decoration: none;
     line-height: 16px;
-    padding-top: 7px;
+    padding: 7px 0 0;
+    border: none;
 }
 
 .site-name-level-2 a {
@@ -2478,4 +2478,9 @@ footer {
 
 .read-more>a {
     float: right;
+}
+
+h2>a[href]:after {
+    content: url(http://upload.wikimedia.org/wikipedia/commons/6/64/Icon_External_Link.png);
+    margin: 0 0 0 5px;
 }
