@@ -666,7 +666,7 @@ h3.site-name-level-3 {
 }
 
 .site-name-level-2 a {
-    color: #fff;
+    color: #fff !important;
     display: block;
     text-decoration: none;
 }
