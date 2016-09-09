@@ -53,9 +53,7 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 
 h2 {
     font-size: 26px;
-    font-weight: 300;
-    padding: 0 0 13px 0;
-    border-bottom: solid 1px #ccc;
+    font-weight: 500;
 }
 
 h2.node-title {
@@ -704,6 +702,7 @@ h3.site-name-level-3 {
 .zone-content .views-row {
     margin-top: 16px;
     padding-bottom: 16px;
+    border-bottom:  1px solid #ddd;
 }
 
 /*////////////////////////////////////*/
@@ -1467,7 +1466,7 @@ nav.navigation .secondary-menu>li a.active-trail {
 .panel-pane > h2.pane-title,
 .region-sidebar-first .block-title,
 .region-sidebar-second .block-title {
-	font-size: 25px;
+	font-size: 32px;
 	font-weight: 300;
 	margin: 0;
 	padding: 0 0 13px 0;
@@ -2480,7 +2479,11 @@ footer {
     float: right;
 }
 
-.section-content h2>a[href]:after {
+/* .section-content h2>a[href]:after {
     content: url(http://upload.wikimedia.org/wikipedia/commons/6/64/Icon_External_Link.png);
     margin: 0 0 0 5px;
+} */
+
+h2>a, h2>a:link, h2>a:visited {
+    color: #333;
 }
