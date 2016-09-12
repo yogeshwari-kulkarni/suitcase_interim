@@ -1466,11 +1466,11 @@ nav.navigation .secondary-menu>li a.active-trail {
 .panel-pane > h2.pane-title,
 .region-sidebar-first .block-title,
 .region-sidebar-second .block-title {
-	font-size: 32px;
-	font-weight: 300;
+	font-size: 26px;
+	font-weight: 400;
 	margin: 0;
-	padding: 0 0 13px 0;
-	border-bottom: solid 1px #ccc;
+	/* padding: 0 0 13px 0; */
+	/* border-bottom: solid 1px #ccc; */
 }
 
 .panel-pane-nostyle>.pane-content {
@@ -1534,7 +1534,7 @@ nav.navigation .secondary-menu>li a.active-trail {
 }
 
 .panel-pane .view-events .views-field:not(.views-field-when-tiny-left) {
-  margin-left: 68px;
+  /* margin-left: 68px; */
 }
 
 .panel-pane .view-events .views-field-when-tiny-left .date-display-single {
@@ -1553,13 +1553,6 @@ nav.navigation .secondary-menu>li a.active-trail {
 
 .front .panel-pane > h2.pane-title {
     display: block;
-}
-
-.front .panel-pane .views-field-title a,
-.front .panel-pane .pane-content .item-list li a {
-    background-color: transparent;
-    padding: 0;
-    border: none;
 }
 
 .front .panel-pane .pane-content .item-list li {
