@@ -477,8 +477,8 @@ a>.fa {
 
 #section-footer a:link:hover,
 #section-footer a:visited:hover {
-    color: #fff;
-    border-bottom-color: #ddd;
+    color: #cc0000;
+    border-bottom-color: #cc0000;
 }
 
 .section-content a,
@@ -649,7 +649,7 @@ h3.site-name-level-3 {
 }
 
 .site-name-slogan a {
-    color: #fff;
+    color: #fff !important;
     display: block;
     text-decoration: none;
 }
