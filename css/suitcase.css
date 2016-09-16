@@ -254,12 +254,6 @@ a>.fa {
     margin-right: 10px;
 }
 
-@media print {
-    a {
-        color: blue;
-    }
-}
-
 .node ol,
 .node ul {
   padding-left: 3em;
@@ -648,8 +642,8 @@ h3.site-name-level-3 {
     margin: 14px 0;
 }
 
-.site-name-slogan a {
-    color: #fff !important;
+#region-branding .site-name-slogan a {
+    color: #fff;
     display: block;
     text-decoration: none;
 }
@@ -665,8 +659,8 @@ h3.site-name-level-3 {
     border: none;
 }
 
-.site-name-level-2 a {
-    color: #fff !important;
+#region-branding .site-name-level-2 a {
+    color: #fff;
     display: block;
     text-decoration: none;
 }
@@ -2238,6 +2232,102 @@ html.js input.form-autocomplete {
     }
 }
 
+ @media print {
+   /* Set background colors */
+   body,
+   div.page .section-header {
+       background-color: #fff;
+   }
+
+   div.page .node {
+       background-color: transparent;
+   }
+
+   /* Fonts */
+   body div.page .node {
+       font-family: Georgia, Palatino, Times, "Times New Roman", serif;
+       line-height: 24px;
+   }
+
+   /* Font colors */
+   div.page .site-slogan a,
+   div.page .site-name a,
+   div.page .title {
+       color: #000;
+       text-shadow: none;
+   }
+
+   div.page a:link,
+   body div.page .node {
+       color: #333;
+   }
+
+   /* Font sizes */
+   body div.page .node {
+       font-size: 14px;
+   }
+
+   a, p, ul, ol, li, img, span, strong, em {
+       font-size: 18px;
+   }
+
+   /* Borders */
+   div.page .section-header,
+   div.page .zone-branding-wrapper,
+   div.page .title,
+   div.page .node {
+       border: none;
+   }
+
+   /* Hide elements */
+   .zone-menu-wrapper,
+   .zone-header-wrapper,
+   .zone-preface-wrapper,
+   .zone-side-menu-wrapper,
+   #breadcrumb,
+   .pwrapper,
+   div.page .tabs,
+   .section-footer,
+   .content-type-indicator,
+   .region-search,
+   aside {
+       display: none;
+   }
+
+   /* Box shadows */
+   div.page .node {
+       -webkit-box-shadow: transparent;
+       box-shadow: none;
+   }
+
+   /* Padding */
+   div.page .node {
+       padding: 0;
+   }
+
+   /* Field resets */
+   .field.field-type-taxonomy-term-reference .field-items>.field-item>a {
+     padding: 0;
+     display: inline;
+     border: none;
+   }
+
+   .nameplate img {
+     filter: invert(1);
+     filter: invert(100%);
+     -webkit-filter: invert(1);
+    }
+
+    #region-branding .site-name-slogan a,
+    #region-branding .site-name-level-2 a {
+      color: #000;
+    }
+
+    .section-content a, .section-content a:link, .section-content a:visited {
+      border-bottom: 1px solid #000 !important;
+    }
+}
+
 figure figcaption {
     color: #818a91;
 }
@@ -2252,9 +2342,9 @@ figure .insert-default-image-styling + figcaption {
 	margin: 0 0 4px 0;
 }
 
-.region-postscript-full, 
-.region-postscript-first, 
-.region-postscript-second, 
+.region-postscript-full,q
+.region-postscript-first,
+.region-postscript-second,
 .region-postscript-third,
 .region-postscript-fourth  {
 	margin-bottom: 16px;
