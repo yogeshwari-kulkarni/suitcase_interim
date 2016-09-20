@@ -923,8 +923,7 @@ nav.navigation .secondary-menu>li a.active-trail {
 .block-menu-secondary-menu .menu li a {
     color: #fff;
     text-decoration: none;
-    font-weight: 200;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .block-menu-secondary-menu .menu li:last-child {
