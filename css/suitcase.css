@@ -904,29 +904,29 @@ nav.navigation .secondary-menu>li a.active-trail {
 }
 
 /*////////////////////////////////////*/
-.block-menu-secondary-menu {
+#block-menu-menu-secondary-menu {
     margin-top: 6px;
 }
 
-.block-menu-secondary-menu .block-title {
+#block-menu-menu-secondary-menu .block-title {
     display: none;
 }
 
-.block-menu-secondary-menu .menu {
+#block-menu-menu-secondary-menu .menu {
     float: right;
 }
 
-.block-menu-secondary-menu .menu li {
+#block-menu-menu-secondary-menu .menu li {
     display: inline-block;
 }
 
-.block-menu-secondary-menu .menu li a {
+#block-menu-menu-secondary-menu .menu li a {
     color: #fff;
     text-decoration: none;
     font-size: 16px;
 }
 
-.block-menu-secondary-menu .menu li:last-child {
+#block-menu-menu-secondary-menu .menu li:last-child {
     padding-right: 0;
 }
 
