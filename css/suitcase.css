@@ -60,10 +60,6 @@ h2.node-title {
     font-size: 26px;
 }
 
-h2>a {
-    border-bottom: none !important;
-}
-
 .node-title>a, .node-title>a:link, .node-title>a:visited {
     text-decoration: none;
 }
@@ -481,20 +477,22 @@ a>.fa {
     border-bottom: 1px dotted #cc0000;
 }
 
-.section-content a:link:hover,
-.section-content a:visited:hover {
-    border-bottom-style: solid;
+/* Remove border on contextual links (gear icons) */
+.section-content .contextual-links-wrapper a,
+.section-content .contextual-links-wrapper a:link,
+.section-conten .contextual-links-wrapper a:visited {
+    border: none;
 }
+
 
 a, a:link, a:visited {
     color: #cc0000;
-text-decoration: none;
+    text-decoration: none;
 }
 
 a:link:hover, a:visited:hover {
 	text-decoration: none;
     color: #cc0000;
-/*     border-bottom: none; */
 	border-bottom-color: #cc0000;
 }
 
@@ -1478,23 +1476,11 @@ nav.navigation .secondary-menu>li a.active-trail {
 .panel-pane .pane-content .item-list li a,
 .region-sidebar-first .block .content .item-list li a,
 .region-sidebar-second .block .content .item-list li a {
-    color: #444;
-    background-color: #eee;
     display: block;
-    border-left: 3px solid transparent;
-    padding: 12px;
-    margin-bottom: 1px;
     overflow: hidden;
     transition: all .1s ease;
     border-bottom: none;
-}
-
-.panel-pane .views-field-title a:hover,
-.panel-pane .pane-content .item-list li a:hover,
-.region-sidebar-first .block .content .item-list li a:hover,
-.region-sidebar-second .block .content .item-list li a:hover {
-    border-color: #f4b859;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .panel-pane .views-field-title a.facetapi-active,
@@ -2565,7 +2551,3 @@ footer {
     content: url(http://upload.wikimedia.org/wikipedia/commons/6/64/Icon_External_Link.png);
     margin: 0 0 0 5px;
 } */
-
-h2>a, h2>a:link, h2>a:visited {
-    color: #333;
-}
