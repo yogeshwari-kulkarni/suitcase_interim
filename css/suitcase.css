@@ -468,32 +468,15 @@ a>.fa {
 #section-footer a:link:hover,
 #section-footer a:visited:hover {
     color: #cc0000;
-    border-bottom-color: #cc0000;
+    text-decoration: underline;
 }
 
-.section-content a,
-.section-content a:link,
-.section-content a:visited {
-    border-bottom: 1px dotted #cc0000;
+.section-content a {
+    text-decoration: underline;
 }
-
-/* Remove border on contextual links (gear icons) */
-.section-content .contextual-links-wrapper a,
-.section-content .contextual-links-wrapper a:link,
-.section-conten .contextual-links-wrapper a:visited {
-    border: none;
-}
-
 
 a, a:link, a:visited {
     color: #cc0000;
-    text-decoration: none;
-}
-
-a:link:hover, a:visited:hover {
-	text-decoration: none;
-    color: #cc0000;
-	border-bottom-color: #cc0000;
 }
 
 textarea,
