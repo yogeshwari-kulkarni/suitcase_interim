@@ -865,7 +865,7 @@ nav.navigation .main-menu>li a:hover,
 nav.navigation .main-menu>li a.active-trail,
 nav.navigation .main-menu>li a.active {
     text-decoration: none;
-    border-bottom: 3px solid #F1BE48;
+    border-bottom: 3px solid #bbb;
     background-color: #ddd;
 }
 
@@ -873,7 +873,7 @@ nav.navigation .main-menu>li a.active-trail,
 nav.navigation .main-menu>li a.active {
     font-weight: bold;
     color: #000;
-    border-bottom: 3px solid #F1BE48;
+    border-bottom: 3px solid #bbb;
 }
 
 nav.navigation .secondary-menu {
@@ -2448,7 +2448,6 @@ figure .insert-default-image-styling + figcaption {
 
 .region-secondary-menu .links {
     margin: 0;
-    margin-top: 1em;
 }
 
 .region-secondary-menu .links.inline {
@@ -2461,14 +2460,15 @@ figure .insert-default-image-styling + figcaption {
 }
 
 .region-secondary-menu .links>li>a {
-    color: #777;
+    color: #444;
+    font-weight: 500;
     text-decoration: none;
+    border-bottom: none;
 }
 
 .region-secondary-menu .links>li.active>a {
     font-weight: bold;
     color: #000;
-    border-bottom: 1px dotted #777;
 }
 
 .region-secondary-menu .links>li:first-child {
@@ -2479,7 +2479,7 @@ figure .insert-default-image-styling + figcaption {
     content: "|";
     margin-left: 1em;
     font-size: 12px;
-    color: #ddd;
+    color: #333;
     vertical-align: text-top;
 }
 
