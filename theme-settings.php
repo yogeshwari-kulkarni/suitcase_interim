@@ -4,11 +4,11 @@
  * Implementation of themehook_settings().
  */
 function suitcase_interim_form_system_theme_settings_alter(&$form, $form_state) {
-  $form['suitcase'] = array(
+  $form['suitcase_interim'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Suitcase Settings'),
+    '#title' => t('Suitcase Interim Settings'),
   );
-  $form['suitcase']['breadcrumb_delimiter'] = array(
+  $form['suitcase_interim']['breadcrumb_delimiter'] = array(
     '#type' => 'textfield',
     '#title' => t('Breadcrumb delimiter'),
     '#size' => 4,
