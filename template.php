@@ -33,38 +33,42 @@ function suitcase_interim_preprocess_region(&$vars) {
     }
   } else if($vars['region'] == 'branding') {
     // Prepare Logo
-    $vars['suitcase_config_logo'] = FALSE;
-    $logo = variable_get('suitcase_config_logo');
+    $vars['suitcase_interim_config_logo'] = FALSE;
+    $logo = variable_get('suitcase_interim_config_logo');
     if ($logo) {
       $logo_url = file_create_url($logo['uri']);
-      $vars['suitcase_config_logo'] = '<div class="logo-img"><a href="' . $GLOBALS['base_url'] . '" rel="home" title="' . $vars['site_name'] . '" class="active"><img src="' . $logo_url . '" alt="Go to ' . $vars['site_name'] . ' home" id="logo" /></a></div>';
+      $vars['suitcase_interim_config_logo'] = '<div class="logo-img"><a href="' . $GLOBALS['base_url'] . '" rel="home" title="' . $vars['site_name'] . '" class="active"><img src="' . $logo_url . '" alt="Go to ' . $vars['site_name'] . ' home" id="logo" /></a></div>';
     }
 
     // Get the level 1 url
-    $vars['level_1_url'] = variable_get('suitcase_config_level_1_url', $default = NULL);
+    $vars['level_1_url'] = variable_get('suitcase_interim_config_level_1_url', $default = NULL);
 
-    $vars['dept_url'] = variable_get('dept_url', $default = NULL);
+    $vars['dept_url'] = variable_get('suitcase_interim_config_dept_url', $default = NULL);
 
-    $vars['site_name_level_2'] = variable_get('site_name');
+    $vars['site_name_level_2'] = variable_get('suitcase_interim_config_level_2');
     $vars['linked_site_name_level_2'] = l($vars['site_name_level_2'], $vars['dept_url'], array('attributes' => array('title' => $vars['site_name_level_2']), 'html' => TRUE));
 
-    $vars['site_name_level_3'] = variable_get('site_slogan');
+    $vars['site_name_level_3'] = variable_get('suitcase_interim_config_level_3');
     $vars['linked_site_name_level_3'] = l($vars['site_name_level_3'], '<front>', array('attributes' => array('title' => t('Home')), 'html' => TRUE));
 
-    $vars['show_isu_nameplate'] = variable_get('suitcase_config_isu_nameplate_display', 1);
+    $vars['show_isu_nameplate'] = variable_get('suitcase_interim_config_isu_nameplate_display', 1);
 
     // Levels to show
-    $vars['levels_to_show'] = variable_get('suitcase_config_levels_to_show', NULL);
+    $vars['levels_to_show'] = variable_get('suitcase_interim_config_levels_to_show', NULL);
 
     // Level that is site name
-    $vars['level_that_is_site_name'] = variable_get('suitcase_config_level_that_is_site_name', NULL);
+    $vars['level_that_is_site_name'] = variable_get('suitcase_interim_config_level_that_is_site_name', NULL);
 
-    // Get the uploaded wordmark if is exists
-    $vars['site_wordmark'] = variable_get('site_wordmark', $default = NULL);
+    // The type of header that we need to output, default to show all
+    $vars['suitcase_interim_config_header_type'] = variable_get('suitcase_interim_config_header_type', 1);
 
-    if (!$vars['site_wordmark']) {
+    // Get the uploaded wordmark if is exists and the header type allows
+    $vars['site_wordmark'] = variable_get('suitcase_interim_config_site_wordmark', $default = NULL);
+
+    if (!$vars['site_wordmark'] || ($vars['suitcase_interim_config_header_type'] != '4' && $vars['suitcase_interim_config_header_type'] != '5')) {
       // If a wordmark hasn't been uploaded, create a var for the default wordmark
       $vars['default_wordmark'] = file_create_url(path_to_theme() . '/images/sprite.png');
+      $vars['site_wordmark'] = NULL;
     } else {
       $vars['site_wordmark'] = file_create_url($vars['site_wordmark']);
     }
@@ -92,7 +96,10 @@ function suitcase_interim_preprocess_region(&$vars) {
     $vars['site_name_level_3'] = variable_get('site_slogan');
 
     // Levels to show
-    $vars['levels_to_show'] = variable_get('suitcase_config_levels_to_show');
+    $vars['levels_to_show'] = variable_get('suitcase_interim_config_levels_to_show');
+
+    // The type of header that we need to output, default to show all
+    $vars['suitcase_interim_config_header_type'] = variable_get('suitcase_interim_config_header_type', 1);
 
   } else if($vars['region'] == 'secondary_menu') {
     $theme = alpha_get_theme();
@@ -102,7 +109,7 @@ function suitcase_interim_preprocess_region(&$vars) {
 
 function suitcase_interim_preprocess_section(&$vars) {
   if($vars['section'] == 'header') {
-    $vars['show_blackbar'] = variable_get('suitcase_config_blackbar_display', 1);
+    $vars['show_blackbar'] = variable_get('suitcase_interim_config_blackbar_display', 1);
   }
 }
 
