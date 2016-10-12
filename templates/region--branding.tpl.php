@@ -2,9 +2,9 @@
   <div<?php print $content_attributes; ?>>
     <?php if ($linked_logo_img || $site_name || $site_slogan): ?>
       <div class="branding-data clearfix">
-        <?php if ($suitcase_config_logo): ?>
+        <?php if ($suitcase_interim_config_logo): ?>
           <div class="logo-img">
-            <?php print $suitcase_config_logo; ?>
+            <?php print $suitcase_interim_config_logo; ?>
           </div>
         <?php endif; ?>
 
@@ -17,7 +17,7 @@
             <?php endif; ?>
           </div>
         <?php endif; ?>
-        <?php if ($suitcase_config_header_type < 3): ?><?/* We show the dept name for cases 1 & 2 */?>
+        <?php if ($suitcase_interim_config_header_type < 3): ?><?/* We show the dept name for cases 1 & 2 */?>
           <?php $class = $site_slogan_hidden ? ' element-invisible' : ''; ?>
           <?php if ($is_front): ?>
             <?php if ($level_that_is_site_name == '2' || $levels_to_show['3'] == 0 || !$level_that_is_site_name || !$levels_to_show): ?>
@@ -33,7 +33,7 @@
             <?php endif; ?>
           <?php endif; ?>
         <?php endif; ?>
-        <?php if ($suitcase_config_header_type == 1 || $suitcase_config_header_type == 3 || $suitcase_config_header_type == 4): ?><?/* We show the lab name for cases 1, 3 & 4 */?>
+        <?php if ($suitcase_interim_config_header_type == 1 || $suitcase_interim_config_header_type == 3 || $suitcase_interim_config_header_type == 4): ?><?/* We show the lab name for cases 1, 3 & 4 */?>
           <hr>
           <?php $class = $site_name_hidden && $site_slogan_hidden ? ' element-invisible' : ''; ?>
           <hgroup class="site-name-slogan<?php print $class; ?>">
