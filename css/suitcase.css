@@ -461,6 +461,11 @@ a>.fa {
     font-size: 14px;
 }
 
+#section-footer a strong, #section-footer a:link strong, #section-footer a:hover strong, #section-footer a:visited strong,
+#section-footer a em, #section-footer a:link em, #section-footer a:hover em, #section-footer a:visited em {
+    color: inherit;
+}
+
 #section-footer h2, #section-footer h3, #section-footer h4, #section-footer h5, #section-footer h6 {
     color: #d3d3d3;
 }
