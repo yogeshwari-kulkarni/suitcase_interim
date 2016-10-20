@@ -199,6 +199,10 @@ a, p, li, span, em {
     color: #333;
 }
 
+a em, a:link em, a:hover em, a:visited em {
+    color: inherit;
+}
+
 ul {
     list-style-type: disc;
 }
