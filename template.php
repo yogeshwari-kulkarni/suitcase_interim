@@ -76,19 +76,6 @@ function suitcase_interim_preprocess_region(&$vars) {
     $vars['site_name'] = variable_get('site_name');
     $vars['linked_site_name'] = l($vars['site_name'], '<front>', array('attributes' => array('title' => t('Home')), 'html' => TRUE));
   } else if($vars['region'] == 'search') {
-    $search_form = drupal_get_form('search_block_form');
-    // Hide the input label
-   $search_form['search_block_form']['#title_display'] = 'invisible';
-   $search_form['search_block_form']['#attributes']['placeholder'] = t('Search');
-   $search_form['search_block_form']['#attributes']['class'][] = 'transparent';
-   $search_form['actions']['submit'] = array(
-     '#type' => 'item',
-     '#markup' => '<button type="submit" id="edit-submit" name="op" class="form-submit transparent"><img src="' . base_path() . drupal_get_path('theme', 'suitcase_interim') . '/images/search_gray.png" class="img-responsive" alt="Search" height="24px"></button>',
-   );
-    $search_form['#form_id'] = 'apachesolr_search_custom_page_search_form';
-    $search_form_box = drupal_render($search_form);
-    $vars['search_form'] = $search_form_box;
-
     // Load the categories vocabulary
     $vars['categories'] = taxonomy_get_tree(1);
 
