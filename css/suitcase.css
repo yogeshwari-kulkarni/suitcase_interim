@@ -513,7 +513,6 @@ input[type="email"],
 input[type="month"],
 input[type="number"],
 input[type="password"],
-input[type="search"],
 input[type="tel"],
 input[type="text"],
 input[type="time"],
@@ -580,36 +579,65 @@ input[type="submit"] {
     position: relative;
 }
 
-.region-search-inner .search-form-container {
+.region-search-inner input[type="submit"],
+.region-search-inner input[type="submit"]:focus {
+    background: url(../images/search_gray.png) no-repeat 0 center;
+    background-size: contain;
+    -webkit-box-shadow: none;
+    -mox-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    margin: 0px 0px 0px 20px;
+}
+
+.region-search-inner input[type=text],
+.region-search-inner input[type=text]:focus,
+.region-search-inner textarea:focus {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: none;
+}
+
+#search-block-form {
     border-radius: 2px;
     width: 100%;
-    max-width: 400px;
+    max-width: 800px;
     background-color: #fff;
 }
 
-.region-search-inner .search-form-container.has-site-name-level-2 {
+.page-search input#edit-keys,
+.page form#search-block-form .form-item-search-block-form input.form-text {
+    width: calc(100% - 62px);
+}
+
+.region-search-inner .block-search .block-title {
+    color: white;
+}
+
+.region-search-inner .block-search-form.has-site-name-level-2 {
     margin-top: 6px;
 }
 
-.region-search-inner .search-form-container.has-site-name-level-3 {
+.region-search-inner .block-search-form.has-site-name-level-3 {
     margin-top: 24px;
 }
 
-.region-search .search-form {
+.region-search .block-search-form {
     margin-bottom: 0;
 }
 
-.region-search .search-form .form-wrapper {
+.region-search .block-search-form .form-wrapper {
     position: relative;
 }
 
-.region-search .search-form .form-text {
+.region-search .block-search-form .form-text {
     font-size: 16px;
     padding: 8px 10px;
     height: 100%;
 }
 
-.region-search .search-form .form-text:not(.throbbing) {
+.region-search .block-search-form .form-text:not(.throbbing) {
     background-image: none;
 }
 
@@ -1784,11 +1812,6 @@ html.js input.form-autocomplete {
 
 .item-list a:hover {
     text-decoration: underline;
-}
-
-.page-search .search-form input#edit-submit:hover,
-.page form#search-block-form .form-actions input.form-submit:hover {
-    border: 1px solid #F1BE48;
 }
 
 /*.block-apachesolr-search:hover {*/
