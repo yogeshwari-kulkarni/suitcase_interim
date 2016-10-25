@@ -199,6 +199,10 @@ a, p, li, span, em {
     color: #333;
 }
 
+a em, a:link em, a:hover em, a:visited em {
+    color: inherit;
+}
+
 ul {
     list-style-type: disc;
 }
@@ -435,7 +439,6 @@ a>.fa {
 
 .section-header {
     background-color: #cc0000;
-    border-bottom: 9px solid #F1BE48;
 }
 
 .section-content {
@@ -459,6 +462,11 @@ a>.fa {
 #section-footer a, #section-footer a:link, #section-footer a:visited, #section-footer p, #section-footer span, #section-footer li, #section-footer strong, #section-footer em {
     color: #333;
     font-size: 14px;
+}
+
+#section-footer a strong, #section-footer a:link strong, #section-footer a:hover strong, #section-footer a:visited strong,
+#section-footer a em, #section-footer a:link em, #section-footer a:hover em, #section-footer a:visited em {
+    color: inherit;
 }
 
 #section-footer h2, #section-footer h3, #section-footer h4, #section-footer h5, #section-footer h6 {
