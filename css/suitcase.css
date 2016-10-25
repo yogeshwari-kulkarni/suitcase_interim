@@ -602,8 +602,16 @@ input[type="submit"] {
 #search-block-form {
     border-radius: 2px;
     width: 100%;
-    max-width: 800px;
     background-color: #fff;
+    min-width: 400px;
+}
+
+@media all and (max-width: 900px) {
+    #search-block-form { min-width: 200px; }
+}
+
+.region-search-inner .block-search-form {
+    margin-top: 1.5em;
 }
 
 .page-search input#edit-keys,
