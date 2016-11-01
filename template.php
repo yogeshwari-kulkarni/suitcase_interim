@@ -46,7 +46,7 @@ function suitcase_interim_preprocess_region(&$vars) {
     $vars['suitcase_interim_config_level_2_url'] = variable_get('suitcase_interim_config_level_2_url', $default = NULL);
 
     $vars['site_name_level_2'] = variable_get('suitcase_interim_config_level_2');
-    $vars['linked_site_name_level_2'] = l($vars['site_name_level_2'], $vars['suitcase_interim_config_level_2_url'], array('attributes' => array('title' => $vars['site_name_level_2']), 'html' => TRUE));
+    $vars['linked_site_name_level_2'] = l($vars['site_name_level_2'], $vars['suitcase_interim_config_level_2_url'], array('html' => TRUE));
 
     $vars['site_name_level_3'] = variable_get('suitcase_interim_config_level_3');
     $vars['linked_site_name_level_3'] = l($vars['site_name_level_3'], '<front>', array('attributes' => array('title' => t('Home')), 'html' => TRUE));
