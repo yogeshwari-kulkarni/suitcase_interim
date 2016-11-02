@@ -1445,6 +1445,10 @@ nav.navigation .secondary-menu>li a.active-trail {
   padding: 0;
 }
 
+.panel-panel .pane-content {
+	margin-bottom: 10px;
+}
+
 .panel-pane > h2.pane-title,
 .region-sidebar-first .block-title,
 .region-sidebar-second .block-title {
