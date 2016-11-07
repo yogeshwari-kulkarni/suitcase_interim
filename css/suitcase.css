@@ -311,8 +311,8 @@ a>.fa {
 .isu-dark-ribbon .wd-ribbon-menu {
     list-style: none;
     margin: 0;
+    padding: 0;
     overflow: hidden;
-    padding: 4px 0;
 }
 
 .isu-dark-ribbon .isu-index {
@@ -337,8 +337,8 @@ a>.fa {
 .isu-dark-ribbon .wd-ribbon-menu-header {
     color: #ccc;
     display: block;
-    font-size: 12px;
-    line-height: 2;
+    font-size: 13px;
+    line-height: 2.2;
     padding: 0 6px;
     text-decoration: none;
 }
@@ -371,7 +371,6 @@ a>.fa {
 }
 
 .isu-dark-ribbon .wd-ribbon-menu .isu-alpha-index li a {
-    border-radius: 2px;
     padding: 0 2px;
     min-width: 7px;
     text-align: center;
