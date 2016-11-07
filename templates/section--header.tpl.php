@@ -31,7 +31,7 @@
                         <li class="first"><a href="http://info.iastate.edu/">Directory</a></li>
                         <li><a href="http://www.fpm.iastate.edu/maps/">Maps</a></li>
                         <li><a href="http://web.iastate.edu/safety/">Safety</a></li>
-                        <li><a href="https://www.it.iastate.edu/signons/">ISU SignOns</a></li>
+                        <li><a href="https://www.it.iastate.edu/signons/">Sign Ons</a></li>
                       </ul>
                     </li>
                   </ul>
