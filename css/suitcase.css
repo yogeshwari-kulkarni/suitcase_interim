@@ -315,7 +315,7 @@ a>.fa {
     padding: 4px 0;
 }
 
-.isu-dark-ribbon .isu-signons {
+.isu-dark-ribbon .isu-index {
     float: left;
 }
 
@@ -331,11 +331,6 @@ a>.fa {
 .isu-dark-ribbon .wd-ribbon-menu-stack li,
 .isu-dark-ribbon .wd-ribbon-menu li {
     float: left;
-}
-
-.isu-dark-ribbon .isu-signons .wd-ribbon-menu li:not(:last-child),
-.isu-dark-ribbon .isu-directory-info .wd-ribbon-menu li:not(:last-child) {
-    border-right: 1px solid #444;
 }
 
 .isu-dark-ribbon .wd-ribbon-menu li a,
@@ -365,23 +360,23 @@ a>.fa {
 }
 
 .isu-dark-ribbon .isu-directory-info.wd-ribbon-menu li a,
-.isu-dark-ribbon .isu-signons.wd-ribbon-menu li a {
+.isu-dark-ribbon .isu-index.wd-ribbon-menu li a {
     border-left: 1px solid #aaa;
     border-right: 1px solid #aaa;
 }
 
 .isu-dark-ribbon .isu-directory-info.wd-ribbon-menu li + li a,
-.isu-dark-ribbon .isu-signons.wd-ribbon-menu li + li a {
+.isu-dark-ribbon .isu-index.wd-ribbon-menu li + li a {
     border-left: 0;
 }
 
-.isu-dark-ribbon .isu-signons.wd-ribbon-menu li.first a {
+.isu-dark-ribbon .isu-index.wd-ribbon-menu li.first a {
     border-left: 0;
     padding-left: 0;
 }
 
 .isu-dark-ribbon .isu-directory-info.wd-ribbon-menu li.last a,
-.isu-dark-ribbon .isu-signons.wd-ribbon-menu li.last a {
+.isu-dark-ribbon .isu-index.wd-ribbon-menu li.last a {
     border-right: 0;
     padding-right: 0;
 }
@@ -400,13 +395,7 @@ a>.fa {
     display: none;
 }
 
-/*.isu-dark-ribbon .isu-directory-info .wd-ribbon-menu li a,
-.isu-dark-ribbon .isu-signons .wd-ribbon-menu li a {
-    border-left: 1px solid #aaa;
-    border-right: 1px solid #aaa;
-}*/
-
-.isu-dark-ribbon .isu-alpha-index .wd-ribbon-menu li a {
+.isu-dark-ribbon .wd-ribbon-menu .isu-alpha-index li a {
     border-radius: 2px;
     padding: 0 2px;
     min-width: 7px;
@@ -418,17 +407,17 @@ a>.fa {
 }
 
 .isu-dark-ribbon .isu-directory-info .wd-ribbon-menu li + li a,
-.isu-dark-ribbon .isu-signons .wd-ribbon-menu li + li a {
+.isu-dark-ribbon .isu-index .wd-ribbon-menu li + li a {
     border-left: 0;
 }
 
 .isu-dark-ribbon .isu-directory-info .wd-ribbon-menu li.last a,
-.isu-dark-ribbon .isu-signons .wd-ribbon-menu li.last a {
+.isu-dark-ribbon .isu-index .wd-ribbon-menu li.last a {
     border-right: 0;
     padding-right: 0;
 }
 
-.isu-dark-ribbon .isu-signons .wd-ribbon-menu li.first a {
+.isu-dark-ribbon .isu-index .wd-ribbon-menu li.first a {
     border-left: 0;
     padding-left: 0;
 }
