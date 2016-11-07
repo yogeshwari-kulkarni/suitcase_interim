@@ -17,7 +17,7 @@
             <?php endif; ?>
           </div>
         <?php endif; ?>
-        <?php if ($suitcase_interim_config_header_type < 3): ?><?/* We show the dept name for cases 1 & 2 */?>
+        <?php if ($suitcase_interim_config_header_type < 3): ?><?php /* We show the dept name for cases 1 & 2 */ ?>
           <?php $class = $site_slogan_hidden ? ' element-invisible' : ''; ?>
           <?php if ($is_front): ?>
             <?php if ($level_that_is_site_name == '2' || $levels_to_show['3'] == 0 || !$level_that_is_site_name || !$levels_to_show): ?>
