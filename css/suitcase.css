@@ -1400,7 +1400,7 @@ nav.navigation .secondary-menu>li a.active-trail {
 /* Flexslider */
 .flexslider {
     border: none;
-    margin: 0 0 1em;
+    margin: 0;
 }
 
 .flexslider .flex-caption {
@@ -1432,7 +1432,8 @@ nav.navigation .secondary-menu>li a.active-trail {
 
 .flex-control-nav {
     z-index: 2;
-    bottom: 0;
+    position: static;
+    margin-top: 10px;
 }
 
 /*////////////////////////////////////*/
