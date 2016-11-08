@@ -1455,11 +1455,9 @@ nav.navigation .secondary-menu>li a.active-trail {
 	font-size: 26px;
 	font-weight: 400;
 	margin: 0;
-	/* padding: 0 0 13px 0; */
-	/* border-bottom: solid 1px #ccc; */
 }
 
-.panel-pane-nostyle>.pane-content {
+.panel-pane-nostyle > .pane-content {
   padding: 0;
 }
 
@@ -1489,7 +1487,7 @@ nav.navigation .secondary-menu>li a.active-trail {
     vertical-align: text-bottom;
 }
 
-.panel-pane .views-field-created>.field-content {
+.panel-pane .views-field-created > .field-content {
   color: #555;
 }
 
@@ -1507,10 +1505,6 @@ nav.navigation .secondary-menu>li a.active-trail {
   text-align: right;
 }
 
-.panel-pane .view-events .views-field:not(.views-field-when-tiny-left) {
-  /* margin-left: 68px; */
-}
-
 .panel-pane .view-events .views-field-when-tiny-left .date-display-single {
   color: #777;
 }
@@ -1518,21 +1512,6 @@ nav.navigation .secondary-menu>li a.active-trail {
 .panel-pane .view-events .views-field-title {
   font-weight: bold;
   font-size: 14px;
-}
-
-.front .panel-display .panel-panel:first-child {
-    background-color: transparent;
-    border: 0;
-}
-
-.front .panel-pane > h2.pane-title {
-    display: block;
-}
-
-.front .panel-pane .pane-content .item-list li {
-    margin-top: 8px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #eee;
 }
 
 .panel-panel.grid-4 .pane-content > p {
@@ -1609,6 +1588,32 @@ nav.navigation .secondary-menu>li a.active-trail {
     margin-bottom: 5px;
 }
 
+.panel-panel iframe {
+    width: 100% !important;
+    padding: 0 10px !important;
+}
+
+/* Front Panel */
+
+#front-panel {
+    margin-top: -32px;
+}
+
+.front .panel-display .panel-panel:first-child {
+    background-color: transparent;
+    border: 0;
+}
+
+.front .panel-pane > h2.pane-title {
+    display: block;
+}
+
+.front .panel-pane .pane-content .item-list li {
+    margin-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+}
+
 .front .item-list {
     display: block;
 }
@@ -1618,17 +1623,8 @@ nav.navigation .secondary-menu>li a.active-trail {
 }
 
 .front .grid-4 .pane-content {
-  height: 350px;
-  overflow-y: auto;
-}
-
-.panel-panel iframe {
-    width: 100% !important;
-    padding: 0 10px !important;
-}
-
-#front-panel {
-    margin-top: -32px;
+    height: 350px;
+    overflow-y: auto;
 }
 
 /*////////////////////////////////////*/
