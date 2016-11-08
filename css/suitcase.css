@@ -61,7 +61,7 @@ h2.node-title {
 }
 
 .node-title>a, .node-title>a:link, .node-title>a:visited {
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 section section h1,
