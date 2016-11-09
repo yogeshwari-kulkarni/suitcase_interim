@@ -76,9 +76,13 @@ function suitcase_interim_preprocess_region(&$vars) {
     $vars['site_name'] = variable_get('site_name');
     $vars['linked_site_name'] = l($vars['site_name'], '<front>', array('attributes' => array('title' => t('Home')), 'html' => TRUE));
   } else if($vars['region'] == 'search') {
-    // Load the categories vocabulary
-    $vars['categories'] = taxonomy_get_tree(1);
-
+    // Load the categories vocabulary if the taxonomy module is enabled.  Without the conditional, the theme breaks in a clean drupal install.
+    // This may still be a problem since the vid for taxonomy_get_tree is hardcoded to 1, which makes some assumptions.
+    // TODO determine if vid of 1 is useful/enforceable
+    if (module_exists('taxonomy'))
+    {
+      $vars['categories'] = taxonomy_get_tree(1);
+    }
     $vars['site_name_level_2'] = variable_get('site_name');
     $vars['site_name_level_3'] = variable_get('site_slogan');
 
