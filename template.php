@@ -114,3 +114,11 @@ function suitcase_interim_form_alter(&$form, &$form_state, $form_id) {
     $form['actions']['submit']['#value'] = '  ';
   }
 }
+
+function suitcase_interim_preprocess_panels_pane(&$variables) {
+  if (isset($variables['classes_array']) && isset($variables['attributes_array']['class']) && !empty($variables['classes_array']) && !empty($variables['attributes_array']['class'])) {
+    $merge = array_unique(array_merge($variables['classes_array'], $variables['attributes_array']['class']));
+    $variables['classes_array'] = $merge;
+    unset($variables['attributes_array']['class']);
+  }
+}
