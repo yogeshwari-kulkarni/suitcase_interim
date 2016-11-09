@@ -311,11 +311,11 @@ a>.fa {
 .isu-dark-ribbon .wd-ribbon-menu {
     list-style: none;
     margin: 0;
+    padding: 0;
     overflow: hidden;
-    padding: 4px 0;
 }
 
-.isu-dark-ribbon .isu-signons {
+.isu-dark-ribbon .isu-index {
     float: left;
 }
 
@@ -333,57 +333,27 @@ a>.fa {
     float: left;
 }
 
-.isu-dark-ribbon .isu-signons .wd-ribbon-menu li:not(:last-child),
-.isu-dark-ribbon .isu-directory-info .wd-ribbon-menu li:not(:last-child) {
-    border-right: 1px solid #444;
-}
-
 .isu-dark-ribbon .wd-ribbon-menu li a,
 .isu-dark-ribbon .wd-ribbon-menu-header {
-    color: #aaa;
+    color: #ccc;
     display: block;
-    font-size: 12px;
-    line-height: 2;
+    font-size: 13px;
+    line-height: 2.2;
     padding: 0 6px;
     text-decoration: none;
 }
 
-/* .isu-dark-ribbon .wd-ribbon-menu-header {
-    border-radius: 0;
-    border-left-width: 0;
-    color: #fff;
-    display: block;
-    margin-left: 2px;
-    padding: 4px 8px;
-    text-decoration: none;
-} */
-
 .isu-dark-ribbon .wd-ribbon-menu li a:hover,
 .isu-dark-ribbon .wd-ribbon-menu-header:hover {
     color: #fff;
-    text-decoration: underline;
+    background-color: #555;
+    transition: all 0.25s ease;
 }
 
 .isu-dark-ribbon .isu-directory-info.wd-ribbon-menu li a,
-.isu-dark-ribbon .isu-signons.wd-ribbon-menu li a {
+.isu-dark-ribbon .isu-index.wd-ribbon-menu li a {
     border-left: 1px solid #aaa;
     border-right: 1px solid #aaa;
-}
-
-.isu-dark-ribbon .isu-directory-info.wd-ribbon-menu li + li a,
-.isu-dark-ribbon .isu-signons.wd-ribbon-menu li + li a {
-    border-left: 0;
-}
-
-.isu-dark-ribbon .isu-signons.wd-ribbon-menu li.first a {
-    border-left: 0;
-    padding-left: 0;
-}
-
-.isu-dark-ribbon .isu-directory-info.wd-ribbon-menu li.last a,
-.isu-dark-ribbon .isu-signons.wd-ribbon-menu li.last a {
-    border-right: 0;
-    padding-right: 0;
 }
 
 .isu-dark-ribbon .isu-responsive-toggles {
@@ -400,14 +370,7 @@ a>.fa {
     display: none;
 }
 
-/*.isu-dark-ribbon .isu-directory-info .wd-ribbon-menu li a,
-.isu-dark-ribbon .isu-signons .wd-ribbon-menu li a {
-    border-left: 1px solid #aaa;
-    border-right: 1px solid #aaa;
-}*/
-
-.isu-dark-ribbon .isu-alpha-index .wd-ribbon-menu li a {
-    border-radius: 2px;
+.isu-dark-ribbon .wd-ribbon-menu .isu-alpha-index li a {
     padding: 0 2px;
     min-width: 7px;
     text-align: center;
@@ -415,22 +378,6 @@ a>.fa {
 
 .isu-dark-ribbon .hlist.borders.left > li > a {
     border-right: 0;
-}
-
-.isu-dark-ribbon .isu-directory-info .wd-ribbon-menu li + li a,
-.isu-dark-ribbon .isu-signons .wd-ribbon-menu li + li a {
-    border-left: 0;
-}
-
-.isu-dark-ribbon .isu-directory-info .wd-ribbon-menu li.last a,
-.isu-dark-ribbon .isu-signons .wd-ribbon-menu li.last a {
-    border-right: 0;
-    padding-right: 0;
-}
-
-.isu-dark-ribbon .isu-signons .wd-ribbon-menu li.first a {
-    border-left: 0;
-    padding-left: 0;
 }
 
 .isu-dark-ribbon .isu-directory-info + .isu-alpha-index .wd-ribbon-menu {
