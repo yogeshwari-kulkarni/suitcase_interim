@@ -11,13 +11,13 @@
         <?php if($show_isu_nameplate): ?>
           <div id="isu_wordmark">
             <?php if ($site_wordmark): ?>
-              <a accesskey="1" class="nameplate" href="<?php ($level_1_url) ? print $level_1_url : 'http://www.iastate.edu' ?>" title="<?php print $site_name; ?>"><img src="<?php print $site_wordmark; ?>" alt="Iowa State University - <?php print $site_name; ?>"></a>
+              <a class="nameplate" href="<?php ($level_1_url) ? print $level_1_url : 'http://www.iastate.edu' ?>" title="<?php print $site_name; ?>"><img src="<?php print $site_wordmark; ?>" alt="Iowa State University - <?php print $site_name; ?>"></a>
             <?php else: ?>
-              <a accesskey="1" class="nameplate" href="<?php ($level_1_url) ? print $level_1_url : 'http://www.iastate.edu' ?>" title="Iowa State University Homepage"><img src="<?php print $default_wordmark; ?>" alt="Iowa State University"></a>
+              <a class="nameplate" href="<?php ($level_1_url) ? print $level_1_url : 'http://www.iastate.edu' ?>" title="Iowa State University Homepage"><img src="<?php print $default_wordmark; ?>" alt="Iowa State University"></a>
             <?php endif; ?>
           </div>
         <?php endif; ?>
-        <?php if ($suitcase_interim_config_header_type < 3): ?><?/* We show the dept name for cases 1 & 2 */?>
+        <?php if ($suitcase_interim_config_header_type < 3): ?><?php /* We show the dept name for cases 1 & 2 */ ?>
           <?php $class = $site_slogan_hidden ? ' element-invisible' : ''; ?>
           <?php if ($is_front): ?>
             <?php if ($level_that_is_site_name == '2' || $levels_to_show['3'] == 0 || !$level_that_is_site_name || !$levels_to_show): ?>
