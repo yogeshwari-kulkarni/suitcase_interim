@@ -68,7 +68,7 @@ function suitcase_interim_preprocess_region(&$vars) {
 
     if (!$vars['site_wordmark'] || ($vars['suitcase_interim_config_header_type'] != '4' && $vars['suitcase_interim_config_header_type'] != '5')) {
       // If a wordmark hasn't been uploaded, create a var for the default wordmark
-      $vars['default_wordmark'] = file_create_url(path_to_theme() . '/images/sprite.png');
+      $vars['default_wordmark'] = file_create_url(path_to_theme() . '/images/isu.svg');
       $vars['site_wordmark'] = NULL;
     } 
     else {
