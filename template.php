@@ -22,16 +22,17 @@ function suitcase_interim_preprocess_html(&$vars) {
 
 // template_preprocess_region
 function suitcase_interim_preprocess_region(&$vars) {
-  if($vars['region'] == 'content' && arg(0) == 'node' && is_numeric(arg(1)) && arg(2) !== 'edit') {
+  if ($vars['region'] == 'content' && arg(0) == 'node' && is_numeric(arg(1)) && arg(2) !== 'edit') {
     $node = node_load(arg(1));
-    if($node->type == 'people' && !empty($node->field_people_category)) {
+    if ($node->type == 'people' && !empty($node->field_people_category)) {
       $vars['categories'] = array();
-      foreach($node->field_people_category[LANGUAGE_NONE] as $category) {
+      foreach ($node->field_people_category[LANGUAGE_NONE] as $category) {
         $tax = taxonomy_term_load($category['tid']);
         array_push($vars['categories'], $tax->name);
       }
     }
-  } else if($vars['region'] == 'branding') {
+  } 
+  elseif ($vars['region'] == 'branding') {
     // Prepare Logo
     $vars['suitcase_interim_config_logo'] = FALSE;
     $logo = variable_get('suitcase_interim_config_logo');
@@ -69,18 +70,20 @@ function suitcase_interim_preprocess_region(&$vars) {
       // If a wordmark hasn't been uploaded, create a var for the default wordmark
       $vars['default_wordmark'] = file_create_url(path_to_theme() . '/images/sprite.png');
       $vars['site_wordmark'] = NULL;
-    } else {
+    } 
+    else {
       $vars['site_wordmark'] = file_create_url($vars['site_wordmark']);
     }
-  } else if($vars['region'] == 'menu') {
+  } 
+  elseif ($vars['region'] == 'menu') {
     $vars['site_name'] = variable_get('site_name');
     $vars['linked_site_name'] = l($vars['site_name'], '<front>', array('attributes' => array('title' => t('Home')), 'html' => TRUE));
-  } else if($vars['region'] == 'search') {
+  } 
+  elseif ($vars['region'] == 'search') {
     // Load the categories vocabulary if the taxonomy module is enabled.  Without the conditional, the theme breaks in a clean drupal install.
     // This may still be a problem since the vid for taxonomy_get_tree is hardcoded to 1, which makes some assumptions.
     // TODO determine if vid of 1 is useful/enforceable
-    if (module_exists('taxonomy'))
-    {
+    if (module_exists('taxonomy')) {
       $vars['categories'] = taxonomy_get_tree(1);
     }
     $vars['site_name_level_2'] = variable_get('site_name');
@@ -93,14 +96,15 @@ function suitcase_interim_preprocess_region(&$vars) {
     $vars['suitcase_interim_config_header_type'] = variable_get('suitcase_interim_config_header_type', 1);
 
 
-  } else if($vars['region'] == 'secondary_menu') {
+  } 
+  elseif ($vars['region'] == 'secondary_menu') {
     $theme = alpha_get_theme();
     $vars['secondary_menu'] = $theme->page['secondary_menu'];
   }
 }
 
 function suitcase_interim_preprocess_section(&$vars) {
-  if($vars['section'] == 'header') {
+  if ($vars['section'] == 'header') {
     $vars['show_blackbar'] = variable_get('suitcase_interim_config_blackbar_display', 1);
   }
 }
