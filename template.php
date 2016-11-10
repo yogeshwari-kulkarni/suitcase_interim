@@ -42,9 +42,9 @@ function suitcase_interim_preprocess_region(&$vars) {
     }
 
     // Get the level 1 url
-    $vars['level_1_url'] = variable_get('suitcase_interim_config_level_1_url', $default = NULL);
+    $vars['level_1_url'] = variable_get('suitcase_interim_config_level_1_url');
 
-    $vars['suitcase_interim_config_level_2_url'] = variable_get('suitcase_interim_config_level_2_url', $default = NULL);
+    $vars['suitcase_interim_config_level_2_url'] = variable_get('suitcase_interim_config_level_2_url');
 
     $vars['site_name_level_2'] = variable_get('suitcase_interim_config_level_2');
     $vars['linked_site_name_level_2'] = l($vars['site_name_level_2'], $vars['suitcase_interim_config_level_2_url'], array('html' => TRUE));
@@ -55,16 +55,16 @@ function suitcase_interim_preprocess_region(&$vars) {
     $vars['show_isu_nameplate'] = variable_get('suitcase_interim_config_isu_nameplate_display', 1);
 
     // Levels to show
-    $vars['levels_to_show'] = variable_get('suitcase_interim_config_levels_to_show', NULL);
+    $vars['levels_to_show'] = variable_get('suitcase_interim_config_levels_to_show');
 
     // Level that is site name
-    $vars['level_that_is_site_name'] = variable_get('suitcase_interim_config_level_that_is_site_name', NULL);
+    $vars['level_that_is_site_name'] = variable_get('suitcase_interim_config_level_that_is_site_name');
 
     // The type of header that we need to output, default to show all
     $vars['suitcase_interim_config_header_type'] = variable_get('suitcase_interim_config_header_type', 1);
 
     // Get the uploaded wordmark if is exists and the header type allows
-    $vars['site_wordmark'] = variable_get('suitcase_interim_config_site_wordmark', $default = NULL);
+    $vars['site_wordmark'] = variable_get('suitcase_interim_config_site_wordmark');
 
     if (!$vars['site_wordmark'] || ($vars['suitcase_interim_config_header_type'] != '4' && $vars['suitcase_interim_config_header_type'] != '5')) {
       // If a wordmark hasn't been uploaded, create a var for the default wordmark
@@ -107,7 +107,7 @@ function suitcase_interim_preprocess_section(&$vars) {
 }
 
 function suitcase_interim_preprocess_content(&$vars) {
-  $vars['categories'] = variable_get('field_people_category', $default = NULL);
+  $vars['categories'] = variable_get('field_people_category');
 }
 
 function suitcase_interim_facetapi_deactivate_widget($variables) {
