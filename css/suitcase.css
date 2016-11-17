@@ -2535,3 +2535,14 @@ footer {
   font-size: 1em;
   color: #000;
 }
+
+/*----- Hero Regions -----*/
+
+#zone-menu-wrapper + .zone-hero-header .region-hero-header,
+#zone-menu + .zone-hero-header .region-hero-header {
+    margin-top: -16px;
+}
+
+.region-hero {
+    padding-bottom: 16px;
+}
