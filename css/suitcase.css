@@ -2424,7 +2424,7 @@ figure .insert-default-image-styling + figcaption {
 
 .region-content img {
     max-width: 100%;
-    height: auto;
+    height: auto !important;
 }
 
 .region-secondary-menu .links {
