@@ -1444,6 +1444,18 @@ div#region-search section.block-menu .menu li:last-child {
 	margin-bottom: 10px;
 }
 
+/* Enable overflow on panes specifically set to have it */
+.panel-pane-overflow .pane-content {
+    height: 350px;
+    overflow-y: auto;
+}
+
+/* Enable overflow on front panel panes of width 4 unless specifically disabled */
+.front .grid-4 .panel-pane:not(.panel-pane-fluidheight) .pane-content {
+    height: 350px;
+    overflow-y: auto;
+}
+
 .panel-pane > h2.pane-title,
 .region-sidebar-first .block-title,
 .region-sidebar-second .block-title {
@@ -1509,7 +1521,7 @@ div#region-search section.block-menu .menu li:last-child {
   font-size: 14px;
 }
 
-.panel-panel.grid-4 .pane-content > p {
+.panel-panel .pane-content > p {
     padding: 0 10px;
 }
 
@@ -1530,19 +1542,19 @@ div#region-search section.block-menu .menu li:last-child {
   margin-left: 0;
 }
 
-.panel-panel.grid-4 .pane-content .views-row,
-.panel-panel.grid-4 .pane-content .node {
+.panel-panel .pane-content .views-row,
+.panel-panel .pane-content .node {
     padding: 10px;
 }
 
-.panel-panel.grid-4 .pane-content .node {
+.panel-panel .pane-content .node {
     background: none;
     border: none;
     box-shadow: none;
     -webkit-box-shadow: none;
 }
 
-.panel-panel.grid-4 .pane-content .views-row:not(.views-row-last) {
+.panel-panel .pane-content .views-row:not(.views-row-last) {
     border-bottom: 1px solid #ddd;
 }
 
@@ -1556,11 +1568,11 @@ div#region-search section.block-menu .menu li:last-child {
     display: block;
 }
 
-.panel-panel.grid-4 .pane-content li:not(:last-child) > a {
+.panel-panel .pane-content li:not(:last-child) > a {
     border-bottom: 1px solid #ddd;
 }
 
-.panel-panel.grid-4 .more-link {
+.panel-panel .more-link {
     display: inline-block;
     padding: 2px 6px;
     border: 1px solid #e2e2e2;
@@ -1572,7 +1584,7 @@ div#region-search section.block-menu .menu li:last-child {
     text-align:right;
 }
 
-.panel-panel.grid-4 .more-link > a {
+.panel-panel .more-link > a {
     display: inline-block;
     padding: 2px 6px;
     border: 1px solid #e2e2e2;
@@ -1615,11 +1627,6 @@ div#region-search section.block-menu .menu li:last-child {
 
 .front .view-about-front-page .field-content li {
     margin-left: 20px;
-}
-
-.front .grid-4 .pane-content {
-    height: 350px;
-    overflow-y: auto;
 }
 
 /*////////////////////////////////////*/
@@ -1921,7 +1928,7 @@ html.js input.form-autocomplete {
     background: #f4f3e8;
 }
 
-.iecomp .panel-panel.grid-4 {
+.iecomp .panel-panel {
     background: #fcfcf9;
 }
 
