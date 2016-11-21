@@ -1568,10 +1568,6 @@ div#region-search section.block-menu .menu li:last-child {
     display: block;
 }
 
-.panel-panel .pane-content li:not(:last-child) > a {
-    border-bottom: 1px solid #ddd;
-}
-
 .panel-panel .more-link {
     display: inline-block;
     padding: 2px 6px;
