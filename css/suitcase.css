@@ -227,6 +227,10 @@ td {
     border-bottom: 1px solid #ddd;
 }
 
+.field-item td {
+    min-width: 100px;
+}
+
 tr.even td {
     background: transparent;
 }
