@@ -22,16 +22,17 @@ function suitcase_interim_preprocess_html(&$vars) {
 
 // template_preprocess_region
 function suitcase_interim_preprocess_region(&$vars) {
-  if($vars['region'] == 'content' && arg(0) == 'node' && is_numeric(arg(1)) && arg(2) !== 'edit') {
+  if ($vars['region'] == 'content' && arg(0) == 'node' && is_numeric(arg(1)) && arg(2) !== 'edit') {
     $node = node_load(arg(1));
-    if($node->type == 'people' && !empty($node->field_people_category)) {
+    if ($node->type == 'people' && !empty($node->field_people_category)) {
       $vars['categories'] = array();
-      foreach($node->field_people_category[LANGUAGE_NONE] as $category) {
+      foreach ($node->field_people_category[LANGUAGE_NONE] as $category) {
         $tax = taxonomy_term_load($category['tid']);
         array_push($vars['categories'], $tax->name);
       }
     }
-  } else if($vars['region'] == 'branding') {
+  } 
+  elseif ($vars['region'] == 'branding') {
     // Prepare Logo
     $vars['suitcase_interim_config_logo'] = FALSE;
     $logo = variable_get('suitcase_interim_config_logo');
@@ -41,9 +42,9 @@ function suitcase_interim_preprocess_region(&$vars) {
     }
 
     // Get the level 1 url
-    $vars['level_1_url'] = variable_get('suitcase_interim_config_level_1_url', $default = NULL);
+    $vars['level_1_url'] = variable_get('suitcase_interim_config_level_1_url');
 
-    $vars['suitcase_interim_config_level_2_url'] = variable_get('suitcase_interim_config_level_2_url', $default = NULL);
+    $vars['suitcase_interim_config_level_2_url'] = variable_get('suitcase_interim_config_level_2_url');
 
     $vars['site_name_level_2'] = variable_get('suitcase_interim_config_level_2');
     $vars['linked_site_name_level_2'] = l($vars['site_name_level_2'], $vars['suitcase_interim_config_level_2_url'], array('html' => TRUE));
@@ -54,30 +55,31 @@ function suitcase_interim_preprocess_region(&$vars) {
     $vars['show_isu_nameplate'] = variable_get('suitcase_interim_config_isu_nameplate_display', 1);
 
     // Levels to show
-    $vars['levels_to_show'] = variable_get('suitcase_interim_config_levels_to_show', NULL);
+    $vars['levels_to_show'] = variable_get('suitcase_interim_config_levels_to_show');
 
     // Level that is site name
-    $vars['level_that_is_site_name'] = variable_get('suitcase_interim_config_level_that_is_site_name', NULL);
+    $vars['level_that_is_site_name'] = variable_get('suitcase_interim_config_level_that_is_site_name');
 
     // The type of header that we need to output, default to show all
     $vars['suitcase_interim_config_header_type'] = variable_get('suitcase_interim_config_header_type', 1);
 
     // Get the uploaded wordmark if is exists and the header type allows
-    $vars['site_wordmark'] = variable_get('suitcase_interim_config_site_wordmark', $default = NULL);
+    $vars['site_wordmark'] = variable_get('suitcase_interim_config_site_wordmark');
 
     if (!$vars['site_wordmark'] || ($vars['suitcase_interim_config_header_type'] != '4' && $vars['suitcase_interim_config_header_type'] != '5')) {
       // If a wordmark hasn't been uploaded, create a var for the default wordmark
-      $vars['default_wordmark'] = file_create_url(path_to_theme() . '/images/sprite.png');
+      $vars['default_wordmark'] = file_create_url(path_to_theme() . '/images/isu.svg');
       $vars['site_wordmark'] = NULL;
-    } else {
+    } 
+    else {
       $vars['site_wordmark'] = file_create_url($vars['site_wordmark']);
     }
-  } else if($vars['region'] == 'menu') {
+  } 
+  elseif ($vars['region'] == 'menu') {
     $vars['site_name'] = variable_get('site_name');
     $vars['linked_site_name'] = l($vars['site_name'], '<front>', array('attributes' => array('title' => t('Home')), 'html' => TRUE));
-  } else if($vars['region'] == 'search') {
-    // Load the categories vocabulary
-    $vars['categories'] = taxonomy_get_tree(1);
+  } 
+  elseif ($vars['region'] == 'search') {
 
     $vars['site_name_level_2'] = variable_get('site_name');
     $vars['site_name_level_3'] = variable_get('site_slogan');
@@ -89,20 +91,21 @@ function suitcase_interim_preprocess_region(&$vars) {
     $vars['suitcase_interim_config_header_type'] = variable_get('suitcase_interim_config_header_type', 1);
 
 
-  } else if($vars['region'] == 'secondary_menu') {
+  } 
+  elseif ($vars['region'] == 'secondary_menu') {
     $theme = alpha_get_theme();
     $vars['secondary_menu'] = $theme->page['secondary_menu'];
   }
 }
 
 function suitcase_interim_preprocess_section(&$vars) {
-  if($vars['section'] == 'header') {
+  if ($vars['section'] == 'header') {
     $vars['show_blackbar'] = variable_get('suitcase_interim_config_blackbar_display', 1);
   }
 }
 
 function suitcase_interim_preprocess_content(&$vars) {
-  $vars['categories'] = variable_get('field_people_category', $default = NULL);
+  $vars['categories'] = variable_get('field_people_category');
 }
 
 function suitcase_interim_facetapi_deactivate_widget($variables) {
@@ -120,5 +123,22 @@ function suitcase_interim_preprocess_panels_pane(&$variables) {
     $merge = array_unique(array_merge($variables['classes_array'], $variables['attributes_array']['class']));
     $variables['classes_array'] = $merge;
     unset($variables['attributes_array']['class']);
+  }
+}
+
+/* Hero */
+
+function suitcase_interim_alpha_preprocess_zone(&$vars) {
+  if (strpos($vars['elements']['#zone'], 'hero') === 0) {
+    unset($vars['elements']['#grid']);
+    unset($vars['elements']['#grid_container']);
+  }
+}
+
+function suitcase_interim_alpha_preprocess_region(&$vars) {
+  if (strpos($vars['elements']['#region'], 'hero') === 0) {
+    $vars['content_attributes_array']['class'][] = 'region-hero-inner';
+    unset($vars['elements']['#grid']);
+    unset($vars['elements']['#grid_container']);
   }
 }

@@ -227,6 +227,10 @@ td {
     border-bottom: 1px solid #ddd;
 }
 
+.field-item td {
+    min-width: 100px;
+}
+
 tr.even td {
     background: transparent;
 }
@@ -386,6 +390,7 @@ a>.fa {
 
 .section-header {
     background-color: #cc0000;
+    border-bottom: 9px solid #F1BE48;
 }
 
 .section-content {
@@ -879,32 +884,38 @@ nav.navigation .secondary-menu>li a.active-trail {
     cursor: pointer;
 }
 
+
 /*////////////////////////////////////*/
-#block-menu-menu-secondary-menu {
-    margin-top: 6px;
-}
-
-#block-menu-menu-secondary-menu .block-title {
-    display: none;
-}
-
-#block-menu-menu-secondary-menu .menu {
-    float: right;
-}
-
-#block-menu-menu-secondary-menu .menu li {
-    display: inline-block;
-}
-
-#block-menu-menu-secondary-menu .menu li a {
+/* JP */
+div#region-search section.block-menu ul.menu>li a
+{
     color: #fff;
     text-decoration: none;
     font-size: 16px;
 }
 
-#block-menu-menu-secondary-menu .menu li:last-child {
+div#region-search section.block-menu {
+    margin-top: 6px;
+}
+
+div#region-search section.block-menu .block-title {
+    display: none;
+}
+
+div#region-search section.block-menu .menu {
+    float: right;
+}
+
+div#region-search section.block-menu .menu li {
+    display: inline-block;
+}
+
+
+div#region-search section.block-menu .menu li:last-child {
     padding-right: 0;
 }
+
+/*  /JP */
 
 /*////////////////////////////////////*/
 /* Main menu container */
@@ -1437,6 +1448,18 @@ nav.navigation .secondary-menu>li a.active-trail {
 	margin-bottom: 10px;
 }
 
+/* Enable overflow on panes specifically set to have it */
+.panel-pane-overflow .pane-content {
+    height: 350px;
+    overflow-y: auto;
+}
+
+/* Enable overflow on front panel panes of width 4 unless specifically disabled */
+.front .grid-4 .panel-pane:not(.panel-pane-fluidheight) .pane-content {
+    height: 350px;
+    overflow-y: auto;
+}
+
 .panel-pane > h2.pane-title,
 .region-sidebar-first .block-title,
 .region-sidebar-second .block-title {
@@ -1502,7 +1525,7 @@ nav.navigation .secondary-menu>li a.active-trail {
   font-size: 14px;
 }
 
-.panel-panel.grid-4 .pane-content > p {
+.panel-panel .pane-content > p {
     padding: 0 10px;
 }
 
@@ -1523,19 +1546,19 @@ nav.navigation .secondary-menu>li a.active-trail {
   margin-left: 0;
 }
 
-.panel-panel.grid-4 .pane-content .views-row,
-.panel-panel.grid-4 .pane-content .node {
+.panel-panel .pane-content .views-row,
+.panel-panel .pane-content .node {
     padding: 10px;
 }
 
-.panel-panel.grid-4 .pane-content .node {
+.panel-panel .pane-content .node {
     background: none;
     border: none;
     box-shadow: none;
     -webkit-box-shadow: none;
 }
 
-.panel-panel.grid-4 .pane-content .views-row:not(.views-row-last) {
+.panel-panel .pane-content .views-row:not(.views-row-last) {
     border-bottom: 1px solid #ddd;
 }
 
@@ -1549,11 +1572,7 @@ nav.navigation .secondary-menu>li a.active-trail {
     display: block;
 }
 
-.panel-panel.grid-4 .pane-content li:not(:last-child) > a {
-    border-bottom: 1px solid #ddd;
-}
-
-.panel-panel.grid-4 .more-link {
+.panel-panel .more-link {
     display: inline-block;
     padding: 2px 6px;
     border: 1px solid #e2e2e2;
@@ -1565,7 +1584,7 @@ nav.navigation .secondary-menu>li a.active-trail {
     text-align:right;
 }
 
-.panel-panel.grid-4 .more-link > a {
+.panel-panel .more-link > a {
     display: inline-block;
     padding: 2px 6px;
     border: 1px solid #e2e2e2;
@@ -1608,11 +1627,6 @@ nav.navigation .secondary-menu>li a.active-trail {
 
 .front .view-about-front-page .field-content li {
     margin-left: 20px;
-}
-
-.front .grid-4 .pane-content {
-    height: 350px;
-    overflow-y: auto;
 }
 
 /*////////////////////////////////////*/
@@ -1914,7 +1928,7 @@ html.js input.form-autocomplete {
     background: #f4f3e8;
 }
 
-.iecomp .panel-panel.grid-4 {
+.iecomp .panel-panel {
     background: #fcfcf9;
 }
 
@@ -1947,14 +1961,6 @@ html.js input.form-autocomplete {
 /*////////////////////////////////////*/
 /* Views */
 /* - People */
-.view-display-id-people_grid .view-content > h3 {
-    border: none;
-}
-
-.view-display-id-people_grid .view-content > h3:not(:first-child) {
-    margin-top: 32px;
-}
-
 .views-field.views-field-field-people-position {
     color: #6e6259;
 }
@@ -2417,7 +2423,7 @@ figure .insert-default-image-styling + figcaption {
 
 .region-content img {
     max-width: 100%;
-    height: auto;
+    height: auto !important;
 }
 
 .region-secondary-menu .links {
@@ -2521,7 +2527,70 @@ footer {
     float: right;
 }
 
-/* .section-content h2>a[href]:after {
-    content: url(http://upload.wikimedia.org/wikipedia/commons/6/64/Icon_External_Link.png);
-    margin: 0 0 0 5px;
-} */
+/*----- Help Text -----*/
+
+.filter-guidelines-wysiwyg .tips,
+.form-item .description {
+  font-size: 1em;
+  color: #000;
+}
+
+/*----- Hero Regions -----*/
+
+#zone-menu-wrapper + .zone-hero-header .region-hero-header,
+#zone-menu + .zone-hero-header .region-hero-header {
+    margin-top: -16px;
+}
+
+.region-hero {
+    padding-bottom: 16px;
+}
+
+/*------- Grid for views -------*/
+
+.luggage-grid .view-content > h3 {
+    color: #444;
+    font-weight: bold;
+    padding: 5px;
+    font-size: 20px;
+    display: block;
+    clear: both;
+}
+
+.luggage-grid .luggage-gridrow {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid #ddd;
+    margin: 0px 0.25% 8px 0.25%;
+    padding: 1em;
+    height: auto;
+    float: left;
+    width: 49.5%;
+    overflow: hidden;
+}
+
+.luggage-grid .luggage-gridrow .views-field img {
+    float: left;
+    margin: 2.5px 15px 2.5px 2.5px;
+}
+
+.luggage-grid .luggage-gridrow .views-field-title {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.luggage-grid .luggage-gridrow .luggage-gridgreen {
+    margin-bottom: 16px;
+}
+
+.luggage-grid .luggage-gridrow .luggage-gridgreen,
+.luggage-grid .luggage-gridrow .luggage-gridgreen a {
+    font-style: italic;
+    color: rgb(36, 109, 73);
+
+}
+
+@media all and (max-width: 739px) {
+    .luggage-grid .luggage-gridrow {
+        width: 100%;
+    }
+}
