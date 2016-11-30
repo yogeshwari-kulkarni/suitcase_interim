@@ -76,9 +76,6 @@
         border-bottom: none;
     }*/
 
-    .view-display-id-people_grid .views-row {
-        width: 47.55%;
-    }
 }
 
 @media (min-device-width: 980px) and (min-width: 980px), (max-device-width: 1024px) and (min-width: 1024px) and (orientation: landscape) {
@@ -98,7 +95,4 @@
         margin-right: auto !important;
     }
 
-    .view-display-id-people_grid .views-row {
-        width: 48%;
-    }
 }
