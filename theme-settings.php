@@ -16,9 +16,15 @@ function suitcase_interim_form_system_theme_settings_alter(&$form, &$form_state)
     drupal_add_css(drupal_get_path('theme', 'suitcase_interim') . '/css/suitcase-interim-header-preview.css', array('group' => CSS_THEME, 'weight' => 100));
 
     $form['suitcase_interim_config'] = array(
+      '#type' => 'fieldset',
+      '#title' => t('Suitcase Interim Config'),
+      '#collapsible' => TRUE,
+      '#collapsed' => FALSE,
+      '#description' => '',
       '#pre_render' => array(
         'suitcase_interim_config_form_pre_render',
       ),
+      '#weight' => -100,
     );
 
     $form['suitcase_interim_config']['suitcase_interim_config_site_info'] = array(
