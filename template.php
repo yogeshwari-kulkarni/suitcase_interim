@@ -17,7 +17,7 @@ function suitcase_interim_preprocess_html(&$vars) {
   $vars['attributes_array']['class'][] = 'responsive';
   $vars['attributes_array']['class'][] = 'wd-show-sidebar';
   // Drupal 7 in hook_preprocess_html()
-  drupal_add_http_header('X-UA-Compatible', 'IE=edge,chrome=1');
+  drupal_add_http_header('X-UA-Compatible', 'IE=edge');
 }
 
 // template_preprocess_region
