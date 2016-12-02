@@ -6,7 +6,7 @@ Suitcase Interim is a mobile first theme that has been optimized for use with Lu
 
 ## Requirements
 
-This theme requires the [suitcase_interim_config module](https://github.com/isubit/suitcase_interim_config) and the [Omega theme](https://www.drupal.org/project/omega) (7.x-3.x-dev)
+This theme requires the [Omega theme][] (7.x-3.x-dev).
 
 ## Browser Support
 - Chrome
@@ -28,5 +28,6 @@ Join us on IRC FreeNode @ #luggage
 
 **Open Source | Open Access | Open Mind**
 
+[Omega theme]:https://www.drupal.org/project/omega
 [GPLv2]:http://www.gnu.org/licenses/gpl-2.0.html
 [Luggage Documentation]:http://www.biology-it.iastate.edu/luggage_doc/
