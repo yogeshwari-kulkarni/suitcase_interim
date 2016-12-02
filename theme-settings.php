@@ -7,12 +7,14 @@ function suitcase_interim_form_system_theme_settings_alter(&$form, &$form_state)
 
   if ($GLOBALS['theme_key'] == $form_state['build_info']['args'][0]) {
 
-    $form['logo']['#access'] = FALSE;
-    $form['logo']['settings']['logo_path']['#access'] = FALSE;
-    $form['logo']['settings']['logo_upload']['#access'] = FALSE;
-    $form['theme_settings']['toggle_logo']['#access'] = FALSE;
+    if (variable_get('suitcase_interim_config_show_advanced_settings', 0) === 0) {
+      $form['alpha_settings']['#prefix'] = '<div class="element-hidden">';
+      $form['alpha_settings']['#suffix'] = '</div>';
+      $form['favicon']['#access'] = FALSE;
+      $form['logo']['#access'] = FALSE;
+      $form['theme_settings']['#access'] = FALSE;
+    }
 
-    //drupal_add_css(drupal_get_path('theme', 'alpha') . '/css/grid/alpha_fluid/normal/alpha-fluid-normal-12.css', array('group' => CSS_THEME, 'weight' => 100));
     drupal_add_css(drupal_get_path('theme', 'suitcase_interim') . '/css/suitcase-interim-header-preview.css', array('group' => CSS_THEME, 'weight' => 100));
 
     $form['suitcase_interim_config'] = array(
@@ -105,6 +107,21 @@ function suitcase_interim_form_system_theme_settings_alter(&$form, &$form_state)
       '#default_value' => variable_get('suitcase_interim_config_isu_nameplate_display', 1),
     );
 
+    $form['suitcase_interim_config']['suitcase_interim_config_advanced_settings'] = array(
+      '#type' => 'fieldset',
+      '#title' => t('Advanced Settings'),
+      '#collapsible' => TRUE,
+      '#collapsed' => TRUE,
+      '#description' => '',
+    );
+
+    $form['suitcase_interim_config']['suitcase_interim_config_advanced_settings']['suitcase_interim_config_show_advanced_settings'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Show advanced settings'),
+      '#description' => t('Show theme settings inherited from Drupal and the Omega base theme.'),
+      '#default_value' => variable_get('suitcase_interim_config_show_advanced_settings', 0),
+    );
+
     array_unshift($form['#submit'], 'suitcase_interim_config_form_submit');
 
   }
@@ -140,6 +157,8 @@ function suitcase_interim_config_form_submit($form, &$form_state) {
   variable_set('suitcase_interim_config_blackbar_display', $form_state['values']['suitcase_interim_config_blackbar_display']);
 
   variable_set('suitcase_interim_config_isu_nameplate_display', $form_state['values']['suitcase_interim_config_isu_nameplate_display']);
+
+  variable_set('suitcase_interim_config_show_advanced_settings', $form_state['values']['suitcase_interim_config_show_advanced_settings']);
 
   // Decide which level the site name should be set to
   $site_name = NULL;
