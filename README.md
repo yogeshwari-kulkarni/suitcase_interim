@@ -6,7 +6,7 @@ Suitcase Interim is a mobile first theme that has been optimized for use with Lu
 
 ## Requirements
 
-This theme requires the [Omega theme (7.x-3.x-dev)](https://ftp.drupal.org/files/projects/omega-7.x-3.x-dev.zip).
+This theme requires the [Omega base theme (7.x-3.x-dev)](https://ftp.drupal.org/files/projects/omega-7.x-3.x-dev.zip).
 
 ## Browser Support
 - Chrome
