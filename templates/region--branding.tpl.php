@@ -10,10 +10,10 @@
 
         <?php if($show_isu_nameplate): ?>
           <div id="isu_wordmark">
-            <?php if ($site_wordmark): ?>
-              <a class="nameplate" href="<?php ($level_1_url) ? print $level_1_url : 'http://www.iastate.edu' ?>" title="<?php print $site_name; ?>"><img src="<?php print $site_wordmark; ?>" alt="Iowa State University - <?php print $site_name; ?>"></a>
+            <?php if (theme_get_setting('default_logo', 'suitcase_interim')): ?>
+              <a class="nameplate" href="<?php ($level_1_url) ? print $level_1_url : 'http://www.iastate.edu' ?>" title="Iowa State University Homepage"><img src="<?php print $wordmark_image; ?>" alt="Iowa State University"></a>
             <?php else: ?>
-              <a class="nameplate" href="<?php ($level_1_url) ? print $level_1_url : 'http://www.iastate.edu' ?>" title="Iowa State University Homepage"><img src="<?php print $default_wordmark; ?>" alt="Iowa State University"></a>
+              <a class="nameplate" href="<?php ($level_1_url) ? print $level_1_url : 'http://www.iastate.edu' ?>" title="<?php print $site_name; ?>"><img src="<?php print $wordmark_image; ?>" alt="Iowa State University - <?php print $site_name; ?>"></a>
             <?php endif; ?>
           </div>
         <?php endif; ?>

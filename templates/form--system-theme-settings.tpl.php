@@ -5,7 +5,7 @@
  */
 ?>
 <div id="suitcase-interim-header-preview">
-  <?php $wordmark_path = base_path() . drupal_get_path('theme', 'suitcase_interim') . '/images/sprite.png'; ?>
+  <?php $wordmark_path = (theme_get_setting('default_logo', 'suitcase_interim')) ? file_create_url(drupal_get_path('theme', 'suitcase_interim') . '/images/isu.svg') : file_create_url(theme_get_setting('logo_path', 'suitcase_interim')); ?>
   <div class="container-12 clearfix">
     <div class="grid-6 suitcase-interim-vertical-tabs clearfix">
       <ul class="suitcase-interim-vertical-tabs-list">
@@ -59,7 +59,7 @@
     </div>
     <div class="grid-6">
       <div class="header-preview">
-        <img src="<?php print ($form['suitcase_interim_config_site_info']['suitcase_interim_config_header_type']['#value'] > 3 && $form['suitcase_interim_config_site_info']['suitcase_interim_config_site_wordmark']['#file'])?file_create_url($form['suitcase_interim_config_site_info']['suitcase_interim_config_site_wordmark']['#file']->uri):$wordmark_path; ?>" height="24px" class="header-img">
+        <img src="<?php print $wordmark_path; ?>" height="24px" class="header-img">
         <header class="header-text">
           <h1 class="site-name-level-1" <?php if (!in_array($form['suitcase_interim_config_site_info']['suitcase_interim_config_header_type']['#value'], array(1, 2))) print 'style="display:none"'; ?>><?php print $form['suitcase_interim_config_site_info']['suitcase_interim_config_level_2']['#value']; ?></h1>
           <div class="site-name-level-2" <?php if (!in_array($form['suitcase_interim_config_site_info']['suitcase_interim_config_header_type']['#value'], array(1, 3))) print 'style="display:none"'; ?>>
@@ -120,7 +120,7 @@
         $headerLevel2.text($(this).val());
       });
 
-      $('#edit-site-wordmark-upload').change(function(e) {
+      $('#edit-logo-upload').change(function(e) {
         var fr = new FileReader();
         fr.onload = function(e) {
           var dataURI = e.target.result;

@@ -64,17 +64,9 @@ function suitcase_interim_preprocess_region(&$vars) {
     $vars['suitcase_interim_config_header_type'] = variable_get('suitcase_interim_config_header_type', 1);
 
     // Get the uploaded wordmark if is exists and the header type allows
-    $vars['site_wordmark'] = variable_get('suitcase_interim_config_site_wordmark');
+    $vars['wordmark_image'] = (theme_get_setting('default_logo', 'suitcase_interim')) ? file_create_url(drupal_get_path('theme', 'suitcase_interim') . '/images/isu.svg') : file_create_url(theme_get_setting('logo_path', 'suitcase_interim'));
 
-    if (!$vars['site_wordmark'] || ($vars['suitcase_interim_config_header_type'] != '4' && $vars['suitcase_interim_config_header_type'] != '5')) {
-      // If a wordmark hasn't been uploaded, create a var for the default wordmark
-      $vars['default_wordmark'] = file_create_url(path_to_theme() . '/images/isu.svg');
-      $vars['site_wordmark'] = NULL;
-    } 
-    else {
-      $vars['site_wordmark'] = file_create_url($vars['site_wordmark']);
-    }
-  } 
+  }
   elseif ($vars['region'] == 'menu') {
     $vars['site_name'] = variable_get('site_name');
     $vars['linked_site_name'] = l($vars['site_name'], '<front>', array('attributes' => array('title' => t('Home')), 'html' => TRUE));

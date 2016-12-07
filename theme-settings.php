@@ -11,7 +11,6 @@ function suitcase_interim_form_system_theme_settings_alter(&$form, &$form_state)
       $form['alpha_settings']['#prefix'] = '<div class="element-hidden">';
       $form['alpha_settings']['#suffix'] = '</div>';
       $form['favicon']['#access'] = FALSE;
-      $form['logo']['#access'] = FALSE;
       $form['theme_settings']['#access'] = FALSE;
     }
 
@@ -100,11 +99,53 @@ function suitcase_interim_form_system_theme_settings_alter(&$form, &$form_state)
       '#default_value' => variable_get('suitcase_interim_config_blackbar_display', 1),
     );
 
-    $form['suitcase_interim_config']['suitcase_interim_config_layout']['suitcase_interim_config_isu_nameplate_display'] = array(
+    $form['suitcase_interim_config']['suitcase_interim_config_logo'] = array(
+      '#type' => 'fieldset',
+      '#title' => t('Wordmark'),
+      '#collapsible' => TRUE,
+      '#collapsed' => FALSE,
+      '#description' => '',
+    );
+
+    $form['suitcase_interim_config']['suitcase_interim_config_logo']['suitcase_interim_config_isu_nameplate_display'] = array(
       '#type' => 'checkbox',
-      '#title' => t('Show ISU nameplate'),
-      '#description' => t('The ISU nameplate identifies Iowa State University above the site name and department title.'),
+      '#title' => t('Show Wordmark'),
+      '#description' => t('The wordmark appears above the department title and site name.'),
       '#default_value' => variable_get('suitcase_interim_config_isu_nameplate_display', 1),
+    );
+
+    unset($form['logo']);
+
+    $form['suitcase_interim_config']['suitcase_interim_config_logo']['default_logo'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Use the default ISU wordmark'),
+      '#default_value' => theme_get_setting('default_logo', 'suitcase_interim'),
+      '#tree' => FALSE,
+      '#description' => t('Check here if you want to use the default ISU wordmark.')
+    );
+
+    $form['suitcase_interim_config']['suitcase_interim_config_logo']['settings'] = array(
+      '#type' => 'container',
+      '#states' => array(
+        // Hide the logo settings when using the default logo.
+        'invisible' => array(
+          'input[name="default_logo"]' => array('checked' => TRUE),
+        ),
+      ),
+    );
+
+    $form['suitcase_interim_config']['suitcase_interim_config_logo']['settings']['logo_path'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Path to custom wordmark'),
+      '#description' => t('The path to the file you would like to use as your logo file instead of the ISU wordmark.'),
+      '#default_value' => theme_get_setting('logo_path', 'suitcase_interim'),
+    );
+
+    $form['suitcase_interim_config']['suitcase_interim_config_logo']['settings']['logo_upload'] = array(
+      '#type' => 'file',
+      '#title' => t('Upload wordmark image'),
+      '#maxlength' => 40,
+      '#description' => t("Upload your logo file to use instead of the ISU wordmark.")
     );
 
     $form['suitcase_interim_config']['suitcase_interim_config_advanced_settings'] = array(
