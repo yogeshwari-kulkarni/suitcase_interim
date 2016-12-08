@@ -813,6 +813,7 @@ ul li.expanded {
 .region-mega-menu .content>.menu>li>.menu.show {
     overflow: auto;
     height: auto;
+    max-height: 500px;
     min-width: 300px;
     padding: 0 16px;
     z-index: 11;
