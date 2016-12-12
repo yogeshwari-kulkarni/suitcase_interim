@@ -1,3 +1,7 @@
+div.vertical-tabs .vertical-tabs-panes .vertical-tabs-pane fieldset legend {
+    display: block;
+}
+
 #suitcase-interim-header-preview .suitcase-interim-vertical-tabs-list {
     list-style: none;
     padding: 0;
