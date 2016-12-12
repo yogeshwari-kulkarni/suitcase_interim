@@ -7,14 +7,14 @@ function suitcase_interim_form_system_theme_settings_alter(&$form, &$form_state)
 
   if ($GLOBALS['theme_key'] == $form_state['build_info']['args'][0]) {
 
+    drupal_add_css(drupal_get_path('theme', 'suitcase_interim') . '/css/suitcase_theme_settings.css', array('group' => CSS_THEME, 'weight' => 100));
+
     if (variable_get('suitcase_interim_config_show_advanced_settings', 0) === 0) {
       $form['alpha_settings']['#prefix'] = '<div class="element-hidden">';
       $form['alpha_settings']['#suffix'] = '</div>';
       $form['favicon']['#access'] = FALSE;
       $form['theme_settings']['#access'] = FALSE;
     }
-
-    drupal_add_css(drupal_get_path('theme', 'suitcase_interim') . '/css/suitcase-interim-header-preview.css', array('group' => CSS_THEME, 'weight' => 100));
 
     $form['suitcase_interim_config'] = array(
       '#type' => 'fieldset',
