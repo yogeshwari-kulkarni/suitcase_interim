@@ -19,7 +19,7 @@ function suitcase_interim_form_system_theme_settings_alter(&$form, &$form_state)
     $form['suitcase_interim_config'] = array(
       '#type' => 'fieldset',
       '#title' => t('Suitcase Interim Config'),
-      '#collapsible' => TRUE,
+      '#collapsible' => FALSE,
       '#collapsed' => FALSE,
       '#description' => '',
       '#pre_render' => array(
@@ -31,7 +31,7 @@ function suitcase_interim_form_system_theme_settings_alter(&$form, &$form_state)
     $form['suitcase_interim_config']['suitcase_interim_config_layout'] = array(
       '#type' => 'fieldset',
       '#title' => t('Layout'),
-      '#collapsible' => TRUE,
+      '#collapsible' => FALSE,
       '#collapsed' => FALSE,
       '#description' => '',
     );
@@ -46,7 +46,7 @@ function suitcase_interim_form_system_theme_settings_alter(&$form, &$form_state)
     $form['suitcase_interim_config']['suitcase_interim_config_logo'] = array(
       '#type' => 'fieldset',
       '#title' => t('Wordmark'),
-      '#collapsible' => TRUE,
+      '#collapsible' => FALSE,
       '#collapsed' => FALSE,
       '#description' => '',
     );
@@ -143,8 +143,8 @@ function suitcase_interim_form_system_theme_settings_alter(&$form, &$form_state)
     $form['suitcase_interim_config']['suitcase_interim_config_advanced_settings'] = array(
       '#type' => 'fieldset',
       '#title' => t('Advanced Settings'),
-      '#collapsible' => TRUE,
-      '#collapsed' => TRUE,
+      '#collapsible' => FALSE,
+      '#collapsed' => FALSE,
       '#description' => '',
     );
 
