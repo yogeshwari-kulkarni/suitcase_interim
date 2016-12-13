@@ -28,62 +28,6 @@ function suitcase_interim_form_system_theme_settings_alter(&$form, &$form_state)
       '#weight' => -100,
     );
 
-    $form['suitcase_interim_config']['suitcase_interim_config_site_info'] = array(
-      '#type' => 'fieldset',
-      '#title' => t('Site Information'),
-      '#collapsible' => TRUE,
-      '#collapsed' => FALSE,
-      '#description' => '',
-    );
-    
-    $form['suitcase_interim_config']['suitcase_interim_config_site_info']['suitcase_interim_config_level_1_url'] = array(
-      '#type' => 'textfield',
-      '#title' => t('Wordmark URL'),
-      '#description' => t('Full URL the Iowa State University wordmark should link to. Defaults to \'http://www.iastate.edu/\''),
-      '#default_value' => variable_get('suitcase_interim_config_level_1_url', 'http://www.iastate.edu/'),
-      '#weight' => 2,
-    );
-
-    $form['suitcase_interim_config']['suitcase_interim_config_site_info']['suitcase_interim_config_level_2_url'] = array(
-      '#type' => 'hidden',
-      '#attributes' => array(
-        'id' => 'edit-dept-url',
-      ),
-      '#title' => t('Level 2 URL'),
-      '#description' => t('Full URL to the Department site'),
-      '#default_value' => variable_get('suitcase_interim_config_level_2_url', NULL),
-    );
-
-    $form['suitcase_interim_config']['suitcase_interim_config_site_info']['suitcase_interim_config_level_2'] = array(
-      '#type' => 'hidden',
-      '#attributes' => array(
-        'id' => 'edit-site-name',
-      ),
-      '#title' => t('Level 2 (Department, College, or Consortium)'),
-      '#description' => t('Displays under the wordmark & defaults to "Iowa State University"'),
-      '#default_value' => variable_get('suitcase_interim_config_level_2', NULL),
-    );
-
-    $form['suitcase_interim_config']['suitcase_interim_config_site_info']['suitcase_interim_config_level_3'] = array(
-      '#type' => 'hidden',
-      '#attributes' => array(
-        'id' => 'edit-site-slogan',
-      ),
-      '#title' => t('Level 3 (Lab or Entity name)'),
-      '#description' => t('Displays under the Level 2 text'),
-      '#default_value' => variable_get('suitcase_interim_config_level_3', NULL),
-    );
-
-    $form['suitcase_interim_config']['suitcase_interim_config_site_info']['suitcase_interim_config_header_type']= array(
-      '#type' => 'hidden',
-      '#attributes' => array(
-        'id' => 'edit-header-type',
-      ),
-      '#title' => t('Header type'),
-      '#description' => t('The type of header to display'),
-      '#default_value' => variable_get('suitcase_interim_config_header_type', 1),
-    );
-
     $form['suitcase_interim_config']['suitcase_interim_config_layout'] = array(
       '#type' => 'fieldset',
       '#title' => t('Layout'),
@@ -146,6 +90,54 @@ function suitcase_interim_form_system_theme_settings_alter(&$form, &$form_state)
       '#title' => t('Upload wordmark image'),
       '#maxlength' => 40,
       '#description' => t("Upload your logo file to use instead of the ISU wordmark.")
+    );
+
+    $form['suitcase_interim_config']['suitcase_interim_config_logo']['suitcase_interim_config_level_1_url'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Wordmark URL'),
+      '#description' => t('Full URL the Iowa State University wordmark should link to. Defaults to \'http://www.iastate.edu/\''),
+      '#default_value' => variable_get('suitcase_interim_config_level_1_url', 'http://www.iastate.edu/'),
+      '#weight' => 2,
+    );
+
+    $form['suitcase_interim_config']['suitcase_interim_config_logo']['suitcase_interim_config_level_2_url'] = array(
+      '#type' => 'hidden',
+      '#attributes' => array(
+        'id' => 'edit-dept-url',
+      ),
+      '#title' => t('Level 2 URL'),
+      '#description' => t('Full URL to the Department site'),
+      '#default_value' => variable_get('suitcase_interim_config_level_2_url', NULL),
+    );
+
+    $form['suitcase_interim_config']['suitcase_interim_config_logo']['suitcase_interim_config_level_2'] = array(
+      '#type' => 'hidden',
+      '#attributes' => array(
+        'id' => 'edit-site-name',
+      ),
+      '#title' => t('Level 2 (Department, College, or Consortium)'),
+      '#description' => t('Displays under the wordmark & defaults to "Iowa State University"'),
+      '#default_value' => variable_get('suitcase_interim_config_level_2', NULL),
+    );
+
+    $form['suitcase_interim_config']['suitcase_interim_config_logo']['suitcase_interim_config_level_3'] = array(
+      '#type' => 'hidden',
+      '#attributes' => array(
+        'id' => 'edit-site-slogan',
+      ),
+      '#title' => t('Level 3 (Lab or Entity name)'),
+      '#description' => t('Displays under the Level 2 text'),
+      '#default_value' => variable_get('suitcase_interim_config_level_3', NULL),
+    );
+
+    $form['suitcase_interim_config']['suitcase_interim_config_logo']['suitcase_interim_config_header_type']= array(
+      '#type' => 'hidden',
+      '#attributes' => array(
+        'id' => 'edit-header-type',
+      ),
+      '#title' => t('Header type'),
+      '#description' => t('The type of header to display'),
+      '#default_value' => variable_get('suitcase_interim_config_header_type', 1),
     );
 
     $form['suitcase_interim_config']['suitcase_interim_config_advanced_settings'] = array(
