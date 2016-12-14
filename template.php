@@ -115,6 +115,12 @@ function suitcase_interim_alpha_preprocess_region(&$vars) {
   }
 }
 
+function suitcase_interim_alpha_preprocess_section(&$vars) {
+  if ($vars['elements']['#section'] == 'footer') {
+    $vars['attributes_array']['role'] = 'contentinfo';
+  }
+}
+
 /* Menu List Theme Functions */
 
 /*
@@ -217,4 +223,11 @@ function suitcase_interim_links__system_main_menu($variables) {
  */
 function suitcase_interim_links__system_secondary_menu($variables) {
   return suitcase_interim_menu_links($variables);
+}
+
+/*
+ * Implements hook_form_FORMID_alter()
+ */
+function suitcase_interim_form_search_block_form_alter(&$form, &$form_state, $form_id) {
+  $form['#attributes']['role'] = 'search';
 }
