@@ -54,12 +54,6 @@ function suitcase_interim_preprocess_region(&$vars) {
 
     $vars['show_isu_nameplate'] = variable_get('suitcase_interim_config_isu_nameplate_display', 1);
 
-    // Levels to show
-    $vars['levels_to_show'] = variable_get('suitcase_interim_config_levels_to_show');
-
-    // Level that is site name
-    $vars['level_that_is_site_name'] = variable_get('suitcase_interim_config_level_that_is_site_name');
-
     // The type of header that we need to output, default to show all
     $vars['suitcase_interim_config_header_type'] = variable_get('suitcase_interim_config_header_type', 1);
 
