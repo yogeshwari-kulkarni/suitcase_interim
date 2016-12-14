@@ -3,7 +3,7 @@
     <?php print $content; ?>
 
     <?php if ($main_menu || $secondary_menu): ?>
-    <nav class="navigation">
+    <nav class="navigation" role="navigation">
       <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix', 'main-menu')), 'heading' => array('text' => t('Main menu'),'level' => 'h2','class' => array('element-invisible')))); ?>
     </nav>
     <?php endif; ?>
