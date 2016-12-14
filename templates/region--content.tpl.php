@@ -1,6 +1,5 @@
-<div<?php print $attributes; ?>>
+<main role="main"<?php print $attributes; ?>>
   <div<?php print $content_attributes; ?>>
-    <main role="main">
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>
@@ -16,4 +15,4 @@
       <?php if ($feed_icons): ?><div class="feed-icon clearfix"><?php print $feed_icons; ?></div><?php endif; ?>
     </main>
   </div>
-</div>
+</main>

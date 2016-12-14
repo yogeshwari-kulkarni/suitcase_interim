@@ -28,6 +28,10 @@ body {
     box-sizing: inherit;
 }
 
+main {
+    display: block;
+}
+
 small {
     font-size: 0.85em;
 }
