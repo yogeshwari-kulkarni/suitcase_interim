@@ -1,4 +1,4 @@
-<div<?php print $attributes; ?>>
+<main<?php print $attributes; ?>>
   <div<?php print $content_attributes; ?>>
     <a id="main-content"></a>
     <?php print render($title_prefix); ?>
@@ -14,4 +14,4 @@
     <?php print $content; ?>
     <?php if ($feed_icons): ?><div class="feed-icon clearfix"><?php print $feed_icons; ?></div><?php endif; ?>
   </div>
-</div>
+</main>
