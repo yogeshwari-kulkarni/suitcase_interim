@@ -23,13 +23,13 @@
 
         <?php if ($suitcase_interim_config_header_type == 1 || $suitcase_interim_config_header_type == 3): ?><?php /* We show the lab name for cases 1 & 3 */?>
           <hr>
-          <hgroup class="site-name-slogan">
+          <div class="site-name-slogan">
             <?php if ($is_front): ?>
               <h1 class="site-name-level-3"><?php print $linked_site_name_level_3; ?></h1>
             <?php else: ?>
               <span class="site-name-level-3"><?php print $linked_site_name_level_3; ?></span>
             <?php endif; ?>
-          </hgroup>
+          </div>
         <?php endif; ?>
 
       </div>
