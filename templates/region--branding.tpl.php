@@ -3,12 +3,6 @@
     <?php if ($site_name || $site_slogan): ?>
       <div class="branding-data clearfix">
 
-        <?php if ($suitcase_interim_config_logo): ?>
-          <div class="logo-img">
-            <?php print $suitcase_interim_config_logo; ?>
-          </div>
-        <?php endif; ?>
-
         <?php if($show_isu_nameplate): ?>
           <div id="isu_wordmark">
             <?php if (theme_get_setting('default_logo', 'suitcase_interim')): ?>

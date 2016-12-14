@@ -33,13 +33,6 @@ function suitcase_interim_preprocess_region(&$vars) {
     }
   } 
   elseif ($vars['region'] == 'branding') {
-    // Prepare Logo
-    $vars['suitcase_interim_config_logo'] = FALSE;
-    $logo = variable_get('suitcase_interim_config_logo');
-    if ($logo) {
-      $logo_url = file_create_url($logo['uri']);
-      $vars['suitcase_interim_config_logo'] = '<div class="logo-img"><a href="' . $GLOBALS['base_url'] . '" rel="home" title="' . $vars['site_name'] . '" class="active"><img src="' . $logo_url . '" alt="Go to ' . $vars['site_name'] . ' home" id="logo" /></a></div>';
-    }
 
     // Get the level 1 url
     $vars['level_1_url'] = variable_get('suitcase_interim_config_level_1_url');
@@ -66,18 +59,11 @@ function suitcase_interim_preprocess_region(&$vars) {
     $vars['linked_site_name'] = l($vars['site_name'], '<front>', array('attributes' => array('title' => t('Home')), 'html' => TRUE));
   } 
   elseif ($vars['region'] == 'search') {
-
     $vars['site_name_level_2'] = variable_get('site_name');
     $vars['site_name_level_3'] = variable_get('site_slogan');
-
-    // Levels to show
-    $vars['levels_to_show'] = variable_get('suitcase_interim_config_levels_to_show');
-
     // The type of header that we need to output, default to show all
     $vars['suitcase_interim_config_header_type'] = variable_get('suitcase_interim_config_header_type', 1);
-
-
-  } 
+  }
   elseif ($vars['region'] == 'secondary_menu') {
     $theme = alpha_get_theme();
     $vars['secondary_menu'] = $theme->page['secondary_menu'];
