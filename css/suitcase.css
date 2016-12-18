@@ -501,14 +501,6 @@ input[type="submit"] {
     border: none;
 }
 
-.margin-left-10 {
-    margin-left: 10px;
-}
-
-.pos-relative {
-    position: relative;
-}
-
 .region-search-inner input[type="submit"],
 .region-search-inner input[type="submit"]:focus {
     background: url(../images/search_gray.png) no-repeat 0 center;
@@ -531,13 +523,14 @@ input[type="submit"] {
 
 #search-block-form {
     border-radius: 2px;
+    float: right;
     width: 100%;
+    max-width: 400px;
     background-color: #fff;
-    min-width: 400px;
 }
 
 @media all and (max-width: 900px) {
-    #search-block-form { min-width: 200px; }
+    #search-block-form { max-width: inherit; }
 }
 
 .region-search-inner .search-form-container.has-site-name-level-2 {
