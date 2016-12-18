@@ -1981,6 +1981,10 @@ figure .insert-default-image-styling + figcaption {
     height: auto !important;
 }
 
+.zone-secondary-menu-wrapper {
+    margin: 16px 0px;
+}
+
 .region-secondary-menu .links {
     margin: 0;
 }
