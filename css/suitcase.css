@@ -745,7 +745,7 @@ ul li.expanded {
     list-style-type: none;
 }
 
-.section-content .container-12 .grid-2.region-mega-menu {
+.section-header .container-12 .grid-2.region-mega-menu {
     width: auto !important;
     margin-right: 0;
 }
@@ -1677,7 +1677,7 @@ html.js input.form-autocomplete {
         padding: 18px 6px;
     }
 
-    .section-content .container-12 .grid-2.region-mega-menu {
+    .section-header .container-12 .grid-2.region-mega-menu {
         margin-right: 1em;
     }
 
