@@ -384,10 +384,6 @@ a>.fa {
     margin-right: 3px;
 }
 
-.section-header {
-    background-color: #cc0000;
-}
-
 .section-content {
     background-color: #fff;
 }
@@ -678,8 +674,9 @@ input[type="submit"] {
 /*////////////////////////////////////*/
 /* Main menu mobile */
 .zone-branding-wrapper {
-    margin-top: 16px;
-    margin-bottom: 16px;
+    background-color: #cc0000;
+    border-bottom: 9px solid #F1BE48;
+    padding: 16px 0px;
 }
 
 nav.navigation .main-menu {
@@ -910,7 +907,6 @@ div#region-search section.block-menu .menu li:last-child {
 
 .zone-menu-wrapper {
   background-color: #eee;
-  border-top: 9px solid #F1BE48;
 }
 
 /*////////////////////////////////////*/
