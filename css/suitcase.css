@@ -21,7 +21,7 @@ body {
     line-height: 1.42857143;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #f3f3f3;
+    background-color: #FFF;
 }
 
 *, *:before, *:after {
@@ -1251,10 +1251,6 @@ div#region-search section.block-menu .menu li:last-child {
 }
 
 /* Front Panel */
-
-#front-panel {
-    margin-top: -32px;
-}
 
 .front .panel-display .panel-panel:first-child {
     background-color: transparent;
