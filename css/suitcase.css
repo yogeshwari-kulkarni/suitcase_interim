@@ -21,7 +21,7 @@ body {
     line-height: 1.42857143;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #FFF;
+    background-color: #f3f3f3;
 }
 
 *, *:before, *:after {
@@ -384,7 +384,7 @@ a>.fa {
     margin-right: 3px;
 }
 
-.section-content {
+.page {
     background-color: #fff;
 }
 
