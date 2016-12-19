@@ -575,10 +575,15 @@ input[type="submit"] {
 /*////////////////////////////////////*/
 /* Site Name/Slogan */
 
-.nameplate img {
-    width: 375.5px;
-    height: auto;
+#isu_wordmark {
+    display: block;
+    width: 375px;
     max-width: 100%;
+}
+
+#isu_wordmark img {
+  width: 100%;
+  height: auto;
 }
 
 .site-name-level-3 {
