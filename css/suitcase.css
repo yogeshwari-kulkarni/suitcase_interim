@@ -21,7 +21,7 @@ body {
     line-height: 1.42857143;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #FFF;
+    background-color: #f3f3f3;
 }
 
 *, *:before, *:after {
@@ -384,7 +384,7 @@ a>.fa {
     margin-right: 3px;
 }
 
-.section-content {
+.page {
     background-color: #fff;
 }
 
@@ -575,10 +575,15 @@ input[type="submit"] {
 /*////////////////////////////////////*/
 /* Site Name/Slogan */
 
-.nameplate img {
-    width: 375.5px;
-    height: auto;
+#isu_wordmark {
+    display: block;
+    width: 375px;
     max-width: 100%;
+}
+
+#isu_wordmark img {
+  width: 100%;
+  height: auto;
 }
 
 .site-name-level-3 {
@@ -1537,53 +1542,6 @@ html.js input.form-autocomplete {
 }
 
 /*////////////////////////////////////*/
-/* IE less than 9 fixes */
-.iecomp .zone-branding-wrapper,
-.iecomp .zone-menu-wrapper {
-    background: #CB1A2A;
-}
-
-.iecomp .zone-branding-wrapper a,
-.iecomp .zone-menu-wrapper a {
-    color: #fff;
-}
-
-.iecomp .zone-content-wrapper,
-.iecomp .zone-preface-wrapper {
-    background: #f4f3e8;
-}
-
-.iecomp .panel-panel {
-    background: #fcfcf9;
-}
-
-.iecomp .pane-title {
-    color: #fff;
-}
-
-.iecomp .container-12 .grid-1 {
-    width: 100%;
-}
-
-.iecomp form#search-block-form {
-    position: relative;
-}
-
-.iecomp form#search-block-form input[name="search_block_form"] {
-    width: 100%;
-}
-
-.iecomp form#search-block-form input[type="submit"] {
-    position: absolute;
-    right: 0;
-    top: 3px;
-}
-
-.iecomp .alert-danger {
-    margin-bottom: 0;
-}
-
-/*////////////////////////////////////*/
 /* Views */
 /* - People */
 .views-field.views-field-field-people-position {
@@ -1920,10 +1878,7 @@ figure .insert-default-image-styling + figcaption {
 	margin: 0 0 4px 0;
 }
 
-.region-postscript-first,
-.region-postscript-second,
-.region-postscript-third,
-.region-postscript-fourth  {
+.region-postscript {
 	margin-bottom: 16px;
 }
 

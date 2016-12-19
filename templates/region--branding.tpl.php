@@ -4,13 +4,11 @@
       <div class="branding-data clearfix">
 
         <?php if($show_isu_nameplate): ?>
-          <div id="isu_wordmark">
             <?php if (theme_get_setting('default_logo', 'suitcase_interim')): ?>
-              <a class="nameplate" href="<?php ($level_1_url) ? print $level_1_url : 'http://www.iastate.edu' ?>" title="Iowa State University Homepage"><img src="<?php print $wordmark_image; ?>" alt="Iowa State University"></a>
+              <a id="isu_wordmark" href="<?php ($level_1_url) ? print $level_1_url : 'http://www.iastate.edu' ?>" title="Iowa State University Homepage"><img src="<?php print $wordmark_image; ?>" alt="Iowa State University"></a>
             <?php else: ?>
-              <a class="nameplate" href="<?php ($level_1_url) ? print $level_1_url : 'http://www.iastate.edu' ?>" title="<?php print $site_name; ?>"><img src="<?php print $wordmark_image; ?>" alt="Iowa State University - <?php print $site_name; ?>"></a>
+              <a id="isu_wordmark" href="<?php ($level_1_url) ? print $level_1_url : 'http://www.iastate.edu' ?>" title="<?php print $site_name; ?>"><img src="<?php print $wordmark_image; ?>" alt="Iowa State University - <?php print $site_name; ?>"></a>
             <?php endif; ?>
-          </div>
         <?php endif; ?>
 
         <?php if ($suitcase_interim_config_header_type == 1 || $suitcase_interim_config_header_type == 2): ?><?php /* We show the dept name for cases 1 & 2 */ ?>
