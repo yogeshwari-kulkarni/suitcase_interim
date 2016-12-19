@@ -575,15 +575,24 @@ input[type="submit"] {
 /*////////////////////////////////////*/
 /* Site Name/Slogan */
 
-#isu_wordmark {
+#isu_header_wordmark,
+#isu_footer_wordmark {
     display: block;
-    width: 375px;
     max-width: 100%;
 }
 
-#isu_wordmark img {
-  width: 100%;
-  height: auto;
+#isu_header_wordmark img,
+#isu_footer_wordmark img {
+    width: 100%;
+    height: auto;
+}
+
+#isu_header_wordmark {
+    width: 375px;
+}
+
+#isu_footer_wordmark {
+    width: 200px;
 }
 
 .site-name-level-3 {
