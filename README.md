@@ -13,7 +13,7 @@ This theme requires the [Omega base theme (7.x-3.x-dev)](https://ftp.drupal.org/
 - Safari
 - Firefox
 - Opera
-- IE 8+
+- IE 9+
 
 ## Troubleshooting
 
