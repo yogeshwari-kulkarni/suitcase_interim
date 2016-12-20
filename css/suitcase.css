@@ -499,7 +499,7 @@ input[type="submit"] {
 
 .region-search-inner input[type="submit"],
 .region-search-inner input[type="submit"]:focus {
-    background: url(../images/search_gray.png) no-repeat 0 center;
+    background: url(../images/search.png) no-repeat 0 center;
     background-size: contain;
     -webkit-box-shadow: none;
     -mox-box-shadow: none;
@@ -1520,7 +1520,7 @@ html.js input.form-autocomplete {
     width: 0;
     height: 0;
     vertical-align: top;
-    border-top: 8px solid #fff;
+    border-top: 8px solid #000;
     border-right: 8px solid transparent;
     border-left: 8px solid transparent;
     content: "";
@@ -1639,10 +1639,6 @@ html.js input.form-autocomplete {
 
     .region-mega-menu .content>.menu>li>.menu {
         width: 100%;
-    }
-
-    .logo-img {
-        display: none;
     }
 
     .isu-dark-ribbon .isu-responsive-toggles {
@@ -1779,99 +1775,83 @@ html.js input.form-autocomplete {
 }
 
  @media print {
-   /* Set background colors */
-   body,
-   div.page .section-header {
-       background-color: #fff;
-   }
 
-   div.page .node {
-       background-color: transparent;
-   }
+     #isu_header_wordmark img {
+         filter: invert(1);
+         filter: invert(100%);
+         -webkit-filter: invert(1);
+     }
 
-   /* Fonts */
-   body div.page .node {
-       font-family: Georgia, Palatino, Times, "Times New Roman", serif;
-       line-height: 24px;
-   }
+     .region-branding {
+         width: 100% !important;
+     }
 
-   /* Font colors */
-   div.page .site-slogan a,
-   div.page .site-name a,
-   div.page .title {
-       color: #000;
-       text-shadow: none;
-   }
+     .region-branding hr {
+         background-color: #000 !important;
+     }
 
-   div.page a:link,
-   body div.page .node {
-       color: #333;
-   }
+     body,
+     .section-header
+     .zone-branding-wrapper {
+         background-color: #fff !important;
+     }
 
-   /* Font sizes */
-   body div.page .node {
-       font-size: 14px;
-   }
+     .zone-menu-wrapper,
+     .zone-secondary-menu-wrapper,
+     .zone-header-wrapper,
+     .zone-preface-wrapper,
+     #breadcrumb,
+     .pwrapper,
+     .tabs,
+     .section-footer,
+     .content-type-indicator,
+     .region-search,
+     aside {
+         display: none !important;
+     }
 
-   a, p, ul, ol, li, img, span, strong, em {
-       font-size: 18px;
-   }
+     .node {
+         background-color: transparent !important;
+         font-family: Georgia, Palatino, Times, "Times New Roman", serif !important;
+         font-size: 14px !important;
+         line-height: 24px !important;
+         padding: 0 !important;
+         color: #333 !important;
+         -webkit-box-shadow: transparent !important;
+         box-shadow: none !important;
+     }
 
-   /* Borders */
-   div.page .section-header,
-   div.page .zone-branding-wrapper,
-   div.page .title,
-   div.page .node {
-       border: none;
-   }
+     .title {
+         color: #333 !important;
+         text-shadow: none !important;
+     }
 
-   /* Hide elements */
-   .zone-menu-wrapper,
-   .zone-header-wrapper,
-   .zone-preface-wrapper,
-   #breadcrumb,
-   .pwrapper,
-   div.page .tabs,
-   .section-footer,
-   .content-type-indicator,
-   .region-search,
-   aside {
-       display: none;
-   }
+     a, a:link, a:visited {
+         color: #333 !important;
+     }
 
-   /* Box shadows */
-   div.page .node {
-       -webkit-box-shadow: transparent;
-       box-shadow: none;
-   }
+     .section-content a, .section-content a:link, .section-content a:visited {
+         text-decoration: underline !important;
+     }
 
-   /* Padding */
-   div.page .node {
-       padding: 0;
-   }
+     a, p, ul, ol, li, img, span, strong, em {
+         font-size: 18px !important;
+     }
 
-   /* Field resets */
-   .field.field-type-taxonomy-term-reference .field-items>.field-item>a {
-     padding: 0;
-     display: inline;
-     border: none;
-   }
+     .section-header,
+     .zone-branding-wrapper,
+     .title,
+     .node {
+         border: none !important;
+     }
 
-   .nameplate img {
-     filter: invert(1);
-     filter: invert(100%);
-     -webkit-filter: invert(1);
-    }
+     .field.field-type-taxonomy-term-reference .field-items>.field-item>a {
+         padding: 0 !important;
+         display: inline !important;
+         border: none !important;
+     }
 
-    #region-branding .site-name-slogan a,
-    #region-branding .site-name-level-2 a {
-      color: #000;
-    }
-
-    .section-content a, .section-content a:link, .section-content a:visited {
-      border-bottom: 1px solid #000 !important;
-    }
-}
+ }
 
 figure figcaption {
     color: #818a91;

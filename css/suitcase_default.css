@@ -7,16 +7,6 @@
         display: block;
     }
 
-    .logo-img {
-        float: none;
-        position: absolute;
-        right: 0;
-    }
-
-    .logo-img img {
-        height: 7em;
-    }
-
     .isu-dark-ribbon .wd-ribbon-menu-stack {
         padding-left: 10px;
         padding-right: 10px;

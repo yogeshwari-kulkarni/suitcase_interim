@@ -36,7 +36,7 @@
     }
 
     .caret {
-        border-top: 6px solid #fff;
+        border-top: 6px solid #000;
         border-right: 6px solid transparent;
         border-left: 6px solid transparent;
         margin-top: 10px;
