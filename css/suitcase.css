@@ -499,7 +499,7 @@ input[type="submit"] {
 
 .region-search-inner input[type="submit"],
 .region-search-inner input[type="submit"]:focus {
-    background: url(../images/search_gray.png) no-repeat 0 center;
+    background: url(../images/search.png) no-repeat 0 center;
     background-size: contain;
     -webkit-box-shadow: none;
     -mox-box-shadow: none;
