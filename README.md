@@ -8,21 +8,13 @@ It has been optimized for use with [Luggage_ISU] (recommended) but will also wor
 
 This theme requires the [Omega base theme (7.x-3.x-dev)].
 
-## Installation with Luggage_ISU
+## Installation with Luggage_ISU 5.x
 
 If you are using [Luggage_ISU] 5.x then Suitcase Interim and Omega have been automatically included.
 
-## Installation with Stock Drupal 7
+## Installation with Stock Drupal 7 or older versions of Luggage_ISU
 
-Download the [Omega base theme (7.x-3.x-dev)] first and then download Suitcase Interim. 
-
-    cd sites/all/themes
-    curl -O https://ftp.drupal.org/files/projects/omega-7.x-3.x-dev.zip
-    unzip omega-7.x-3.x-dev.zip && rm omega-7.x-3.x-dev.zip 
-    drush en omega suitcase_interim -y
-    drush vset admin_theme seven
-    
-When you are done, you should have sites/all/themes/omega and sites/all/themes/suitcase_interim. In your browser, navigate to Administration / Appearance, click "Enable and set default" under Suitcase Interim. Then modify Settings for Suitcase Interim.
+Please follow the directions on the [Installation page] of the wiki.
 
 ## Browser Support
 - Chrome
@@ -33,13 +25,13 @@ When you are done, you should have sites/all/themes/omega and sites/all/themes/s
 
 ## Troubleshooting
 
-Read/Search [Luggage Documentation][]
+Read/Search [Luggage Documentation]
 
 Join us on the FreeNode IRC network in the #luggage channel. If you need help setting up IRC see https://www.drupal.org/irc/setting-up
 
 ## License
 
-[GPLv2][]
+[GPLv2]
 
 **Open Source | Open Access | Open Mind**
 
@@ -48,4 +40,5 @@ Join us on the FreeNode IRC network in the #luggage channel. If you need help se
 [Luggage]:http://www.biology-it.iastate.edu/luggage_doc/
 [IASTATE theme]:https://www.theme.iastate.edu
 [Luggage_ISU]:https://github.com/isubit/luggage_isu
+[Installation page]:https://github.com/isubit/suitcase_interim/wiki/Installation
 [Omega base theme (7.x-3.x-dev)]:https://ftp.drupal.org/files/projects/omega-7.x-3.x-dev.zip
