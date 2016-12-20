@@ -1520,7 +1520,7 @@ html.js input.form-autocomplete {
     width: 0;
     height: 0;
     vertical-align: top;
-    border-top: 8px solid #fff;
+    border-top: 8px solid #000;
     border-right: 8px solid transparent;
     border-left: 8px solid transparent;
     content: "";
