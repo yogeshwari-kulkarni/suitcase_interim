@@ -161,7 +161,7 @@ function suitcase_interim_menu_tree__main_menu($variables) {
   $pop = array_slice($variables['#tree'], 0, 1);
   $menu_item = array_pop($pop);
   if (isset($menu_item['#original_link']['depth']) && $menu_item['#original_link']['depth'] == 1) {
-    return '<ul id="main-menu" class="links inline clearfix main-menu">' . $variables['tree'] . '</ul>';
+    return '<ul id="main-menu" class="sm">' . $variables['tree'] . '</ul>';
   } else {
     return '<ul class="menu">' . $variables['tree'] . '</ul>';
   }
