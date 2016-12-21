@@ -2,9 +2,10 @@
   <div<?php print $content_attributes; ?>>
     <?php print $content; ?>
 
-    <?php if ($main_menu || $secondary_menu): ?>
+    <?php if ($main_menu): ?>
     <nav class="navigation" role="navigation">
-      <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix', 'main-menu')), 'heading' => array('text' => t('Main menu'),'level' => 'h2','class' => array('element-invisible')))); ?>
+      <h2 class="element-invisible">Main menu</h2>
+      <?php print render($main_menu_smartmenu); ?>
     </nav>
     <?php endif; ?>
   </div>
