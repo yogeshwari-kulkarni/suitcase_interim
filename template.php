@@ -161,8 +161,13 @@ function suitcase_interim_menu_tree__main_menu($variables) {
   $pop = array_slice($variables['#tree'], 0, 1);
   $menu_item = array_pop($pop);
   if (isset($menu_item['#original_link']['depth']) && $menu_item['#original_link']['depth'] == 1) {
-    return '<ul id="main-menu" class="sm">' . $variables['tree'] . '</ul>';
+    $output  = '<input id="sm-menu-state" type="checkbox" />';
+    $output .= '<label class="sm-menu-btn" for="sm-menu-state">';
+    $output .= '  <span class="sm-menu-btn-icon"></span> Toggle main menu visibility';
+    $output .= '</label>';
+    $output .= '<ul id="main-menu" class="sm">' . $variables['tree'] . '</ul>';
+    return $output;
   } else {
-    return '<ul class="menu">' . $variables['tree'] . '</ul>';
+    return '<ul>' . $variables['tree'] . '</ul>';
   }
 }
