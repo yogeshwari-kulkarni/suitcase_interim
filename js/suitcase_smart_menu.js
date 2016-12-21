@@ -6,7 +6,7 @@
   /**
    * @todo
    */
-  Drupal.behaviors.suitcaseMegaMenu = {
+  Drupal.behaviors.suitcaseSmartMenu = {
     attach: function (context) {
       $('body', context).once('suitcaseSmartMenu', function() {
         $('#main-menu').smartmenus();
