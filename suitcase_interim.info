@@ -1,5 +1,5 @@
 name = 'Suitcase Interim'
-description = 'An accessibilty-compliant implementation of the <a href="https://theme.iastate.edu">IASTATE theme</a> for Drupal providing the Iowa State University look and feel.'
+description = 'An accessibility-compliant implementation of the <a href="https://theme.iastate.edu">IASTATE theme</a> for Drupal providing the Iowa State University look and feel.'
 core = '7.x'
 engine = 'phptemplate'
 screenshot = 'screenshot.png'
