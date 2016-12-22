@@ -13,7 +13,7 @@
 .sm:after{content:"\00a0";display:block;height:0;font:0px/0 serif;clear:both;visibility:hidden;overflow:hidden;}
 .sm,.sm *,.sm *:before,.sm *:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
 
-@media (min-width: 768px) {
+@media (min-width: 740px) {
 
     /* https://www.smartmenus.org/docs/#styling-menus */
 

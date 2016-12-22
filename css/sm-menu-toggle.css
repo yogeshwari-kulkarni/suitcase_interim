@@ -69,7 +69,7 @@
 .sm-menu-state:checked ~ .sm {
     display: block;
 }
-@media (min-width: 768px) {
+@media (min-width: 740px) {
     /* hide the button in desktop view */
     .sm-menu-btn {
         position: absolute;
