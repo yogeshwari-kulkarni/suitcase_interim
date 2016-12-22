@@ -2,9 +2,18 @@
   <div<?php print $content_attributes; ?>>
     <?php print $content; ?>
 
-    <?php if ($main_menu || $secondary_menu): ?>
-    <nav class="navigation" role="navigation">
-      <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix', 'main-menu')), 'heading' => array('text' => t('Main menu'),'level' => 'h2','class' => array('element-invisible')))); ?>
+    <?php if ($main_menu): ?>
+    <nav id="main-menu-nav" class="navigation" role="navigation">
+
+      <h2 class="element-invisible">Main menu</h2>
+
+      <!-- Mobile menu toggle button (hamburger/x icon) -->
+      <input id="main-menu-state" class="sm-menu-state" type="checkbox" />
+      <label class="sm-menu-btn" for="main-menu-state">
+         <span class="sm-menu-btn-icon"></span> Main Menu
+      </label>
+      <?php print render($main_menu_smartmenu); ?>
+
     </nav>
     <?php endif; ?>
   </div>

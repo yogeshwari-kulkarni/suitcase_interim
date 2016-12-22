@@ -1,7 +1,4 @@
 @media all and (min-width: 740px) {
-    #block-system-main-menu {
-        width: auto;
-    }
 
     .flexslider {
         display: block;
@@ -10,10 +7,6 @@
     .isu-dark-ribbon .wd-ribbon-menu-stack {
         padding-left: 10px;
         padding-right: 10px;
-    }
-
-    #suitcase-main-menu-dropdown-toggle {
-        display: none;
     }
 
 }
