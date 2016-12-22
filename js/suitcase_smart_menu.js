@@ -10,6 +10,7 @@
     attach: function (context) {
       $('body', context).once('suitcaseSmartMenu', function() {
         $('.sm').smartmenus();
+        // https://www.smartmenus.org/docs/#menu-toggle-button
         $('.sm-menu-state').change(function(e) {
           var $menu = $('#' + this.id.slice(0, -6));
           if (this.checked) {
