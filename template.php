@@ -68,7 +68,12 @@ function suitcase_interim_preprocess_region(&$vars) {
   elseif ($vars['region'] == 'menu') {
     $vars['site_name'] = variable_get('site_name');
     $vars['linked_site_name'] = l($vars['site_name'], '<front>', array('attributes' => array('title' => t('Home')), 'html' => TRUE));
-    $vars['main_menu_smartmenu'] = suitcase_interim_smartmenu_tree_output(menu_tree_page_data('main-menu'));
+    $main_menu_attributes = array(
+      'id' => 'main-menu',
+      'class' => array('sm'),
+      'data-sm-options' => '{ showOnClick: true, subIndicatorsPos: "append", subMenusMinWidth: "300px" }'
+    );
+    $vars['main_menu_smartmenu'] = suitcase_interim_smartmenu_tree_output(menu_tree_page_data('main-menu'), $main_menu_attributes);
   } 
   elseif ($vars['region'] == 'search') {
     $vars['site_name_level_2'] = variable_get('site_name');
@@ -160,12 +165,10 @@ function suitcase_interim_preprocess_smartmenu_tree(&$variables) {
  * Implements theme_smartmenu_tree().
  */
 function suitcase_interim_smartmenu_tree($variables) {
-  $pop = array_slice($variables['#tree'], 0, 1);
-  $menu_item = array_pop($pop);
-  if (isset($menu_item['#original_link']['depth']) && $menu_item['#original_link']['depth'] == 1) {
-    return '<ul id="' . $menu_item['#original_link']['menu_name'] . '" class="sm">' . $variables['tree'] . '</ul>';
+  if (!empty($variables['#tree']['#attributes'])) {
+    return '<ul' . drupal_attributes($variables['#tree']['#attributes']) . '>' . $variables['tree'] . '</ul>';
   } else {
-    return '<ul class="menu">' . $variables['tree'] . '</ul>';
+    return '<ul>' . $variables['tree'] . '</ul>';
   }
 }
 
@@ -202,8 +205,10 @@ function suitcase_interim_smartmenu_tree($variables) {
  *   multiple menu items that link to the same page and differ only in query strings
  *   will both highlight upon visiting either of them.
  *
+ * - Accepts an array of attributes to apply to the generated list
+ *
  */
-function suitcase_interim_smartmenu_tree_output($tree) {
+function suitcase_interim_smartmenu_tree_output($tree, $attributes = NULL) {
   $build = array();
   $items = array();
 
@@ -271,6 +276,7 @@ function suitcase_interim_smartmenu_tree_output($tree) {
   if ($build) {
     // Make sure drupal_render() does not re-order the links.
     $build['#sorted'] = TRUE;
+    $build['#attributes'] = $attributes;
     $build['#tree'] = $build;
     $build['#theme_wrappers'][] = 'smartmenu_tree';
   }
