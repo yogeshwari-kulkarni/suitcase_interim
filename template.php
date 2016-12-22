@@ -11,6 +11,17 @@
  * for more information on this topic.
  */
 
+/**
+ * Implements hook_theme().
+ */
+function suitcase_interim_theme($existing, $type, $theme, $path) {
+  return array(
+    'smartmenu_tree' => array(
+      'render element' => 'tree',
+    ),
+  );
+}
+
 // theme_preprocess_html
 function suitcase_interim_preprocess_html(&$vars) {
 //  ISU Bar responsive classes added to body
@@ -57,6 +68,12 @@ function suitcase_interim_preprocess_region(&$vars) {
   elseif ($vars['region'] == 'menu') {
     $vars['site_name'] = variable_get('site_name');
     $vars['linked_site_name'] = l($vars['site_name'], '<front>', array('attributes' => array('title' => t('Home')), 'html' => TRUE));
+    $main_menu_attributes = array(
+      'id' => 'main-menu',
+      'class' => array('sm'),
+      'data-sm-options' => '{ showOnClick: true, subIndicatorsPos: "append", subMenusMinWidth: "300px" }'
+    );
+    $vars['main_menu_smartmenu'] = suitcase_interim_smartmenu_tree_output(menu_tree_page_data('main-menu'), $main_menu_attributes);
   } 
   elseif ($vars['region'] == 'search') {
     $vars['site_name_level_2'] = variable_get('site_name');
@@ -134,106 +151,135 @@ function suitcase_interim_form_search_block_form_alter(&$form, &$form_state, $fo
   $form['#attributes']['role'] = 'search';
 }
 
-/* Menu List Theme Functions */
+/* Menu Theme Functions */
 
 /*
- * Clone of theme_links that also adds the active classes for absolute url
- * matches (including query string). This does not handle the case, which might
- * be considered a core bug, where multiple menu items that link to the same
- * page and differ only in query strings will both highlight upon visiting
- * either of them.
+ * Implements theme_preprocess_HOOK() for theme_smartmenu_tree().
  */
-function suitcase_interim_menu_links($variables)  {
+function suitcase_interim_preprocess_smartmenu_tree(&$variables) {
+  $variables['#tree'] = $variables['tree'];
+  $variables['tree'] = $variables['tree']['#children'];
+}
 
-  $links = $variables['links'];
-  $attributes = $variables['attributes'];
-  $heading = $variables['heading'];
-  global $language_url;
-  $output = '';
+/*
+ * Implements theme_smartmenu_tree().
+ */
+function suitcase_interim_smartmenu_tree($variables) {
+  if (!empty($variables['#tree']['#attributes'])) {
+    return '<ul' . drupal_attributes($variables['#tree']['#attributes']) . '>' . $variables['tree'] . '</ul>';
+  } else {
+    return '<ul>' . $variables['tree'] . '</ul>';
+  }
+}
 
-  if (count($links) > 0) {
-    // Treat the heading first if it is present to prepend it to the
-    // list of links.
-    if (!empty($heading)) {
-      if (is_string($heading)) {
-        // Prepare the array that will be used when the passed heading
-        // is a string.
-        $heading = array(
-          'text' => $heading,
-          // Set the default level of the heading.
-          'level' => 'h2',
-        );
-      }
-      $output .= '<' . $heading['level'];
-      if (!empty($heading['class'])) {
-        $output .= drupal_attributes(array('class' => $heading['class']));
-      }
-      $output .= '>' . check_plain($heading['text']) . '</' . $heading['level'] . '>';
+/*
+ *
+ * Modified version of menu_tree_output
+ * 
+ * -------------------------------------------------------------------------
+ *
+ * Returns an output structure for rendering a menu tree.
+ *
+ * The menu item's LI element is given one of the following classes:
+ * - expanded: The menu item is showing its submenu.
+ * - collapsed: The menu item has a submenu which is not shown.
+ * - leaf: The menu item has no submenu.
+ *
+ * @param $tree
+ *   A data structure representing the tree as returned from menu_tree_data.
+ *
+ * @return
+ *   A structured array to be rendered by drupal_render().
+ *
+ * -------------------------------------------------------------------------
+ *
+ * Modifications:
+ *
+ * - Uses theme_smartmenu_tree as a theme_wrapper rather than theme_menu_tree
+ *   This is important because template_preprocess_menu_tree removes depth
+ *   information from from the tree and working around this requires altering the
+ *   theme registry. See https://www.drupal.org/node/767404
+ *
+ * - Adds the active classes for absolute url matches (including query string).
+ *   This does not handle the case, which might be considered a core bug, where
+ *   multiple menu items that link to the same page and differ only in query strings
+ *   will both highlight upon visiting either of them.
+ *
+ * - Accepts an array of attributes to apply to the generated list
+ *
+ */
+function suitcase_interim_smartmenu_tree_output($tree, $attributes = NULL) {
+  $build = array();
+  $items = array();
+
+  // Pull out just the menu links we are going to render so that we
+  // get an accurate count for the first/last classes.
+  foreach ($tree as $data) {
+    if ($data['link']['access'] && !$data['link']['hidden']) {
+      $items[] = $data;
     }
-
-    $output .= '<ul' . drupal_attributes($attributes) . '>';
-
-    $num_links = count($links);
-    $i = 1;
-
-    foreach ($links as $key => $link) {
-      $class = array($key);
-
-      // Add first, last and active classes to the list of links to help out
-      // themers.
-      if ($i == 1) {
-        $class[] = 'first';
-      }
-      if ($i == $num_links) {
-        $class[] = 'last';
-      }
-      if (isset($link['href']) && (($link['href'] == $_GET['q'] || $link['href'] == ($GLOBALS['base_root'] . request_uri())) || ($link['href'] == '<front>' && drupal_is_front_page()))
-        && (empty($link['language']) || $link['language']->language == $language_url->language)) {
-        $class[] = 'active';
-        $class[] = 'active-trail';
-        $link['attributes']['class'][] = 'active';
-        $link['attributes']['class'][] = 'active-trail';
-      }
-      $output .= '<li' . drupal_attributes(array('class' => $class)) . '>';
-
-      if (isset($link['href'])) {
-        // Pass in $link as $options, they share the same keys.
-        $output .= l($link['title'], $link['href'], $link);
-      }
-      elseif (!empty($link['title'])) {
-        // Some links are actually not links, but we wrap these in <span> for
-        // adding title and class attributes.
-        if (empty($link['html'])) {
-          $link['title'] = check_plain($link['title']);
-        }
-        $span_attributes = '';
-        if (isset($link['attributes'])) {
-          $span_attributes = drupal_attributes($link['attributes']);
-        }
-        $output .= '<span' . $span_attributes . '>' . $link['title'] . '</span>';
-      }
-
-      $i++;
-      $output .= "</li>\n";
-    }
-
-    $output .= '</ul>';
   }
 
-  return $output;
+  $router_item = menu_get_item();
+  $num_items = count($items);
+  foreach ($items as $i => $data) {
+    $class = array();
+    if ($i == 0) {
+      $class[] = 'first';
+    }
+    if ($i == $num_items - 1) {
+      $class[] = 'last';
+    }
+    // Set a class for the <li>-tag. Since $data['below'] may contain local
+    // tasks, only set 'expanded' class if the link also has children within
+    // the current menu.
+    if ($data['link']['has_children'] && $data['below']) {
+      $class[] = 'expanded';
+    }
+    elseif ($data['link']['has_children']) {
+      $class[] = 'collapsed';
+    }
+    else {
+      $class[] = 'leaf';
+    }
+    // Set a class if the link is in the active trail.
+    if ($data['link']['in_active_trail']) {
+      $class[] = 'active-trail';
+      $data['link']['localized_options']['attributes']['class'][] = 'active-trail';
+    }
+    // Normally, l() compares the href of every link with $_GET['q'] and sets
+    // the active class accordingly. But local tasks do not appear in menu
+    // trees, so if the current path is a local task, and this link is its
+    // tab root, then we have to set the class manually.
+    if ($data['link']['href'] == $router_item['tab_root_href'] && $data['link']['href'] != $_GET['q']) {
+      $data['link']['localized_options']['attributes']['class'][] = 'active';
+    }
 
-}
+    if (($data['link']['href'] == $_GET['q'] || $data['link']['href'] == ($GLOBALS['base_root'] . request_uri())) || ($data['link']['href'] == '<front>' && drupal_is_front_page())) {
+      $class[] = 'active';
+      $class[] = 'active-trail';
+      $data['link']['localized_options']['attributes']['class'][] = 'active';
+      $data['link']['localized_options']['attributes']['class'][] = 'active-trail';
+    }
 
-/*
- * Implements theme_links__system_main_menu()
- */
-function suitcase_interim_links__system_main_menu($variables) {
-  return suitcase_interim_menu_links($variables);
-}
+    // Allow menu-specific theme overrides.
+    $element['#theme'] = 'menu_link__' . strtr($data['link']['menu_name'], '-', '_');
+    $element['#attributes']['class'] = $class;
+    $element['#title'] = $data['link']['title'];
+    $element['#href'] = $data['link']['href'];
+    $element['#localized_options'] = !empty($data['link']['localized_options']) ? $data['link']['localized_options'] : array();
+    $element['#below'] = $data['below'] ? suitcase_interim_smartmenu_tree_output($data['below']) : $data['below'];
+    $element['#original_link'] = $data['link'];
+    // Index using the link's unique mlid.
+    $build[$data['link']['mlid']] = $element;
+  }
+  if ($build) {
+    // Make sure drupal_render() does not re-order the links.
+    $build['#sorted'] = TRUE;
+    $build['#attributes'] = $attributes;
+    $build['#tree'] = $build;
+    $build['#theme_wrappers'][] = 'smartmenu_tree';
+  }
 
-/*
- * Implements theme_links__system_secondary_menu()
- */
-function suitcase_interim_links__system_secondary_menu($variables) {
-  return suitcase_interim_menu_links($variables);
+  return $build;
 }
