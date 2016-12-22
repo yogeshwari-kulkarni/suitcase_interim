@@ -12,3 +12,24 @@
 .sm a.disabled{cursor:not-allowed;}
 .sm:after{content:"\00a0";display:block;height:0;font:0px/0 serif;clear:both;visibility:hidden;overflow:hidden;}
 .sm,.sm *,.sm *:before,.sm *:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+
+@media (min-width: 768px) {
+
+    /* https://www.smartmenus.org/docs/#styling-menus */
+
+    /* Switch to desktop layout
+    -----------------------------------------------
+       These transform the menu tree from
+       collapsible to desktop (navbar + dropdowns)
+    -----------------------------------------------*/
+    /* start... (it's not recommended editing these rules) */
+    .sm ul{position:absolute;width:12em;}
+    .sm li{float:left;}
+    .sm.sm-rtl li{float:right;}
+    .sm ul li,.sm.sm-rtl ul li,.sm.sm-vertical li{float:none;}
+    .sm a{white-space:nowrap;}
+    .sm ul a,.sm.sm-vertical a{white-space:normal;}
+    .sm .sm-nowrap > li > a,.sm .sm-nowrap > li > :not(ul) a{white-space:nowrap;}
+    /* ...end */
+    
+}
