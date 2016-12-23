@@ -781,6 +781,8 @@ input[type="submit"] {
 #main-menu ul a.highlighted,
 #main-menu ul a.active-trail,
 #main-menu ul a.active {
+    border-bottom: none;
+    background-color: transparent;
     color: #cc0000;
 }
 
