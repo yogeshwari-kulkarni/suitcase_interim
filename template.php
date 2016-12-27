@@ -66,12 +66,13 @@ function suitcase_interim_preprocess_region(&$vars) {
 
   }
   elseif ($vars['region'] == 'menu') {
+    $main_menu_tree = menu_tree_all_data('main-menu');
     $main_menu_attributes = array(
       'id' => 'main-menu',
       'class' => array('sm'),
       'data-sm-options' => '{ subIndicatorsPos: "append", subMenusMinWidth: "300px" }'
     );
-    $vars['main_menu_smartmenu'] = suitcase_interim_smartmenu_tree_output(menu_tree_page_data('main-menu'), $main_menu_attributes);
+    $vars['main_menu_smartmenu'] = suitcase_interim_smartmenu_tree_output($main_menu_tree, $main_menu_attributes);
   } 
   elseif ($vars['region'] == 'search') {
     $vars['suitcase_interim_config_header_type'] = variable_get('suitcase_interim_config_header_type', 1);
