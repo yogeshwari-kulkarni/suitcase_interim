@@ -619,11 +619,6 @@ input[type="submit"] {
   text-decoration: none;
 }
 
-.site-name-level-2,
-.site-name-level-3 {
-    font-family: Helvetica neue, sans-serif;
-}
-
 .region-branding hr {
     background-color: #cc0000;
     border-top-color: rgba(255, 255, 255, 0.5);
@@ -1326,10 +1321,6 @@ html.js input.form-autocomplete {
 
 /*////////////////////////////////////*/
 /* Book Outline Sidebar Block */
-/*.zone-content .block .book-outline-sidebar-block > .view-content > .views-row a {*/
-    /*font-family: "Overpass","Open Sans","Helvetica Neue",sans-serif;*/
-    /*color: #333;*/
-/*}*/
 
 .section-content .block .book-outline-sidebar-block > .view-content > .views-row.indent-level-1 {
     border-bottom: 1px solid #ddd;
