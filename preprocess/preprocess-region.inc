@@ -37,7 +37,7 @@ function suitcase_interim_alpha_preprocess_region(&$vars) {
 
   }
   elseif ($vars['region'] == 'menu') {
-    $main_menu_tree = menu_tree_all_data('main-menu');
+    $main_menu_tree = menu_tree_page_data('main-menu');
     $main_menu_attributes = array(
       'id' => 'main-menu',
       'class' => array('sm'),
