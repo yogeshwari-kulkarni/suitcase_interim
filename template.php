@@ -154,21 +154,13 @@ function suitcase_interim_form_search_block_form_alter(&$form, &$form_state, $fo
 /* Menu Theme Functions */
 
 /*
- * Implements theme_preprocess_HOOK() for theme_smartmenu_tree().
- */
-function suitcase_interim_preprocess_smartmenu_tree(&$variables) {
-  $variables['#tree'] = $variables['tree'];
-  $variables['tree'] = $variables['tree']['#children'];
-}
-
-/*
  * Implements theme_smartmenu_tree().
  */
 function suitcase_interim_smartmenu_tree($variables) {
-  if (!empty($variables['#tree']['#attributes'])) {
-    return '<ul' . drupal_attributes($variables['#tree']['#attributes']) . '>' . $variables['tree'] . '</ul>';
+  if (!empty($variables['tree']['#attributes'])) {
+    return '<ul' . drupal_attributes($variables['tree']['#attributes']) . '>' . $variables['tree']['#children'] . '</ul>';
   } else {
-    return '<ul>' . $variables['tree'] . '</ul>';
+    return '<ul>' . $variables['tree']['#children'] . '</ul>';
   }
 }
 
