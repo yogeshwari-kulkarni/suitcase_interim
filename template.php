@@ -66,8 +66,6 @@ function suitcase_interim_preprocess_region(&$vars) {
 
   }
   elseif ($vars['region'] == 'menu') {
-    $vars['site_name'] = variable_get('site_name');
-    $vars['linked_site_name'] = l($vars['site_name'], '<front>', array('attributes' => array('title' => t('Home')), 'html' => TRUE));
     $main_menu_attributes = array(
       'id' => 'main-menu',
       'class' => array('sm'),
@@ -76,9 +74,6 @@ function suitcase_interim_preprocess_region(&$vars) {
     $vars['main_menu_smartmenu'] = suitcase_interim_smartmenu_tree_output(menu_tree_page_data('main-menu'), $main_menu_attributes);
   } 
   elseif ($vars['region'] == 'search') {
-    $vars['site_name_level_2'] = variable_get('site_name');
-    $vars['site_name_level_3'] = variable_get('site_slogan');
-    // The type of header that we need to output, default to show all
     $vars['suitcase_interim_config_header_type'] = variable_get('suitcase_interim_config_header_type', 1);
   }
   elseif ($vars['region'] == 'secondary_menu') {
