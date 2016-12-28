@@ -1,8 +1,55 @@
 @media (min-width: 740px) {
 
-    .isu-dark-ribbon .wd-ribbon-menu-stack {
-        padding-left: 10px;
-        padding-right: 10px;
+    #isu-menu-nav .sm a span.sub-arrow {
+        position: absolute;
+        left: auto;
+        overflow: hidden;
+        font: bold 16px/34px monospace !important;
+        text-align: center;
+        text-shadow: none;
+        top: 50%;
+        margin-top: -2px;
+        right: 8px;
+        width: 0;
+        height: 0;
+        border-width: 4px;
+        border-style: solid dashed dashed dashed;
+        border-color: #ccc transparent transparent transparent;
+        background: transparent;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+        border-radius: 0;
+    }
+
+    #isu-menu-nav .sm a.has-submenu {
+        padding-right: 24px;
+    }
+
+
+    #isu-menu-nav #isu-index-menu ul {
+        min-width: 528px;
+    }
+
+    #isu-menu-nav #isu-index-menu ul li {
+        float: left;
+    }
+
+    #isu-menu-nav #isu-index-menu ul li:first-of-type a,
+    #isu-menu-nav #isu-index-menu ul li:first-of-type a:hover,
+    #isu-menu-nav #isu-index-menu ul li:first-of-type a:focus,
+    #isu-menu-nav #isu-index-menu ul li:first-of-type a:active {
+        min-width: 24px;
+        padding-left: 6px;
+    }
+
+    #isu-menu-nav #isu-index-menu ul li:last-of-type a,
+    #isu-menu-nav #isu-index-menu ul li:last-of-type a:hover,
+    #isu-menu-nav #isu-index-menu ul li:last-of-type a:focus,
+    #isu-menu-nav #isu-index-menu ul li:last-of-type a:active {
+        min-width: 24px;
+        padding-right: 6px;
     }
 
     #main-menu a span.sub-arrow {
@@ -26,6 +73,10 @@
         padding-right: 24px;
     }
 
+    #main-menu ul {
+        min-width: 300px;
+    }
+
     .zone-footer>.region:not(:last-child) {
         border-bottom: none;
         margin-bottom: 0;
@@ -44,6 +95,14 @@
 
 @media all and (max-width: 739px) {
 
+    .region-isu-menu {
+        margin: 0;
+    }
+
+    #isu-menu-nav .sm ul {
+        display: none !important;
+    }
+
     .region-menu {
         margin: 0;
     }
@@ -54,77 +113,6 @@
 
     nav.navigation .secondary-menu {
         margin-left: 0;
-    }
-
-    .isu-dark-ribbon .isu-responsive-toggles {
-        display: block;
-        float: left;
-        padding: 5px 0 5px 5px;
-    }
-
-    .isu-dark-ribbon .isu-responsive-toggles li a {
-        border-radius: 3px;
-        height: 28px;
-        margin-right: 5px;
-        padding: 3px;
-        position: relative;
-    }
-
-    .isu-dark-ribbon .wd-ribbon-menu-stack {
-        float: right;
-        padding: 8px 5px 8px 0;
-    }
-
-    .isu-dark-ribbon .wd-ribbon-menu-stack .wd-ribbon-menu {
-        background-color: #ddd;
-        opacity: 0;
-        padding: 5px 0 0;
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 100%;
-        z-index: 100;
-    }
-
-    .lt-ie10 .isu-dark-ribbon .wd-ribbon-menu-stack .wd-ribbon-menu {
-        top: -100%;
-    }
-
-    .isu-dark-ribbon .wd-ribbon-menu-stack .wd-ribbon-menu {
-        margin-right: 0;
-        display: none;
-    }
-
-    .isu-dark-ribbon .wd-ribbon-menu-stack .wd-ribbon-menu.active {
-        opacity: 1;
-    }
-
-    .lt-ie10 .isu-dark-ribbon .wd-ribbon-menu-stack .wd-ribbon-menu.active {
-        top: -34px;
-    }
-
-    .isu-dark-ribbon .wd-ribbon-menu-stack .wd-ribbon-menu li {
-        float: right;
-    }
-
-    .isu-dark-ribbon .wd-ribbon-menu-stack .wd-ribbon-menu li a {
-        background-color: #444;
-        border: 0;
-        border-radius: 3px;
-        color: #fff;
-        margin: 0 5px 5px 0;
-        padding: 3px 9px !important;
-        text-decoration: none;
-    }
-
-    .isu-dark-ribbon .wd-ribbon-menu-header {
-        display: block;
-    }
-
-    .isu-dark-ribbon .isu-alpha-index {
-        margin-right: 0;
-        border-left: 1px solid rgba(255, 255, 255, 0.5);
-        border-right: 1px solid rgba(255, 255, 255, 0.5);
     }
 
     .zone-footer .block-menu-footer {
@@ -152,23 +140,6 @@
     .view .field-content a {
         display: block;
         width: 100%;
-    }
-
-    /*-- Top strip --*/
-    .isu-dark-ribbon .isu-alpha-index .wd-ribbon-menu li a {
-        display: none;
-    }
-
-    .isu-dark-ribbon .isu-alpha-index .wd-ribbon-menu li.first a {
-        display: block;
-    }
-
-    .isu-dark-ribbon .isu-alpha-index .wd-ribbon-menu li.first a:before {
-        content: 'Index ';
-    }
-
-    .isu-dark-ribbon .isu-alpha-index .wd-ribbon-menu li.first a:after {
-        content: ' - Z';
     }
 
     .zone-content h2.block-title {
@@ -212,7 +183,6 @@
     .zone-header-wrapper,
     .zone-preface-wrapper,
     #breadcrumb,
-    .pwrapper,
     .tabs,
     .section-footer,
     .content-type-indicator,

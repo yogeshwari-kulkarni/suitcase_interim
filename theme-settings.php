@@ -28,21 +28,6 @@ function suitcase_interim_form_system_theme_settings_alter(&$form, &$form_state)
       '#weight' => -100,
     );
 
-    $form['suitcase_interim_config']['suitcase_interim_config_layout'] = array(
-      '#type' => 'fieldset',
-      '#title' => t('Layout'),
-      '#collapsible' => FALSE,
-      '#collapsed' => FALSE,
-      '#description' => '',
-    );
-
-    $form['suitcase_interim_config']['suitcase_interim_config_layout']['suitcase_interim_config_blackbar_display'] = array(
-      '#type' => 'checkbox',
-      '#title' => t('Show black bar'),
-      '#description' => t('The black bar contains the Iowa State University links to ISU Sign-ons, Directory, Maps, ISU Contact Us, and the index.'),
-      '#default_value' => variable_get('suitcase_interim_config_blackbar_display', 1),
-    );
-
     $form['suitcase_interim_config']['suitcase_interim_config_logo'] = array(
       '#type' => 'fieldset',
       '#title' => t('Wordmark'),
@@ -186,8 +171,6 @@ function suitcase_interim_config_form_submit($form, &$form_state) {
   // Type of header
   $header_type = $form_state['values']['suitcase_interim_config_header_type'];
   variable_set('suitcase_interim_config_header_type', $header_type);
-
-  variable_set('suitcase_interim_config_blackbar_display', $form_state['values']['suitcase_interim_config_blackbar_display']);
 
   variable_set('suitcase_interim_config_isu_nameplate_display', $form_state['values']['suitcase_interim_config_isu_nameplate_display']);
 

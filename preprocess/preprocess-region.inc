@@ -41,7 +41,7 @@ function suitcase_interim_alpha_preprocess_region(&$vars) {
     $main_menu_attributes = array(
       'id' => 'main-menu',
       'class' => array('sm'),
-      'data-sm-options' => '{ subIndicatorsPos: "append", subMenusMinWidth: "300px" }'
+      'data-sm-options' => '{ subIndicatorsText: "+", subMenusMinWidth: "", subMenusMaxWidth: "", subIndicatorsPos: "append" }'
     );
     $vars['main_menu_smartmenu'] = suitcase_interim_smartmenu_tree_output($main_menu_tree, $main_menu_attributes);
   }

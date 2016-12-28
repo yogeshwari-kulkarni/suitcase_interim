@@ -9,7 +9,11 @@
   Drupal.behaviors.suitcaseSmartMenu = {
     attach: function (context) {
       $('body', context).once('suitcaseSmartMenu', function() {
-        $('.sm').smartmenus();
+        // do this using .each so that data-sm-options attribute is correctly
+        // detected and applied separately for each menu
+        $('.sm').each(function(index, element) {
+          $(this).smartmenus();
+        });
         // https://www.smartmenus.org/docs/#menu-toggle-button
         $('.sm-menu-state').change(function(e) {
           var $menu = $('#' + this.id.slice(0, -6));
