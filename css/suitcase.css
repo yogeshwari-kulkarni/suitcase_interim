@@ -495,6 +495,91 @@ input[type="submit"] {
 }
 
 /*////////////////////////////////////*/
+/* ISU Menu Bar */
+
+#zone-isu-menu-wrapper {
+    background: #333;
+    color: #ccc;
+}
+
+#isu-menu-nav .sm {
+    z-index: 499 !important;
+}
+
+#isu-menu-nav .sm li {
+    float: left;
+}
+
+#isu-menu-nav .sm ul li {
+    float: none;
+}
+
+#isu-menu-nav .sm a,
+#isu-menu-nav .sm a:hover,
+#isu-menu-nav .sm a:focus,
+#isu-menu-nav .sm a:active {
+    color: #ccc;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 4px 8px;
+    text-decoration: none;
+    transition: all .25s ease;
+}
+
+#isu-menu-nav .sm a:hover,
+#isu-menu-nav .sm a:focus,
+#isu-menu-nav .sm a:active,
+#isu-menu-nav .sm a.highlighted {
+    background-color: #555;
+    color: #fff;
+    transition: all 0.25s ease;
+}
+
+#isu-menu-nav .sm ul * {
+    transition: display 0.5s ease;
+}
+
+#isu-menu-nav .sm ul a,
+#isu-menu-nav .sm ul a:hover,
+#isu-menu-nav .sm ul a:focus,
+#isu-menu-nav .sm ul a:active {
+    background-color: #555;
+    color: #ccc;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 20px;
+    padding: 4px 10px;
+    min-width: 20px;
+    transition: all .25s ease;
+}
+
+#isu-menu-nav .sm ul a:hover,
+#isu-menu-nav .sm ul a:focus,
+#isu-menu-nav .sm ul a:active,
+#isu-menu-nav .sm ul a.highlighted {
+    background-color: #777;
+    color: #fff;
+    transition: all 0.25s ease;
+}
+
+#isu-menu-nav #isu-index-menu {
+    float: left;
+}
+
+#isu-menu-nav #isu-index-menu ul a,
+#isu-menu-nav #isu-index-menu ul a:hover,
+#isu-menu-nav #isu-index-menu ul a:focus,
+#isu-menu-nav #isu-index-menu ul a:active {
+    padding: 4px 3px;
+    text-align: center;
+}
+
+#isu-menu-nav #isu-quick-links-menu {
+    float: right;
+}
+
+/*////////////////////////////////////*/
 /* Site Name/Slogan */
 
 .zone-branding-wrapper {
@@ -612,7 +697,7 @@ input[type="submit"] {
 /* Main menu */
 
 .sm {
-    z-index: 499 !important;
+    z-index: 498 !important;
 }
 
 #main-menu a,
