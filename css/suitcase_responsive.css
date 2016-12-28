@@ -95,12 +95,12 @@
 
 @media all and (max-width: 739px) {
 
-    .sm ul {
-        display: none !important;
-    }
-
     .region-isu-menu {
         margin: 0;
+    }
+
+    #isu-menu-nav .sm ul {
+        display: none !important;
     }
 
     .region-menu {
