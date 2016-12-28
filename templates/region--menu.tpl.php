@@ -2,7 +2,7 @@
   <div<?php print $content_attributes; ?>>
     <?php print $content; ?>
 
-    <?php if ($main_menu): ?>
+    <?php if ($main_menu_smartmenu): ?>
     <nav id="main-menu-nav" class="navigation" role="navigation">
 
       <h2 class="element-invisible">Main menu</h2>
