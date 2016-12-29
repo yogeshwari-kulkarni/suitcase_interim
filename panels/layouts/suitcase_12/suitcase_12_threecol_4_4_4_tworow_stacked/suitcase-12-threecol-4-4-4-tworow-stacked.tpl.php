@@ -1,30 +1,30 @@
-<div class="panel-display omega-grid omega-12-threecol-4-4-4" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
+<div class="panel-display omega-grid suitcase-12-threecol-4-4-4-tworow-stacked" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
   <div class="panel-panel grid-12">
-    <div class="inside"><?php print $content['top']; ?></div>
+    <?php print $content['top']; ?>
   </div>
   <div class="clearfix">
     <div class="panel-panel grid-4">
-      <div class="inside"><?php print $content['upper_left']; ?></div>
+      <?php print $content['upper_left']; ?>
     </div>
     <div class="panel-panel grid-4">
-      <div class="inside"><?php print $content['upper_middle']; ?></div>
+      <?php print $content['upper_middle']; ?>
     </div>
     <div class="panel-panel grid-4">
-      <div class="inside"><?php print $content['upper_right']; ?></div>
+      <?php print $content['upper_right']; ?>
     </div>
   </div>
   <div class="clearfix">
     <div class="panel-panel grid-4">
-      <div class="inside"><?php print $content['lower_left']; ?></div>
+      <?php print $content['lower_left']; ?>
     </div>
     <div class="panel-panel grid-4">
-      <div class="inside"><?php print $content['lower_middle']; ?></div>
+      <?php print $content['lower_middle']; ?>
     </div>
     <div class="panel-panel grid-4">
-      <div class="inside"><?php print $content['lower_right']; ?></div>
+      <?php print $content['lower_right']; ?>
     </div>
   </div>
   <div class="panel-panel grid-12">
-    <div class="inside"><?php print $content['bottom']; ?></div>
+    <?php print $content['bottom']; ?>
   </div>
 </div>

@@ -8,7 +8,7 @@
       $('body', context).once('suitcaseGridHeight', function () {
         $(window).bind('load resize', function () {
           // Check to make sure this isn't happening on mobile
-          if (!Drupal.behaviors.hasOwnProperty('omegaMediaQueries') || Drupal.omega.getCurrentLayout() != 'mobile') {
+          if (window.matchMedia('(min-width: 740px)').matches) {
             // Check to make sure this isn't happening on views without the luggage-grid class
             $($('.luggage-grid').get().reverse()).each(function () {
               var maxHeight = 0;

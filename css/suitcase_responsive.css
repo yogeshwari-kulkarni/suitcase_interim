@@ -1,4 +1,4 @@
-@media (min-width: 740px) {
+@media all and (min-width: 740px) {
 
     #isu-menu-nav .sm a span.sub-arrow {
         position: absolute;
@@ -159,9 +159,9 @@
 @media print {
 
     #isu_header_wordmark img {
-        filter: invert(1);
-        filter: invert(100%);
-        -webkit-filter: invert(1);
+        filter: invert(1) !important;
+        filter: invert(100%) !important;
+        -webkit-filter: invert(1) !important;
     }
 
     .region-branding {
@@ -178,6 +178,7 @@
         background-color: #fff !important;
     }
 
+    .zone-isu-menu-wrapper,
     .zone-menu-wrapper,
     .zone-secondary-menu-wrapper,
     .zone-header-wrapper,
@@ -299,7 +300,7 @@
 
 }
 
-@media (min-device-width: 980px) and (min-width: 980px), (max-device-width: 1024px) and (min-width: 1024px) and (orientation: landscape) {
+@media all and (min-width: 980px) {
     .zone-content-wrapper .container-12 .grid-2 {
         width: 25% !important;
     }
