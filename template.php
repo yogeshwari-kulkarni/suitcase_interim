@@ -26,16 +26,11 @@ function suitcase_interim_facetapi_deactivate_widget($variables) {
   return '&nbsp;&times;';
 }
 
-function suitcase_interim_form_alter(&$form, &$form_state, $form_id) {
-  if ($form_id == 'search_block_form') {
-    $form['actions']['submit']['#value'] = '  ';
-  }
-}
-
 /*
  * Implements hook_form_FORMID_alter()
  */
 function suitcase_interim_form_search_block_form_alter(&$form, &$form_state, $form_id) {
+  $form['actions']['submit']['#value'] = '  ';
   $form['#attributes']['role'] = 'search';
 }
 
