@@ -1,4 +1,4 @@
-@media (min-width: 740px) {
+@media all and (min-width: 740px) {
 
     #isu-menu-nav .sm a span.sub-arrow {
         position: absolute;
@@ -300,7 +300,7 @@
 
 }
 
-@media (min-device-width: 980px) and (min-width: 980px), (max-device-width: 1024px) and (min-width: 1024px) and (orientation: landscape) {
+@media all and (min-width: 980px) {
     .zone-content-wrapper .container-12 .grid-2 {
         width: 25% !important;
     }
