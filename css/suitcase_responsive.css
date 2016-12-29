@@ -159,9 +159,9 @@
 @media print {
 
     #isu_header_wordmark img {
-        filter: invert(1);
-        filter: invert(100%);
-        -webkit-filter: invert(1);
+        filter: invert(1) !important;
+        filter: invert(100%) !important;
+        -webkit-filter: invert(1) !important;
     }
 
     .region-branding {
@@ -178,6 +178,7 @@
         background-color: #fff !important;
     }
 
+    .zone-isu-menu-wrapper,
     .zone-menu-wrapper,
     .zone-secondary-menu-wrapper,
     .zone-header-wrapper,
