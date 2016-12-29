@@ -1,7 +1,6 @@
 <div<?php print $attributes; ?>>
   <div<?php print $content_attributes; ?>>
     <?php if ($site_name || $site_slogan): ?>
-      <div class="branding-data clearfix">
 
         <?php if ($show_isu_nameplate): ?>
             <?php if (theme_get_setting('default_logo', 'suitcase_interim')): ?>
@@ -30,7 +29,6 @@
           </div>
         <?php endif; ?>
 
-      </div>
     <?php endif; ?>
     <?php print $content; ?>
   </div>
