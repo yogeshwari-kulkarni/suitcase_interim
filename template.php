@@ -82,6 +82,10 @@ function suitcase_interim_smartmenu_tree($variables) {
  *
  * - Accepts an array of attributes to apply to the generated list
  *
+ * - Only render subtrees for menu items that are set to 'Always Show Expanded',
+ *   even if a menu item is part of the current active trail. This allows enabling
+ *   dropdowns on a per menu item basis.
+ *
  */
 function suitcase_interim_smartmenu_tree_output($tree, $attributes = NULL) {
   $build = array();
@@ -143,7 +147,7 @@ function suitcase_interim_smartmenu_tree_output($tree, $attributes = NULL) {
     $element['#title'] = $data['link']['title'];
     $element['#href'] = $data['link']['href'];
     $element['#localized_options'] = !empty($data['link']['localized_options']) ? $data['link']['localized_options'] : array();
-    $element['#below'] = $data['below'] ? suitcase_interim_smartmenu_tree_output($data['below']) : $data['below'];
+    $element['#below'] = ($data['link']['has_children'] && $data['below'] && $data['link']['expanded']) ? suitcase_interim_smartmenu_tree_output($data['below']) : $data['below'];
     $element['#original_link'] = $data['link'];
     // Index using the link's unique mlid.
     $build[$data['link']['mlid']] = $element;
