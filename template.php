@@ -16,6 +16,9 @@
  */
 function suitcase_interim_theme($existing, $type, $theme, $path) {
   return array(
+    'smartmenu_link' => array(
+      'render element' => 'element',
+    ),
     'smartmenu_tree' => array(
       'render element' => 'tree',
     ),
@@ -38,13 +41,78 @@ function suitcase_interim_form_search_block_form_alter(&$form, &$form_state, $fo
 
 /*
  * Implements theme_smartmenu_tree().
+ *
+ * Modified version of theme_menu_tree
+ *
+ * -------------------------------------------------------------------------
+ *
+ * Returns HTML for a wrapper for a menu sub-tree.
+ *
+ * @param $variables
+ *   An associative array containing:
+ *   - tree: An HTML string containing the tree's items.
+ *
+ * @see template_preprocess_menu_tree()
+ * @ingroup themeable
+ *
+ * -------------------------------------------------------------------------
+ *
+ * Modifications:
+ *
+ * - Doesn't have a template_preprocess function like theme_menu_tree.
+ *   Instead, the tree variable provided should be the full tree from
+ *   suitcase_interim_smartmenu_tree_output
+ *
+ * - Applies attributes (if supplied) to the menu sub-tree
+ *
+ * - Does not apply the 'menu' class by default
+ *
  */
 function suitcase_interim_smartmenu_tree($variables) {
-  if (!empty($variables['tree']['#attributes'])) {
-    return '<ul' . drupal_attributes($variables['tree']['#attributes']) . '>' . $variables['tree']['#children'] . '</ul>';
+  $tree = $variables['tree'];
+  if (!empty($tree['#attributes'])) {
+    return '<ul' . drupal_attributes($tree['#attributes']) . '>' . $tree['#children'] . '</ul>';
   } else {
-    return '<ul>' . $variables['tree']['#children'] . '</ul>';
+    return '<ul>' . $tree['#children'] . '</ul>';
   }
+}
+
+
+/*
+ * Implements theme_smartmenu_link().
+ *
+ * Modified version of theme_menu_link
+ *
+ * -------------------------------------------------------------------------
+ *
+ * Returns HTML for a menu link and submenu.
+ *
+ * @param $variables
+ *   An associative array containing:
+ *   - element: Structured array data for a menu link.
+ *
+ * @ingroup themeable
+ *
+ * -------------------------------------------------------------------------
+ *
+ * Modifications:
+ *
+ * - Only adds the submenu to the output if the link it set to 'Always Show Expanded'
+ * 
+ */
+function suitcase_interim_smartmenu_link(array $variables) {
+  $element = $variables['element'];
+
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+
+  if ($element['#below']) {
+    $sub_menu = drupal_render($element['#below']);
+    if ($element['#original_link']['expanded']) {
+      $output .= $sub_menu;
+    }
+  }
+
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . "</li>\n";
 }
 
 /*
@@ -81,10 +149,6 @@ function suitcase_interim_smartmenu_tree($variables) {
  *   will both highlight upon visiting either of them.
  *
  * - Accepts an array of attributes to apply to the generated list
- *
- * - Only render subtrees for menu items that are set to 'Always Show Expanded',
- *   even if a menu item is part of the current active trail. This allows enabling
- *   dropdowns on a per menu item basis.
  *
  */
 function suitcase_interim_smartmenu_tree_output($tree, $attributes = NULL) {
@@ -142,12 +206,12 @@ function suitcase_interim_smartmenu_tree_output($tree, $attributes = NULL) {
     }
 
     // Allow menu-specific theme overrides.
-    $element['#theme'] = 'menu_link__' . strtr($data['link']['menu_name'], '-', '_');
+    $element['#theme'] = 'smartmenu_link';
     $element['#attributes']['class'] = $class;
     $element['#title'] = $data['link']['title'];
     $element['#href'] = $data['link']['href'];
     $element['#localized_options'] = !empty($data['link']['localized_options']) ? $data['link']['localized_options'] : array();
-    $element['#below'] = ($data['link']['has_children'] && $data['below'] && $data['link']['expanded']) ? suitcase_interim_smartmenu_tree_output($data['below']) : $data['below'];
+    $element['#below'] = $data['below'] ? suitcase_interim_smartmenu_tree_output($data['below']) : $data['below'];
     $element['#original_link'] = $data['link'];
     // Index using the link's unique mlid.
     $build[$data['link']['mlid']] = $element;
