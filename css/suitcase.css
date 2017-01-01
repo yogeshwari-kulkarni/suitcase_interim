@@ -1232,20 +1232,22 @@ div#region-search section.block-menu .menu li:last-child {
 
 /*////////////////////////////////////*/
 /* Footer */
-.zone-footer ul.menu li {
+
+#zone-footer ul.menu li {
     margin: 0;
     margin-bottom: 8px;
 }
 
-.section-footer img {
+#section-footer img {
     max-width: 100%;
+    height: auto !important;
 }
 
-.section-footer .block {
+#section-footer .block {
     margin-bottom: 16px;
 }
 
-.zone-footer>.region:not(:last-child) {
+#zone-footer > .region:not(:last-child) {
     border-bottom: 1px solid #444;
     margin-bottom: 16px;
 }

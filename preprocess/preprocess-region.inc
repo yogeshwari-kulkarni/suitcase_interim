@@ -52,12 +52,12 @@ function suitcase_interim_alpha_preprocess_region(&$vars) {
     $theme = alpha_get_theme();
     $vars['secondary_menu'] = $theme->page['secondary_menu'];
   }
-  elseif (strpos($vars['elements']['#region'], 'hero') === 0) {
+  elseif (strpos($vars['region'], 'hero') === 0) {
     $vars['content_attributes_array']['class'][] = 'region-hero-inner';
     unset($vars['elements']['#grid']);
     unset($vars['elements']['#grid_container']);
   }
-  elseif (strpos($vars['elements']['#region'], 'sidebar') === 0) {
+  elseif (strpos($vars['region'], 'sidebar') === 0) {
     $vars['attributes_array']['role'] = 'complementary';
   }
 }

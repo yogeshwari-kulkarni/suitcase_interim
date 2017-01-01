@@ -376,7 +376,7 @@ settings[alpha_region_footer_fourth_equal_height_element] = '0'
 settings[alpha_region_footer_fourth_equal_height_container] = '0'
 settings[favicon_mimetype] = 'image/vnd.microsoft.icon'
 libraries[suitcase_formalize][name] = 'Formalize (Suitcase)'
-libraries[suitcase_formalize][description] = Formalize is a framework by <a href="http://formalize.me/" title="Formalize">Nathan Smith</a> for neat looking cross-browser forms with extended functionality.
+libraries[suitcase_formalize][description] = 'Formalize is a framework by <a href="http://formalize.me/" title="Formalize">Nathan Smith</a> for neat looking cross-browser forms with extended functionality.'
 libraries[suitcase_formalize][js][0][file] = jquery.formalize.js
 libraries[suitcase_formalize][js][0][options][weight] = -20
 libraries[suitcase_formalize][css][0][file] = formalize.css
