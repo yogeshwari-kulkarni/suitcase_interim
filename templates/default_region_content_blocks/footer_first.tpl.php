@@ -1,0 +1,1 @@
+<p><a href="http://www.iastate.edu" id="isu_footer_wordmark"><img src="<?php print $GLOBALS['base_url'] . '/' . drupal_get_path('theme', 'suitcase_interim') . '/images/isu_stacked.svg'; ?>" alt="Iowa State University" /></a></p>

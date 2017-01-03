@@ -191,6 +191,53 @@ function suitcase_interim_config_form_submit($form, &$form_state) {
 
   variable_set('site_name', $site_name);
 
+  // Populate empty theme regions with default content blocks if provided
+
+  if (module_exists('block') && filter_format_exists('full_html')) {
+
+    module_load_include('inc', 'block', 'block.admin');
+
+    $block_template_files = file_scan_directory(drupal_get_path('theme', 'suitcase_interim') . '/templates/default_region_content_blocks', '/\.tpl.php$/', array('key' => 'name', 'min_depth' => 0));
+
+    foreach ($block_template_files as $region_name => $block_template_file) {
+
+      // Chop off the remaining extensions if there are any. $region_name already
+      // has the rightmost extension removed, but there might still be more,
+      // such as with .tpl.php, which still has .tpl in $region_name at this point.
+      if (($pos = strpos($region_name, '.')) !== FALSE) {
+        $region_name = substr($region_name, 0, $pos);
+      }
+
+      $block_name = 'Default ' . $region_name . ' content';
+
+      // Skip creating block if it already exists
+      $block_exists = (bool) db_query_range('SELECT 1 FROM {block_custom} WHERE info = :info', 0, 1, array(':info' => $block_name))->fetchField();
+
+      if ($block_exists) {
+        continue;
+      }
+
+      $add_block_form_state = array(
+        'values' => array(
+          'title' => '<none>',
+          'info' => $block_name,
+          'body' => array(
+            'value' => theme_render_template($block_template_file->uri, array()),
+            'format' => 'full_html',
+          ),
+          'regions' => array(
+            'suitcase_interim' => $region_name,
+          ),
+          'op' => 'Save block',
+        )
+      );
+
+      drupal_form_submit('block_add_block_form', $add_block_form_state, 'block', NULL);
+
+    }
+
+  }
+
 }
 
 
