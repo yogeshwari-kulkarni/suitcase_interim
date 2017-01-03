@@ -98,7 +98,7 @@
         min-width: 300px;
     }
 
-    .zone-footer>.region:not(:last-child) {
+    #zone-footer > .region:not(:last-child) {
         border-bottom: none;
         margin-bottom: 0;
     }
@@ -302,14 +302,12 @@
         height: 0.8em;
     }
 
-    #block-menu-menu-footer .leaf a {
-        background: none;
+    #region-footer-fourth ul li.leaf a {
         font-size: 1.1em;
     }
 
-    #block-menu-menu-footer .leaf a:hover {
+    #region-footer-fourth ul li.leaf a:hover {
         text-decoration: underline;
-        background: none;
     }
 
     .caret {

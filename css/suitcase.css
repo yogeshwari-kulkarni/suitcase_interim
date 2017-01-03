@@ -1,13 +1,5 @@
 /*///////////////////////////////////////////////////////////////////////////////*/
 /*///////////////////////////////////////////////////////////////////////////////*/
-/* ISU Font */
-/*///////////////////////////////////////////////////////////////////////////////*/
-/*///////////////////////////////////////////////////////////////////////////////*/
-
-@import url("//cdn.theme.iastate.edu/nimbus-sans/css/nimbus-sans.css");
-
-/*///////////////////////////////////////////////////////////////////////////////*/
-/*///////////////////////////////////////////////////////////////////////////////*/
 /* GLOBAL STYLING */
 /*///////////////////////////////////////////////////////////////////////////////*/
 /*///////////////////////////////////////////////////////////////////////////////*/
@@ -791,6 +783,7 @@ input[type="submit"] {
 #main-menu-nav .sm-menu-btn {
     color: #444;
     display: block;
+    font-size: 15px;
     font-weight: normal;
     height: auto;
     padding: 16px 12px;
@@ -1042,6 +1035,12 @@ div#region-search section.block-menu .menu li:last-child {
 /*////////////////////////////////////*/
 /* Block styling */
 
+/* Make blocks appear collapsible */
+.js-suitcase-facet .block-title:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 /* Reset for panels marked nostyle */
 .panel-pane-nostyle {
   background-color: transparent;
@@ -1232,20 +1231,22 @@ div#region-search section.block-menu .menu li:last-child {
 
 /*////////////////////////////////////*/
 /* Footer */
-.zone-footer ul.menu li {
+
+#zone-footer ul.menu li {
     margin: 0;
     margin-bottom: 8px;
 }
 
-.section-footer img {
+#section-footer img {
     max-width: 100%;
+    height: auto !important;
 }
 
-.section-footer .block {
+#section-footer .block {
     margin-bottom: 16px;
 }
 
-.zone-footer>.region:not(:last-child) {
+#zone-footer > .region:not(:last-child) {
     border-bottom: 1px solid #444;
     margin-bottom: 16px;
 }
