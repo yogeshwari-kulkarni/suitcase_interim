@@ -1035,6 +1035,12 @@ div#region-search section.block-menu .menu li:last-child {
 /*////////////////////////////////////*/
 /* Block styling */
 
+/* Make blocks appear collapsible */
+.js-suitcase-facet .block-title:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 /* Reset for panels marked nostyle */
 .panel-pane-nostyle {
   background-color: transparent;
