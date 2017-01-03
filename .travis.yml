@@ -4,7 +4,7 @@ php:
   - 5.3
 
 mysql:
-  database: suitcase
+  database: suitcase_interim
   username: root
   encoding: utf8
 
@@ -27,17 +27,17 @@ before_script:
   - cd ../..
 
   # create new site, stubbing sendmail path with true to prevent delivery errors and manually resolving drush path
-  - mysql -e 'create database suitcase'
-  - php -d sendmail_path=`which true` ~/.composer/vendor/bin/drush.php --yes core-quick-drupal --profile=testing --no-server --db-url=mysql://root:@127.0.0.1/suitcase --enable=simpletest suitcase
+  - mysql -e 'create database suitcase_interim'
+  - php -d sendmail_path=`which true` ~/.composer/vendor/bin/drush.php --yes core-quick-drupal --profile=testing --no-server --db-url=mysql://root:@127.0.0.1/suitcase_interim --enable=simpletest suitcase_interim
 
   # reference and enable travis_ci_drupal_module_example in build site
-  - ln -s $(readlink -e $(cd -)) suitcase/drupal/sites/all/themes/suitcase
-  - cd suitcase/drupal/sites/all/modules/
+  - ln -s $(readlink -e $(cd -)) suitcase_interim/drupal/sites/all/themes/suitcase_interim
+  - cd suitcase_interim/drupal/sites/all/modules/
   - git clone https://github.com/isubit/luggage_ckeditor.git
   - git clone https://github.com/isubit/luggage_contrib.git
   - git clone https://github.com/isubit/luggage_core.git
   - git clone https://github.com/isubit/luggage_roles.git
-  - drush --yes pm-enable suitcase luggage_ckeditor luggage_contrib luggage_core luggage_roles
+  - drush --yes pm-enable suitcase_interim luggage_ckeditor luggage_contrib luggage_core luggage_roles
   - drush fra -y
   - drush cc all
   
@@ -52,12 +52,13 @@ before_script:
   # - until netstat -an 2>/dev/null | grep '8080.*LISTEN'; do true; done
   
 script:
-  - drush test-run 'suitcase' --debug --uri=http://127.0.0.1:8080
+  - drush test-run 'suitcase_interim' --debug --uri=http://127.0.0.1:8080
 
 # script: drush test-run 'Travis-CI Drupal Module Example' --uri=http://127.0.0.1:8080
 
 notifications:
   email: false
-  irc: "irc.freenode.org##luggage"
+  irc:
+    channels: "chat.freenode.net##luggage"
     on_success: never
     on_failure: always
