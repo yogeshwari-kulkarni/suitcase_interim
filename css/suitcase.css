@@ -670,6 +670,14 @@ input[type="submit"] {
     width: 100%;
 }
 
+/* --------------------- */
+/* Header Search Field
+/* --------------------- */
+
+input#edit-search-block-form--2 {
+    padding: 10px;
+}
+
 /*////////////////////////////////////*/
 /* Views */
 .zone-content .views-row {
