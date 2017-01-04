@@ -834,6 +834,7 @@ nav.navigation .secondary-menu>li a.active-trail {
 }
 
 
+
 /*////////////////////////////////////*/
 /* JP */
 div#region-search section.block-menu ul.menu>li a
@@ -1615,42 +1616,55 @@ figure .insert-default-image-styling + figcaption {
     height: auto !important;
 }
 
-#secondary-menu {
-    margin: 16px 0px;
+/* SECONDARY MENU */
+
+.region-inner.region-secondary-menu-inner {
+    background-color: #dddddd;
 }
 
-.region-secondary-menu .links {
-    margin: 0;
-}
+#secondary-menu { margin: 0; padding: 10px; }
+
+.region-secondary-menu .links { margin: 0; }
 
 .region-secondary-menu .links.inline {
     display: inline-block;
 }
 
-.region-secondary-menu .links>li {
+.region-secondary-menu .links > li {
     padding: 0;
-    margin-right: 1em;
+    margin-right: 0;
+    white-space: nowrap;
 }
 
-.region-secondary-menu .links>li>a {
+.region-secondary-menu .links > li > a {
+    padding: 5px 10px;
     color: #444;
+    font-size: 14px;
     font-weight: 500;
     text-decoration: none;
     border-bottom: none;
+    transition: background-color 0.5s ease;
 }
 
-.region-secondary-menu .links>li.active>a {
+.region-secondary-menu .links > li.active > a {
     font-weight: bold;
     color: #000;
 }
 
-.region-secondary-menu .links>li:first-child {
+.region-secondary-menu .links > li > a:hover {
+    background-color: #cccccc;
+}
+
+.region-secondary-menu .links > li:first-child {
     padding-left: 0;
 }
 
-.region-secondary-menu .links>li:not(:last-child)::after {
+.region-secondary-menu .links > li:not(:last-child)::after {
     content: "|";
-    margin-left: 1em;
+    display: inline-block;
+    margin-top: 2px;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
     font-size: 12px;
     color: #333;
     vertical-align: text-top;
