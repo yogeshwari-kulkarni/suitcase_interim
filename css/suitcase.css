@@ -825,6 +825,14 @@ nav.navigation .secondary-menu>li a.active-trail {
     cursor: pointer;
 }
 
+.region-inner.region-secondary-menu-inner {
+    background-color: #dddddd;
+}
+
+#secondary-menu { margin: 10px; }
+
+.region-secondary-menu { margin: 0; }
+
 
 /*////////////////////////////////////*/
 /* JP */
