@@ -795,7 +795,18 @@ nav.navigation .secondary-menu>li a.active-trail {
 /* ## BREADCRUMBS 
 /* -------------------- */
 
-.breadcrumb { padding-top: 0.5em; }
+.breadcrumb { 
+    padding: 10px 20px;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd; 
+}
+
+.breadcrumb a { text-decoration: none; }
+
+    .breadcrumb a:hover {
+        color: #524727;
+        text-decoration: underline;
+    }
 
 /* -------------------- */
 /* ## ALERTS 
