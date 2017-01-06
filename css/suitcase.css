@@ -1142,6 +1142,10 @@ nav.navigation .secondary-menu>li a.active-trail {
 
 .panel-panel .pane-content { margin-bottom: 10px; }
 
+.panel-panel .pane-content p { padding: 0; }
+
+.panel-panel .pane-content .views-row { padding: 0; }
+
 /* Enable overflow on front panel panes
 /* of width 4 unless specifically disabled */
 .front .grid-4 .panel-pane:not(.panel-pane-fluidheight) .pane-content {
@@ -1221,9 +1225,6 @@ nav.navigation .secondary-menu>li a.active-trail {
 .region-sidebar-second .block .content .item-list li {
     margin-left: 0;
 }
-
-.panel-panel .pane-content .views-row,
-.panel-panel .pane-content .node { padding: 10px; }
 
 .panel-panel .pane-content .node {
     background: none;
