@@ -921,7 +921,7 @@ nav.navigation .secondary-menu>li a.active-trail {
     padding-left: 10px; 
     color: #333333;
     border: none;
-    transition: width: 0.1s ease;
+    transition: width 0.1s ease;
 }
 .form-text.transparent:focus { border: none; }
 
@@ -1525,7 +1525,7 @@ h2.node-title > a:visited { text-decoration: underline; }
     border: none;
     border-top: 1px solid #dddddd;
     border-bottom: 1px solid #dddddd;
-    border-radius: 1px solid #dddddd
+    border-right: 1px solid #dddddd;
 }
 
 .pager li.pager-first { border-left: 1px solid #dddddd; }
