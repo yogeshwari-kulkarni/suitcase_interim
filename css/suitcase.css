@@ -659,6 +659,7 @@ nav.navigation .secondary-menu>li a.active-trail {
 .region-secondary-menu .links.inline { display: inline-block; }
 
 .region-secondary-menu .links > li {
+    display: inline-block;
     margin-right: 0;
     padding: 0;
 }
