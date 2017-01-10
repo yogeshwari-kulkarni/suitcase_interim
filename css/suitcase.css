@@ -90,13 +90,6 @@ a > .fa { margin-right: 10px; }
     transition: background 0.1s ease;
 }
 
-.read-more {
-    display: block;
-    clear: both;
-}
-
-.read-more > a { float: right; }
-
 /* --------------------- */
 /* Lists */
 
@@ -1585,6 +1578,47 @@ h2.node-title > a:visited { text-decoration: underline; }
 
 .node-people-form .field-multiple-table tbody tr.even td {
     background: rgba(0,0,0,0.1);
+}
+
+/* -------------------- */
+/* ## NEWS ARCHIVE
+/* -------------------- */
+
+.zone-content .view-news .views-row {
+    padding-bottom: 0;
+    border: 0;
+}
+
+.views-row > .node-news {
+    padding: 1em;
+    border: 1px solid #dddddd;
+}
+
+.node-news .node-title { margin-top: 0; }
+
+footer.submitted > span {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dddddd;
+}
+
+footer.submitted > span .placeholder {
+    font-size: 14px;
+    font-style: normal;
+}
+
+.read-more {
+    display: inline;
+    font-size: 0.9em;
+    clear: both;
+}
+
+.read-more > a { float: none; }
+
+.read-more > a > strong {
+    font-weight: normal;
+    white-space: nowrap;
 }
 
 /* -------------------- */
