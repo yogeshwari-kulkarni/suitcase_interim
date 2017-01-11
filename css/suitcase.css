@@ -76,6 +76,12 @@ span { color: #333333; }
 a, a:link, a:visited { color: #cc0000; }
 a em, a:link em, a:hover em, a:visited em { color: inherit; }
 
+a:focus {
+    outline-style: solid;
+    outline-color: #F1BE48;
+    outline-width: 2px;
+}
+
 a > .fa { margin-right: 10px; }
 
 .more-link {
@@ -257,6 +263,9 @@ input[type=text]:focus, textarea:focus {
     -moz-box-shadow: none;
     box-shadow: none;
     border: 1px solid #F1BE48;
+    outline-style: solid;
+    outline-color: #F1BE48;
+    outline-width: 1px;
 }
 
 input[type="password"] {
@@ -290,6 +299,10 @@ figure .insert-default-image-styling + figcaption {
 .region-content img {
     height: auto !important;
     max-width: 100%; 
+}
+
+a img:focus {
+    border: 2px #F1BE48;
 }
 
 /* -------------------- */
@@ -397,6 +410,12 @@ figure .insert-default-image-styling + figcaption {
     color: #fff;
     background: #777;
     transition: all 0.25s ease;
+}
+
+#isu-menu-nav .sm ul a:focus,
+#isu-menu-nav .sm ul a:active,
+#isu-menu-nav .sm ul a.highlighted {
+    border: 2px #F1BE48;
 }
 
 #isu-menu-nav #isu-index-menu { float: left; }
@@ -513,6 +532,10 @@ input#edit-search-block-form--2 { padding: 10px; }
     border-bottom: 3px solid transparent;
     transition: all 0.1s ease;  
 }
+
+#main-menu a:focus,
+#main-menu a:active,
+#main-menu a.highlighted { border: 2px #F1BE48; }
 
 #main-menu a:hover,
 #main-menu a:focus,
@@ -985,7 +1008,7 @@ nav.navigation .secondary-menu>li a.active-trail {
 .region-search .block-search-form .form-wrapper { position: relative; }
 
 .region-search .block-search-form .form-text {
-    height: 100%; 
+    height: 100%;
     padding: 8px 10px;
     font-size: 16px;
 }
