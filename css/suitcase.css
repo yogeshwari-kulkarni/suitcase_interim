@@ -1626,12 +1626,15 @@ footer.submitted > span .placeholder {
 /* ## FACETS SIDEBAR
 /* -------------------- */
 
-.region-sidebar-first-inner .block {
+.region-sidebar-first-inner .block,
+.region-sidebar-second-inner .block {
+    margin-top: 1em;
     padding: 1em;
     border: 1px solid #dddddd;
 }
 
-.region-sidebar-first .block-title {
+.region-sidebar-first .block-title,
+.region-sidebar-second-inner .block  {
     position: relative;
     margin-bottom: 0;
     font-size: 20px;
