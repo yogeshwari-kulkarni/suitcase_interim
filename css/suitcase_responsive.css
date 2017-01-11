@@ -136,6 +136,8 @@
         margin-left: 0;
     }
 
+    .breadcrumb { padding: 10px; }
+
     .zone-footer .block-menu-footer {
         float: none;
     }
@@ -172,9 +174,6 @@
         height: 1em;
     }
 
-    .region-secondary-menu {
-        text-align: center;
-    }
 }
 
 @media print {
