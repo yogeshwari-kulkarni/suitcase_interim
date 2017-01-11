@@ -1627,14 +1627,16 @@ footer.submitted > span .placeholder {
 /* -------------------- */
 
 .region-sidebar-first-inner .block,
-.region-sidebar-second-inner .block {
+.region-sidebar-second-inner .block,
+.js-suitcase-facet.block {
     margin-top: 1em;
     padding: 1em;
     border: 1px solid #dddddd;
 }
 
 .region-sidebar-first .block-title,
-.region-sidebar-second-inner .block  {
+.region-sidebar-second-inner .block,
+.js-suitcase-facet .block-title  {
     position: relative;
     margin-bottom: 0;
     font-size: 20px;
