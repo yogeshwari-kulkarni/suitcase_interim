@@ -108,7 +108,7 @@ ol ul { list-style-type: circle; }
 ol ol ul,
 ol ul ul,
 ul ol ul,
-ul ul ul { list-style-image: square; }
+ul ul ul { list-style-type: square; }
 
 li { color: #333333; }
 
@@ -1484,7 +1484,7 @@ h2.node-title > a:visited { text-decoration: underline; }
     padding: 15px;
     background: rgba(255, 255, 255, 0.8);
     border: 1px solid #dddddd;
-    box-shadow: 0 1px 1px rgba(0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
 .biblio-separator-bar {
