@@ -1621,6 +1621,28 @@ footer.submitted > span .placeholder {
     white-space: nowrap;
 }
 
+
+/* -------------------- */
+/* ## FACETS SIDEBAR
+/* -------------------- */
+
+.region-sidebar-first-inner .block {
+    padding: 1em;
+    border: 1px solid #dddddd;
+}
+
+.region-sidebar-first .block-title {
+    position: relative;
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+.item-list ul { margin-top: 1em; }
+
+.item-list li a {
+    margin-bottom: 5px;
+}
+
 /* -------------------- */
 /* ## THROBBER
 /* -------------------- */
