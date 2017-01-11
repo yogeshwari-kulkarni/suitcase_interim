@@ -1643,6 +1643,31 @@ footer.submitted > span .placeholder {
     margin-bottom: 5px;
 }
 
+.js-suitcase-facet .caret {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    border: 0;
+    opacity: 1; 
+}
+
+.js-suitcase-facet .caret:before,
+.js-suitcase-facet .caret:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 4px;
+    background: #cccccc;
+}
+
+.js-suitcase-facet .caret:after { transform: rotate(90deg); }
+
+.block-title-open .caret:after { opacity: 0; }
+
 /* -------------------- */
 /* ## THROBBER
 /* -------------------- */
