@@ -15,8 +15,10 @@
         $('.js-suitcase-facet .block-title').each(function() {
           $(this).append('<span class="caret"></span>');
         }).bind('click touchend', function(e) {
-          if(touched) {e.preventDefault();touched=false;return;}
+          if(touched) {e.preventDefault();touched=false;return;
+          }
           $(this).parent().find('.content').toggle();
+          $(this).toggleClass('block-title-open');
           touched = (e.type == 'touchend');
         });
 
