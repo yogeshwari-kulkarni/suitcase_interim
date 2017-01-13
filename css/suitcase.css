@@ -1634,8 +1634,8 @@ footer.submitted > span .placeholder {
     border: 1px solid #dddddd;
 }
 
-.region-sidebar-first .block-title,
-.region-sidebar-second-inner .block,
+.region-sidebar-first-inner .block-title,
+.region-sidebar-second-inner .block-title,
 .js-suitcase-facet .block-title  {
     position: relative;
     margin-bottom: 0;
