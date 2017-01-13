@@ -1621,6 +1621,60 @@ footer.submitted > span .placeholder {
     white-space: nowrap;
 }
 
+
+/* -------------------- */
+/* ## FACETS SIDEBAR
+/* -------------------- */
+
+.region-sidebar-first-inner .block,
+.region-sidebar-second-inner .block,
+.js-suitcase-facet.block {
+    margin-top: 1em;
+    padding: 1em;
+    border: 1px solid #dddddd;
+}
+
+.region-sidebar-first .block-title,
+.region-sidebar-second-inner .block,
+.js-suitcase-facet .block-title  {
+    position: relative;
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+.item-list ul { margin-top: 1em; }
+
+.item-list li a {
+    margin-bottom: 5px;
+}
+
+.js-suitcase-facet .caret {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    border: 0;
+    opacity: 1; 
+}
+
+.js-suitcase-facet .caret:before,
+.js-suitcase-facet .caret:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 4px;
+    background: #cccccc;
+}
+
+.js-suitcase-facet .caret:after { transform: rotate(90deg); }
+
+.block-title .caret:after { opacity: 0; }
+
+.block-inner .block-title-open .caret:after { opacity: 100; }
+
 /* -------------------- */
 /* ## THROBBER
 /* -------------------- */
