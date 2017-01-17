@@ -35,7 +35,7 @@
     }
 
     #isu-menu-nav .sm a.has-submenu {
-        padding-right: 24px;
+        padding-right: 24px !important;
     }
 
 
@@ -91,7 +91,7 @@
     }
 
     #main-menu a.has-submenu {
-        padding-right: 24px;
+        padding-right: 24px !important;
     }
 
     #main-menu ul {
