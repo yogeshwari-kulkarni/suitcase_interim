@@ -81,13 +81,23 @@ a > .fa { margin-right: 10px; }
 .more-link {
     display: inline-block;
     margin-bottom: 5px;
-    padding: 2px 6px;
-    color: #247bbd;
-    border: 1px solid #e2e2e2;
+    padding: 0.5rem 0.75rem;
+    color: #ffffff;
+    font-weight: 700;
     border-radius: 2px;
-    background: #ffffff;
+    background: #cc0000;
     float: right;
     transition: background 0.1s ease;
+    cursor: pointer;
+}
+
+.more-link  > a {
+    color: #ffffff;
+    text-decoration: none !important ; 
+}
+
+.more-link:hover {
+    background: #333333;
 }
 
 /* --------------------- */
@@ -1249,17 +1259,6 @@ nav.navigation .secondary-menu>li a.active-trail {
 .panel-panel.grid-4 .pane-content li > a {
     display: block;
     padding: 10px;
-}
-
-.panel-panel .more-link > a {
-    display: inline-block;
-    margin-bottom: 5px;
-    padding: 2px 6px;
-    color: #247bbd;
-    background: #ffffff;
-    border-radius: 2px;
-    border: 1px solid #e2e2e2;
-    transition: background 0.1s ease;
 }
 
 .panel-panel iframe {
