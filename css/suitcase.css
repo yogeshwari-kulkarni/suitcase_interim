@@ -81,13 +81,23 @@ a > .fa { margin-right: 10px; }
 .more-link {
     display: inline-block;
     margin-bottom: 5px;
-    padding: 2px 6px;
-    color: #247bbd;
-    border: 1px solid #e2e2e2;
+    padding: 0.5rem 0.75rem;
+    color: #ffffff;
+    font-weight: 700;
     border-radius: 2px;
-    background: #ffffff;
+    background: #cc0000;
     float: right;
     transition: background 0.1s ease;
+    cursor: pointer;
+}
+
+.more-link  > a {
+    color: #ffffff;
+    text-decoration: none !important ; 
+}
+
+.more-link:hover {
+    background: #333333;
 }
 
 /* --------------------- */
@@ -1251,17 +1261,6 @@ nav.navigation .secondary-menu>li a.active-trail {
     padding: 10px;
 }
 
-.panel-panel .more-link > a {
-    display: inline-block;
-    margin-bottom: 5px;
-    padding: 2px 6px;
-    color: #247bbd;
-    background: #ffffff;
-    border-radius: 2px;
-    border: 1px solid #e2e2e2;
-    transition: background 0.1s ease;
-}
-
 .panel-panel iframe {
     width: 100% !important;
     padding: 0 10px !important;
@@ -1493,7 +1492,8 @@ h2.node-title > a:visited { text-decoration: underline; }
     border-bottom: 1px solid #dddddd;
 }
 
-.pager {
+.item-list .pager {
+    margin-top: 1rem;
     background: none;
     border: none;
     border-color: inherit;
@@ -1522,7 +1522,10 @@ h2.node-title > a:visited { text-decoration: underline; }
     border-right: 1px solid #dddddd;
 }
 
-.pager li.pager-first { border-left: 1px solid #dddddd; }
+.pager li.first { 
+    border-left: 1px solid #dddddd; 
+    border-right: 1px solid #dddddd;
+}
 
 .pager li.pager-current { background: rgba(52, 52, 52, 0.1); }
 
@@ -1535,11 +1538,15 @@ h2.node-title > a:visited { text-decoration: underline; }
 .pager li.pager-ellipsis {
     width: auto;
     padding: 10px 16px;
+    margin-bottom: 0;
     color: #333333;
     font-size: 14px;
     background: #fff;
     transition: background 0.3s ease ;
 }
+
+.pager li.pager-current { background: #eeeeee; }
+
     .pager li.pager-first > a:hover,
     .pager li.pager-previous > a:hover,
     .pager li.pager-item > a:hover,
