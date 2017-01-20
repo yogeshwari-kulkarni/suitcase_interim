@@ -533,10 +533,6 @@ input#edit-search-block-form--2 { padding: 10px; }
     transition: all 0.1s ease;  
 }
 
-#main-menu a:focus,
-#main-menu a:active,
-#main-menu a.highlighted { border: 2px #F1BE48; }
-
 #main-menu a:hover,
 #main-menu a:focus,
 #main-menu a:active,
