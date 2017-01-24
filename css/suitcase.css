@@ -1120,10 +1120,48 @@ nav.navigation .secondary-menu>li a.active-trail {
 /* ## SELECT & INPUTS 
 /* -------------------- */
 
+/* Select Fields */
+
+.form-type-select select {
+    height: 2.25rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    padding-right: 1.5rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+}
+
+.form-type-select select[multiple] {
+    height: auto;
+}
+
+/* Text Fields */
+
+.form-type-textfield:not(.form-item-search-block-form) input[type=text] {
+    height: 2.25rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+}
+
 .page-search input#edit-keys,
 .page form#search-block-form .form-item-search-block-form input.form-text {
     width: calc(100% - 68px);
 }
+
+/* Submit Buttons */
+
+.views-exposed-form .views-exposed-widget .form-submit {
+    margin-top: 2rem;
+    height: 2.25rem;
+}
+
+.search-form .form-submit {
+    margin-top: 0.5rem;
+    height: 2.25rem;
+}
+
 
 /* -------------------- */
 /* ## BLOCKS
