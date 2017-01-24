@@ -1117,6 +1117,15 @@ nav.navigation .secondary-menu>li a.active-trail {
 .page-search .content article footer { padding-top: 0; }
 
 /* -------------------- */
+/* ## SELECT & INPUTS 
+/* -------------------- */
+
+.page-search input#edit-keys,
+.page form#search-block-form .form-item-search-block-form input.form-text {
+    width: calc(100% - 68px);
+}
+
+/* -------------------- */
 /* ## BLOCKS
 /* -------------------- */
 
