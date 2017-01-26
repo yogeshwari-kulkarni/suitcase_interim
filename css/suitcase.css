@@ -1150,9 +1150,10 @@ nav.navigation .secondary-menu>li a.active-trail {
 
 .panel-pane-nostyle > .pane-content { padding: 0; }
 
-.panel-pane-overflow .pane-content {
+.panel-pane-overflow.pane-twitter-block-1 .pane-content,
+.panel-pane-overflow.pane-views-instagrams-block .pane-content {
     height: 350px;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 .panel-panel .pane-content { margin-bottom: 10px; }
@@ -1693,4 +1694,102 @@ html.js input.form-autocomplete.throbbing {
 html.js input.form-autocomplete {
     background-image: url('../images/throbber_lugg.gif');
     background-position: 100% 12px;
+}
+
+/* -------------------- */
+/* ## MEGAPANELS
+/* -------------------- */
+
+/* --- IE 9 --- */
+
+    .front-panel-row .panel-panel.grid-3 {
+        display: inline-block;
+        width: calc(25% - 1.25rem);
+        margin: 0 0.5rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        border: 1px solid #ddd;
+    }
+
+    .front-panel-row .panel-panel.grid-3:first-child:nth-last-child(1) { 
+        width: 100%; 
+    }
+
+    .front-panel-row .panel-panel.grid-3:first-child:nth-last-child(2),
+    .front-panel-row .panel-panel.grid-3:first-child:nth-last-child(2) ~ .grid-3 { 
+        width: calc(50% - 1.25rem); 
+    }
+
+    .front-panel-row .panel-panel.grid-3:first-child:nth-last-child(3),
+    .front-panel-row .panel-panel.grid-3:first-child:nth-last-child(3) ~ .grid-3 { 
+        width: calc(33.33% - 1.25rem); 
+    }
+
+    @media (max-width: 900px) {
+        .front-panel-row .panel-panel.grid-3  { 
+            width: calc(50% - 1.25rem); 
+        }
+        
+        .front-panel-row .panel-panel.grid-3:first-child:nth-last-child(1) { 
+            width: 100%; 
+        }
+
+        .front-panel-row .panel-panel.grid-3:first-child:nth-last-child(2),
+        .front-panel-row .panel-panel.grid-3:first-child:nth-last-child(2) ~ .grid-3 {
+            width: calc(50% - 1.25rem); 
+        }
+
+        .front-panel-row .panel-panel.grid-3:first-child:nth-last-child(3),
+        .front-panel-row .panel-panel.grid-3:first-child:nth-last-child(3) ~ .grid-3 {
+            width: calc(33.33% - 1.25rem); 
+        }
+    }
+
+    @media (max-width: 700px) {
+        .front-panel-row .panel-panel.grid-3  { 
+            width: 100%; 
+        }
+        
+        .front-panel-row .panel-panel.grid-3:first-child:nth-last-child(1) { 
+            width: 100%; 
+        }
+
+        .front-panel-row .panel-panel.grid-3:first-child:nth-last-child(2),
+        .front-panel-row .panel-panel.grid-3:first-child:nth-last-child(2) ~ .grid-3 {
+            width: 100%; 
+        }
+
+        .front-panel-row .panel-panel.grid-3:first-child:nth-last-child(3),
+        .front-panel-row .panel-panel.grid-3:first-child:nth-last-child(3) ~ .grid-3 {
+            width: 100%; 
+        }
+    }
+
+
+/* --- Browsers that support flex --- */
+
+.front-panel-full { margin-bottom: 1rem; }
+
+.front-panel-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -0.5rem;
+    margin-left: -0.5rem;
+}
+
+@media (max-width: 740px) {
+    .front-panel-row {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+}
+
+.front-panel-row .panel-panel.grid-3 {
+    flex: 1 1 250px;
+    min-width: 250px;
+    float: none;
+    margin: 0 0.5rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
 }
