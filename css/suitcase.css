@@ -1123,7 +1123,7 @@ nav.navigation .secondary-menu>li a.active-trail {
 /* Select Fields */
 
 .form-type-select select {
-    height: 2.25rem;
+    height: auto;
     margin-top: 0.5rem;
     padding: 0.5rem;
     padding-right: 1.5rem;
