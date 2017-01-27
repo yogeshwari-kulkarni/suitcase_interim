@@ -1317,10 +1317,6 @@ nav.navigation .secondary-menu>li a.active-trail {
 /* -------------------- */
 /* Front Panel */
 
-.front .panel-display .panel-panel:first-child {
-    background: transparent;
-    border: 0;
-}
 
 .front .panel-pane > h2.pane-title { display: block; }
 
