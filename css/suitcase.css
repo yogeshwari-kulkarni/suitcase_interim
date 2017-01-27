@@ -1809,6 +1809,14 @@ html.js input.form-autocomplete {
 /* ## MEGAPANELS
 /* -------------------- */
 
+.suitcase_megapanels > .front-panel-row {
+    margin-top: 1rem;
+}
+
+.suitcase_megapanels > .front-panel-row ~ .front-panel-row {
+    margin-top: 0;
+}
+
 /* --- IE 9 --- */
 
     .front-panel-row .panel-panel.grid-3 {
