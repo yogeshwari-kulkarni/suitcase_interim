@@ -1613,12 +1613,24 @@ h2.node-title > a:visited { text-decoration: underline; }
     display: inherit;
     width: inherit;
     margin-right: 20px;
+    margin-bottom: 0;
     padding: 0;
-    float: left;
+    float: none;
     border-bottom: none;    
 }
 
-.field-name-field-people-title-category { margin-left: 0; }
+.field-name-field-people-title-category { 
+    margin-left: 0; 
+    margin-bottom: 1rem;
+    float: none;
+}
+
+.field-name-field-people-title-category a {
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1;
+    text-decoration: none;
+}
 
 .node-people-form .field-multiple-table thead th { background: none; }
 
