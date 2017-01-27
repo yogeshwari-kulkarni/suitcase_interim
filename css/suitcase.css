@@ -78,8 +78,10 @@ a em, a:link em, a:hover em, a:visited em { color: inherit; }
 
 a > .fa { margin-right: 10px; }
 
-.more-link {
+.more-link ,
+.read-more {
     display: inline-block;
+    margin-top: 5px;
     margin-bottom: 5px;
     padding: 0.5rem 0.75rem;
     color: #ffffff;
@@ -91,12 +93,19 @@ a > .fa { margin-right: 10px; }
     cursor: pointer;
 }
 
-.more-link  > a {
+.more-link  > a,
+.read-more > a {
     color: #ffffff;
     text-decoration: none !important ; 
 }
 
-.more-link:hover {
+.more-link  > a > strong,
+.read-more > a > strong {
+    font-weight: bold;
+}
+
+.more-link:hover,
+.read-more:hover {
     background: #333333;
 }
 
@@ -745,7 +754,11 @@ nav.navigation .secondary-menu>li a.active-trail {
 
 #section-footer a,
 #section-footer a:link,
-#section-footer a:visited,
+#section-footer a:visited {
+    color: #cc0000;
+    text-decoration: underline;
+}
+
 #section-footer p,
 #section-footer span,
 #section-footer li,
@@ -772,7 +785,7 @@ nav.navigation .secondary-menu>li a.active-trail {
 
 #section-footer a:link:hover,
 #section-footer a:visited:hover {
-    color: #cc0000;
+    color: #333;
     text-decoration: underline;
 }
 
@@ -1331,10 +1344,12 @@ nav.navigation .secondary-menu>li a.active-trail {
 /* -------------------- */
 /* Front Panel */
 
-.front .panel-display .panel-panel:first-child {
-    background: transparent;
-    border: 0;
+.front .panel-pane {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
 }
+
 
 .front .panel-pane > h2.pane-title { display: block; }
 
@@ -1826,6 +1841,14 @@ html.js input.form-autocomplete {
 /* -------------------- */
 /* ## MEGAPANELS
 /* -------------------- */
+
+.suitcase_megapanels > .front-panel-row {
+    margin-top: 1rem;
+}
+
+.suitcase_megapanels > .front-panel-row ~ .front-panel-row {
+    margin-top: 0;
+}
 
 /* --- IE 9 --- */
 
