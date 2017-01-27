@@ -1207,6 +1207,10 @@ nav.navigation .secondary-menu>li a.active-trail {
 /* -------------------- */
 /* Collapsible Blocks */
 
+.js-suitcase-facet .block-title {
+    margin-right: 2rem;
+}
+
 .js-suitcase-facet .block-title:hover {
     text-decoration: underline;
     cursor: pointer;
@@ -1748,9 +1752,11 @@ footer.submitted > span .placeholder {
     display: block;
     position: absolute;
     top: 0;
+    right: 0;
     width: 20px;
     height: 20px;
     margin-top: 10px;
+    margin-right: -2rem;
     border: 0;
     opacity: 1; 
 }
