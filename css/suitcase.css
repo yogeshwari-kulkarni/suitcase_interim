@@ -78,9 +78,10 @@ a em, a:link em, a:hover em, a:visited em { color: inherit; }
 
 a > .fa { margin-right: 10px; }
 
-.more-link,
+.more-link ,
 .read-more {
     display: inline-block;
+    margin-top: 5px;
     margin-bottom: 5px;
     padding: 0.5rem 0.75rem;
     color: #ffffff;
@@ -92,12 +93,19 @@ a > .fa { margin-right: 10px; }
     cursor: pointer;
 }
 
-.more-link  > a {
+.more-link  > a,
+.read-more > a {
     color: #ffffff;
     text-decoration: none !important ; 
 }
 
-.more-link:hover {
+.more-link  > a > strong,
+.read-more > a > strong {
+    font-weight: bold;
+}
+
+.more-link:hover,
+.read-more:hover {
     background: #333333;
 }
 
