@@ -1134,7 +1134,7 @@ nav.navigation .secondary-menu>li a.active-trail {
 /* Collapsible Blocks */
 
 .js-suitcase-facet .block-title {
-    margin-right: 2rem;
+    padding-right: 35px;
 }
 
 .js-suitcase-facet .block-title:hover {
