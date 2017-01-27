@@ -1317,6 +1317,12 @@ nav.navigation .secondary-menu>li a.active-trail {
 /* -------------------- */
 /* Front Panel */
 
+.front .panel-pane {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
 
 .front .panel-pane > h2.pane-title { display: block; }
 
