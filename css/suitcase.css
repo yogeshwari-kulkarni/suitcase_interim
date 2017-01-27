@@ -78,7 +78,8 @@ a em, a:link em, a:hover em, a:visited em { color: inherit; }
 
 a > .fa { margin-right: 10px; }
 
-.more-link {
+.more-link,
+.read-more {
     display: inline-block;
     margin-bottom: 5px;
     padding: 0.5rem 0.75rem;
@@ -745,7 +746,11 @@ nav.navigation .secondary-menu>li a.active-trail {
 
 #section-footer a,
 #section-footer a:link,
-#section-footer a:visited,
+#section-footer a:visited {
+    color: #cc0000;
+    text-decoration: underline;
+}
+
 #section-footer p,
 #section-footer span,
 #section-footer li,
@@ -772,7 +777,7 @@ nav.navigation .secondary-menu>li a.active-trail {
 
 #section-footer a:link:hover,
 #section-footer a:visited:hover {
-    color: #cc0000;
+    color: #333;
     text-decoration: underline;
 }
 
