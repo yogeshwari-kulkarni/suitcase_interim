@@ -26,7 +26,7 @@ function suitcase_interim_theme($existing, $type, $theme, $path) {
 }
 
 function suitcase_interim_facetapi_deactivate_widget($variables) {
-  return '&nbsp;&times;';
+  return '<span class="facetapi-x">&times;</span>';
 }
 
 /*
