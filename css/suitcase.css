@@ -1287,17 +1287,6 @@ nav.navigation .secondary-menu>li a.active-trail {
     overflow: hidden;
 }
 
-.panel-pane .views-field-title a.facetapi-active,
-.panel-pane .pane-content .item-list li a.facetapi-active,
-.region-sidebar-first .block .content .item-list li a.facetapi-active,
-.region-sidebar-second .block .content .item-list li a.facetapi-active {
-    display: inline;
-    margin-right: 12px;
-    padding: 0;
-    vertical-align: text-bottom;
-    background: none;
-}
-
 .panel-pane .views-field-created > .field-content { color: #555555; }
 
 .panel-pane .views-field { margin-bottom: 5px; }
@@ -1737,6 +1726,122 @@ footer.submitted > span .placeholder {
 .read-more > a > strong {
     font-weight: normal;
     white-space: nowrap;
+}
+
+/* -------------------- */
+/* ## FACETS TAGS
+/* -------------------- */
+
+/* All items */
+.block-facetapi .content .item-list li a,
+.block-facetapi .content .item-list li a.facetapi-active {
+    display: block;
+    position: relative;
+    padding: 0.25rem 0.5rem;
+    padding-left: 2rem;
+    border-radius: 3px;
+    margin-right: 0.25rem;
+    text-decoration: none !important;
+    font-size: 0.95rem;
+    color: #333;
+    transition: all 100ms ease;
+}
+
+    /* Hover */
+    .block-facetapi .content .item-list li a:hover {
+        color: #ffffff;
+        background: #7A99AC;
+        border-color: #7A99AC;
+    }
+
+/* Indicators */
+.block-facetapi .content .item-list ul li a:before {
+    content: '';
+    position: absolute;
+    top: 0.45rem; left: 0.5rem;
+    height: 1rem;
+    width: 1rem;
+    margin-right: 5px;
+    padding-top: 2px;
+    font-size: 0.75rem;
+    line-height: 1;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+}
+
+.block-facetapi .content .item-list ul li a.facetapi-active:before,
+.block-facetapi .content .item-list ul li a:hover:before {
+    content: '✓';
+}
+
+.block-facetapi .content .item-list ul li a.facetapi-active:hover:before {
+    content: '✕';
+}
+
+/* Just tags */
+.block-facetapi .content .item-list .facetapi-facet-im-field-tags li a:not(.facetapi-active) {
+    display: inline-block;
+    padding-left: 0.5rem;
+    border: 1px solid #ddd;
+}
+
+.block-facetapi .content .item-list .facetapi-facet-im-field-tags li a:not(.facetapi-active):before {
+    display: none;
+}
+
+.block-facetapi .content .item-list .facetapi-facet-im-field-tags li {
+    float: left;
+}
+
+/* Active */
+.block-facetapi .content .item-list .facetapi-facet-im-field-tags li a.facetapi-active,
+.block-facetapi .content .item-list li a.facetapi-active {
+    color: #ffffff;
+    font-weight: 700;
+    background: #7A99AC;
+    border-color: #7A99AC;
+}
+
+    /* Hover */
+    .block-facetapi .content .item-list li a.facetapi-active:hover {
+        color: #000;
+        background: #eee;
+        border-color: #ddd;
+    }
+
+.facetapi-x {
+    display: none;
+}
+
+/* Show More/Less */
+    
+.block-facetapi .content .item-list .facetapi-facet-im-field-tags:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+a.facetapi-limit-link {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    color: #000;
+    font-size: 0.9rem;
+    text-decoration: none;
+    background: #ddd;
+    border-radius: 3px;
+}
+
+a.facetapi-limit-link:hover {
+    background: #ccc;
+    text-decoration: none;
+}
+
+a.facetapi-limit-link:not(.open):after {
+    content: ' +';
+}
+a.facetapi-limit-link.open:after {
+    content: ' -';
 }
 
 
