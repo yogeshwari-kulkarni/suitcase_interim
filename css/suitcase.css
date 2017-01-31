@@ -810,6 +810,14 @@ nav.navigation .secondary-menu>li a.active-trail {
     text-decoration: underline;
 }
 
+/* ------------------- */
+/* Footer Menus */
+
+#section-footer ul.menu a {
+    color: #333;
+    text-decoration: none;
+}
+
 /* -------------------- */
 /* ## CARETS 
 /* -------------------- */
