@@ -1319,13 +1319,12 @@ nav.navigation .secondary-menu>li a.active-trail {
     float: left;
 }
 
-.panel-pane .view-events .views-field-when-tiny-left .date-display-single {
-    color: #777777;
+span.date-display-single {
+    color: #555555;
 }
 
-.panel-pane .view-events .views-field-title {
-    font-size: 14px;
-    font-weight: 700;
+.panel-pane .view-events .views-field-when-tiny-left .date-display-single {
+    color: #777777;
 }
 
 .panel-panel .pane-content > p { padding: 0 10px; }
@@ -1379,14 +1378,7 @@ nav.navigation .secondary-menu>li a.active-trail {
     word-break: break-word;
 }
 
-
 .front .panel-pane > h2.pane-title { display: block; }
-
-.front .panel-pane .pane-content .item-list li {
-    margin-top: 8px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #eeeeee;
-}
 
 .front .item-list { display: block; }
 
