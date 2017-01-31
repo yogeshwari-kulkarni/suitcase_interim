@@ -1241,6 +1241,8 @@ nav.navigation .secondary-menu>li a.active-trail {
 /* ## PANELS
 /* -------------------- */
 
+.panel-pane { clear: both; }
+
 .panel-pane-nostyle {
     padding: 0;
     box-shadow: none;
