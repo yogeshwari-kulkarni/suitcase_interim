@@ -141,6 +141,9 @@ ul.right { text-align: right; }
 
 ul.hlist > li { float: left; }
 
+.pane-content ul,
+.pane-content ol { padding-left: 40px; }
+
 /* --------------------- */
 /* Description Lists */
 
@@ -1255,6 +1258,8 @@ nav.navigation .secondary-menu>li a.active-trail {
 .panel-panel .pane-content { margin-bottom: 10px; }
 
 .panel-panel .pane-content p { padding: 0; }
+
+.pane-content .item-list ul { padding-left: 0; }
 
 .panel-panel .pane-content .views-row { padding: 0; }
 
