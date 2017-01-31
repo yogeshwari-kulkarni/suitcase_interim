@@ -249,8 +249,9 @@ function suitcase_interim_config_form_submit($form, &$form_state) {
     );
 
     $menu_exists = (bool) db_query_range('SELECT 1 FROM {menu_custom} WHERE menu_name = :menu_name', 0, 1, array(':menu_name' => $menu['menu_name']))->fetchField();
+    $link_exists = db_query_range('SELECT 1 FROM {menu_links} WHERE menu_name = :menu_name', 0, 1, array(':menu_name' => $menu['menu_name']))->fetchField();
 
-    if (!$menu_exists) {
+    if (!$menu_exists && !$link_exists) {
 
       menu_save($menu);
 
@@ -261,6 +262,19 @@ function suitcase_interim_config_form_submit($form, &$form_state) {
       );
 
       menu_link_save($item);
+
+      db_insert('block')->fields(array(
+        'module' => 'menu',
+        'delta' => 'menu-social',
+        'theme' => 'suitcase_interim',
+        'status' => 1,
+        'weight' => '-28',
+        'region' => 'footer_fourth',
+        'visibility' => BLOCK_VISIBILITY_NOTLISTED,
+        'pages' => '',
+        'title' => '<none>',
+        'cache' => DRUPAL_NO_CACHE,
+      ))->execute();
 
     }
 
