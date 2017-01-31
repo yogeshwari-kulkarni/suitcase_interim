@@ -261,3 +261,60 @@ function suitcase_interim_date_display_range($variables) {
   // Add remaining message and return.
   return $output . $show_remaining_days;
 }
+
+/*
+ * Implements theme_menu_link()
+ *
+ * Modified version of theme_menu_link
+ *
+ * -------------------------------------------------------------------------
+ *
+ * Returns HTML for a menu link and submenu.
+ *
+ * @param $variables
+ *   An associative array containing:
+ *   - element: Structured array data for a menu link.
+ *
+ * @ingroup themeable
+ *
+ * -------------------------------------------------------------------------
+ *
+ * Modifications:
+ *
+ * - Prepends a font awesome icon for known social media websites to the link text
+ *
+ */
+function suitcase_interim_menu_link__menu_social($variables) {
+
+  $element = $variables['element'];
+
+  $sub_menu = '';
+  if ($element['#below']) {
+    $sub_menu = drupal_render($element['#below']);
+  }
+
+  $font_awesome_icons = array(
+    'facebook' => 'fa-facebook-official',
+    'twitter' => 'fa-twitter-square'
+  );
+
+  $font_awesome_icon = '';
+
+  foreach ($font_awesome_icons as $pattern => $icon) {
+    if (strpos($element['#href'], $pattern) !== FALSE) {
+      $font_awesome_icon = $icon;
+      break;
+    }
+  }
+
+  if (!empty($font_awesome_icon)) {
+    $element['#title'] = '<i class="fa ' . $font_awesome_icon . '" aria-hidden="true"></i> ' . $element['#title'];
+    $element['#localized_options']['html'] = TRUE;
+  }
+
+
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+
+}
