@@ -26,7 +26,7 @@ function suitcase_interim_theme($existing, $type, $theme, $path) {
 }
 
 function suitcase_interim_facetapi_deactivate_widget($variables) {
-  return '&nbsp;&times;';
+  return '<span class="facetapi-x">&times;</span>';
 }
 
 /*
@@ -260,6 +260,54 @@ function suitcase_interim_date_display_range($variables) {
 
   // Add remaining message and return.
   return $output . $show_remaining_days;
+}
+
+/**
+ * Implements theme_facetapi_link_active().
+ *
+ * Modified version of theme_facetapi_link_active
+ *
+ * -------------------------------------------------------------------------
+ *
+ * Returns HTML for an active facet item.
+ *
+ * @param $variables
+ *   An associative array containing the keys 'text', 'path', and 'options'. See
+ *   the l() function for information about these variables.
+ *
+ * @see l()
+ *
+ * @ingroup themeable
+ *
+ * -------------------------------------------------------------------------
+ *
+ * Modifications:
+ *
+ * - Includes the tag name in the link text instead of appending after the link
+ *
+ */
+function suitcase_interim_facetapi_link_active($variables) {
+
+  // Sanitizes the link text if necessary.
+  $sanitize = empty($variables['options']['html']);
+  $link_text = ($sanitize) ? check_plain($variables['text']) : $variables['text'];
+
+  // Theme function variables fro accessible markup.
+  // @see http://drupal.org/node/1316580
+  $accessible_vars = array(
+    'text' => $variables['text'],
+    'active' => TRUE,
+  );
+
+  // Builds link, passes through t() which gives us the ability to change the
+  // position of the widget on a per-language basis.
+  $replacements = array(
+    '!facetapi_deactivate_widget' => theme('facetapi_deactivate_widget', $variables),
+    '!facetapi_accessible_markup' => theme('facetapi_accessible_markup', $accessible_vars),
+  );
+  $variables['text'] = t('!facetapi_deactivate_widget !facetapi_accessible_markup', $replacements) . $link_text;
+  $variables['options']['html'] = TRUE;
+  return theme_link($variables);
 }
 
 /*
