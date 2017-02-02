@@ -1732,6 +1732,11 @@ footer.submitted > span .placeholder {
 /* ## FACETS TAGS
 /* -------------------- */
 
+.block-facetapi .content .item-list ul ul {
+    margin-top: 0;
+    margin-left: 1rem;
+}
+
 /* All items */
 .block-facetapi .content .item-list li a,
 .block-facetapi .content .item-list li a.facetapi-active {
