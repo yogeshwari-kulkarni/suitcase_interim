@@ -302,8 +302,6 @@ input[type="submit"] {
 /* ## FIGURES and IMAGES 
 /* -------------------- */
 
-figure figcaption { color: #818a91; }
-
 figure .insert-default-image-styling + figcaption {
     margin: 0 10px;
 }
@@ -311,11 +309,48 @@ figure .insert-default-image-styling + figcaption {
 .region-content img {
     height: auto !important;
     max-width: 100%; 
+    margin: 0.5rem;
 }
 
 a img:focus {
     border: 2px #F1BE48;
 }
+
+/* CK Editor Enhanced Images */
+
+figure.image {
+    display: table;
+    margin: 0;
+}
+
+figure.image img {
+    max-width: 100%;
+    display: block;
+    margin: 0;
+}
+
+figure.image figcaption {
+    display: table-caption;
+    caption-side: bottom;
+    padding: 0.5rem;
+    color: #333;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid #ddd;
+    border-top: 0;
+    background-color: #eee;
+}
+
+figure.image br {
+    display: none;
+}
+
+figure.image.floated-left { margin: 0.25rem 1rem 0.25rem 0; }
+
+figure.image.floated-right { margin: 0.25rem 0 0.25rem 1rem; }
+
+figure.image.floated-left img,
+figure.image.floated-right img { margin: 0; }
 
 /* -------------------- */
 /* ## UTILITY 
