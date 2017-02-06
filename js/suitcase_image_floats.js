@@ -3,30 +3,30 @@
  * And floated images with captions.
  */
 
-jQuery(document).ready(function($) {
+(function($) {
+  $(document).ready( function() {
+    $('figure.image')
+      .filter(function() {
+        return $(this).css('float') == 'left';
+      })
+      .addClass('floated-left');
 
-	$('figure.image')
-		.filter(function() {
-			return $(this).css('float') == 'left';
-		})
-		.addClass('floated-left');
+    $('figure.image')
+      .filter(function() {
+        return $(this).css('float') =='right';
+      })
+      .addClass('floated-right');
 
-	$('figure.image')
-		.filter(function() {
-			return $(this).css('float') =='right';
-		})
-		.addClass('floated-right');
+    $('.content img')
+      .filter(function() {
+        return $(this).css('float') == 'left';
+      })
+      .addClass('floated-left');
 
-	$('.content img')
-		.filter(function() {
-			return $(this).css('float') == 'left';
-		})
-		.addClass('floated-left');
-
-	$('.content img')
-		.filter(function() {
-			return $(this).css('float') == 'right';
-		})
-		.addClass('floated-right');
-	
+    $('.content img')
+      .filter(function() {
+        return $(this).css('float') == 'right';
+      })
+      .addClass('floated-right');
+  });
 })(jQuery);
