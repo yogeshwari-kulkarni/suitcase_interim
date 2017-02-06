@@ -26,7 +26,7 @@ function suitcase_interim_theme($existing, $type, $theme, $path) {
 }
 
 function suitcase_interim_facetapi_deactivate_widget($variables) {
-  return '&nbsp;&times;';
+  return '<span class="facetapi-x">&times;</span>';
 }
 
 /*
@@ -260,4 +260,114 @@ function suitcase_interim_date_display_range($variables) {
 
   // Add remaining message and return.
   return $output . $show_remaining_days;
+}
+
+/**
+ * Implements theme_facetapi_link_active().
+ *
+ * Modified version of theme_facetapi_link_active
+ *
+ * -------------------------------------------------------------------------
+ *
+ * Returns HTML for an active facet item.
+ *
+ * @param $variables
+ *   An associative array containing the keys 'text', 'path', and 'options'. See
+ *   the l() function for information about these variables.
+ *
+ * @see l()
+ *
+ * @ingroup themeable
+ *
+ * -------------------------------------------------------------------------
+ *
+ * Modifications:
+ *
+ * - Includes the tag name in the link text instead of appending after the link
+ *
+ */
+function suitcase_interim_facetapi_link_active($variables) {
+
+  // Sanitizes the link text if necessary.
+  $sanitize = empty($variables['options']['html']);
+  $link_text = ($sanitize) ? check_plain($variables['text']) : $variables['text'];
+
+  // Theme function variables fro accessible markup.
+  // @see http://drupal.org/node/1316580
+  $accessible_vars = array(
+    'text' => $variables['text'],
+    'active' => TRUE,
+  );
+
+  // Builds link, passes through t() which gives us the ability to change the
+  // position of the widget on a per-language basis.
+  $replacements = array(
+    '!facetapi_deactivate_widget' => theme('facetapi_deactivate_widget', $variables),
+    '!facetapi_accessible_markup' => theme('facetapi_accessible_markup', $accessible_vars),
+  );
+  $variables['text'] = t('!facetapi_deactivate_widget !facetapi_accessible_markup', $replacements) . $link_text;
+  $variables['options']['html'] = TRUE;
+  return theme_link($variables);
+}
+
+/*
+ * Implements theme_menu_link()
+ *
+ * Modified version of theme_menu_link
+ *
+ * -------------------------------------------------------------------------
+ *
+ * Returns HTML for a menu link and submenu.
+ *
+ * @param $variables
+ *   An associative array containing:
+ *   - element: Structured array data for a menu link.
+ *
+ * @ingroup themeable
+ *
+ * -------------------------------------------------------------------------
+ *
+ * Modifications:
+ *
+ * - Prepends a font awesome icon for known social media websites to the link text
+ *
+ */
+function suitcase_interim_menu_link__menu_social($variables) {
+
+  $element = $variables['element'];
+
+  $sub_menu = '';
+  if ($element['#below']) {
+    $sub_menu = drupal_render($element['#below']);
+  }
+
+  $font_awesome_icons = array(
+    'facebook' => 'fa-facebook-official',
+    'twitter' => 'fa-twitter-square',
+    'youtube' => 'fa-youtube-square',
+    'instagram' => 'fa-instagram',
+    'pinterest' => 'fa-pinterest-square',
+    'github' => 'fa-github-square',
+    'rss' => 'fa-rss-square'
+  );
+
+  $font_awesome_icon = '';
+
+  foreach ($font_awesome_icons as $pattern => $icon) {
+    if (strpos($element['#href'], $pattern) !== FALSE) {
+      $font_awesome_icon = $icon;
+      break;
+    }
+  }
+
+  if (!empty($font_awesome_icon)) {
+    $element['#title'] = '<i class="fa ' . $font_awesome_icon . '" aria-hidden="true"></i> ' . $element['#title'];
+    $element['#localized_options']['html'] = TRUE;
+  }
+
+
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+
 }
