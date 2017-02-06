@@ -309,6 +309,7 @@ figure .insert-default-image-styling + figcaption {
 .region-content img {
     height: auto !important;
     max-width: 100%; 
+    margin: 0.5rem;
 }
 
 a img:focus {
