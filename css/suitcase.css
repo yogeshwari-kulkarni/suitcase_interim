@@ -961,17 +961,17 @@ nav.navigation .secondary-menu>li a.active-trail {
 /* -------------------- */
 
 .zone-content .block ::-webkit-scrollbar,
-.front .panel-panel ::-webkit-scrollbar {
+.panel-panel ::-webkit-scrollbar {
     width: 6px;
 }
 
 .zone-content .block ::-webkit-scrollbar-track,
-.front .panel-panel ::-webkit-scrollbar-track {
+.panel-panel ::-webkit-scrollbar-track {
     opacity: 0;
 }
 
 .zone-content .block ::-webkit-scrollbar-thumb,
-.front .panel-panel ::-webkit-scrollbar-thumb {
+.panel-panel ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background-color: rgba(51,51,51,0.2);
 }
@@ -1310,7 +1310,7 @@ nav.navigation .secondary-menu>li a.active-trail {
 
 /* Enable overflow on front panel panes
 /* of width 4 unless specifically disabled */
-.front .grid-4 .panel-pane:not(.panel-pane-fluidheight) .pane-content {
+.grid-4 .panel-pane:not(.panel-pane-fluidheight) .pane-content {
     height: 350px;
     overflow-y: auto;
 }
@@ -1404,17 +1404,17 @@ span.date-display-single {
 /* -------------------- */
 /* Front Panel */
 
-.front .panel-pane {
+.panel-pane {
     overflow-wrap: break-word;
     word-wrap: break-word;
     word-break: break-word;
 }
 
-.front .panel-pane > h2.pane-title { display: block; }
+.panel-pane > h2.pane-title { display: block; }
 
-.front .item-list { display: block; }
+.item-list { display: block; }
 
-.front .view-about-front-page .field-content li {
+.view-about-front-page .field-content li {
     margin-left: 20px;
 }
 
