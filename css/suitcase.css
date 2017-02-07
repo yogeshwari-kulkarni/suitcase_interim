@@ -1127,19 +1127,23 @@ nav.navigation .secondary-menu>li a.active-trail {
 .flexslider .flex-caption {
     position: absolute;
     right: 1em; bottom: 2em;
-    padding: 1em;
+    padding: 1.25rem !important;
     background: rgba(255, 255, 255, 0.85);
-    -webkit-box-shadow: 0 0 0.4em rgba(100, 100, 100, 0.85);
-    -moz-box-shadow: 0 0 0.4em rgba(100, 100, 100, 0.85);
-    box-shadow: 0 0 0.4em rgba(100, 100, 100, 0.85);
+    border: 1px solid #bbb;
+    box-shadow: -0.15em 0.15em 0.1em rgba(0, 0, 0, 0.25);
 }
 
 .flexslider img { height: 100%; }
 
+.flexslider .flex-caption a {
+    text-decoration: none;
+}
+
 .flexslider .flex-caption p {
     margin-bottom: 0;
-    color: rgba(0, 0, 0, .85);
+    color: #333;
     font-size: 1em;
+    font-weight: 500;
 }
 
 .flexslider .flex-prev,
