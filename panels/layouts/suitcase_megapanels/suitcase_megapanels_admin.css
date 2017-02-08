@@ -1,0 +1,15 @@
+.panel-region {
+	margin: 0.5em;
+}
+
+.panel-region h2.label {
+	margin-top: 0.5em !important;
+}
+
+.front-panel-row {
+	display: flex;
+}
+
+.front-panel-row .grid-3 {
+	width: 25%;
+}
