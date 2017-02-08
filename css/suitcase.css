@@ -1313,13 +1313,6 @@ nav.navigation .secondary-menu>li a.active-trail {
 
 .panel-panel .pane-content .views-row { padding: 0; }
 
-/* Enable overflow on front panel panes
-/* of width 4 unless specifically disabled */
-.front .grid-4 .panel-pane:not(.panel-pane-fluidheight) .pane-content {
-    height: 350px;
-    overflow-y: auto;
-}
-
 .panel-pane > h2.panel-title {
     margin: 0;
     font-size: 26px;
@@ -1381,16 +1374,6 @@ span.date-display-single {
 
 .panel-panel .pane-content .views-row:not(.views-row-last) {
     border-bottom: 1px solid #dddddd;
-}
-
-.panel-panel.grid-4 .pane-content li {
-    margin: 0;
-    padding: 0;
-}
-
-.panel-panel.grid-4 .pane-content li > a {
-    display: block;
-    padding: 10px;
 }
 
 .panel-panel iframe {
