@@ -7,9 +7,9 @@ function suitcase_interim_suitcase_megapanels_panels_layouts() {
   $items['suitcase_megapanels'] = array(
     'title' => t('Suitcase Mega Panel'),
     'category' => t('Suitcase: Mega Panels'),
-    'icon' => 'suitcase_megapanels.png',
+    'icon' => 'suitcase_megapanels.jpg',
     'theme' => 'suitcase_megapanels',
-    'admin css' => '/suitcase_megapanels_admin.css',
+    'admin css' => 'suitcase_megapanels_admin.css',
     'regions' => array(
       'top_full' => t('Top Full'),
       'top_1' => t('Top 1'),
