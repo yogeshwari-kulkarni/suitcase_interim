@@ -1532,7 +1532,10 @@ span.date-display-single {
 /* -------------------- */
 
 .node ol,
-.node ul { padding-left: 3em; }
+.node ul { 
+    padding-left: 3em;
+    overflow: hidden; /* fixes wrapping around floated content */ 
+}
 
 h2.node-title { font-size: 26px }
 
