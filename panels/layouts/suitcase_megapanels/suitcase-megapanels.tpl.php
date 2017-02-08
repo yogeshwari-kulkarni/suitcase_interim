@@ -87,7 +87,7 @@
 	<div class="clearfix front-panel-row front-panel-row_bottom">
 		<?php if (!empty($content['bottom_grow_first'])): ?>
 			<div class="panel-panel grid-3 grid-grow">
-				<?php print $content['middle_grow_first']; ?>
+				<?php print $content['bottom_grow_first']; ?>
 			</div>
 		<?php endif; ?>
 
