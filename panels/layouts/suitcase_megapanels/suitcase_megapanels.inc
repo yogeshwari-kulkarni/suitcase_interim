@@ -9,6 +9,7 @@ function suitcase_interim_suitcase_megapanels_panels_layouts() {
     'category' => t('Suitcase: Mega Panels'),
     'icon' => 'suitcase_megapanels.png',
     'theme' => 'suitcase_megapanels',
+    'admin css' => '/suitcase_megapanels_admin.css'
     'regions' => array(
       'top_full' => t('Top Full'),
       'top_1' => t('Top 1'),
