@@ -9,6 +9,12 @@
 	<?php endif; ?>
 	
 	<div class="clearfix front-panel-row front-panel-row_top">
+		<?php if (!empty($content['top_grow_first'])): ?>
+			<div class="panel-panel grid-3 grid-grow">
+				<?php print $content['top_grow_first']; ?>
+			</div>
+		<?php endif; ?>
+
 		<?php if (!empty($content['top_1'])): ?>
 			<div class="panel-panel grid-3">
 				<?php print $content['top_1']; ?>
@@ -32,9 +38,21 @@
 				<?php print $content['top_4']; ?>
 			</div>
 		<?php endif; ?>
+
+		<?php if (!empty($content['top_grow_last'])): ?>
+			<div class="panel-panel grid-3 grid-grow">
+				<?php print $content['top_grow_last']; ?>
+			</div>
+		<?php endif; ?>
 	</div>
 
 	<div class="clearfix front-panel-row front-panel-row_middle">
+		<?php if (!empty($content['middle_grow_first'])): ?>
+			<div class="panel-panel grid-3 grid-grow">
+				<?php print $content['middle_grow_first']; ?>
+			</div>
+		<?php endif; ?>
+
 		<?php if (!empty($content['middle_1'])): ?>
 			<div class="panel-panel grid-3">
 				<?php print $content['middle_1']; ?>
@@ -58,9 +76,21 @@
 				<?php print $content['middle_4']; ?>
 			</div>
 		<?php endif; ?>
+
+		<?php if (!empty($content['middle_grow_last'])): ?>
+			<div class="panel-panel grid-3 grid-grow">
+				<?php print $content['middle_grow_last']; ?>
+			</div>
+		<?php endif; ?>
 	</div>
 
 	<div class="clearfix front-panel-row front-panel-row_bottom">
+		<?php if (!empty($content['bottom_grow_first'])): ?>
+			<div class="panel-panel grid-3 grid-grow">
+				<?php print $content['middle_grow_first']; ?>
+			</div>
+		<?php endif; ?>
+
 		<?php if (!empty($content['bottom_1'])): ?>
 			<div class="panel-panel grid-3">
 				<?php print $content['bottom_1']; ?>
@@ -82,6 +112,12 @@
 		<?php if (!empty($content['bottom_4'])): ?>
 			<div class="panel-panel grid-3">
 				<?php print $content['bottom_4']; ?>
+			</div>
+		<?php endif; ?>
+
+		<?php if (!empty($content['bottom_grow_last'])): ?>
+			<div class="panel-panel grid-3 grid-grow">
+				<?php print $content['bottom_grow_last']; ?>
 			</div>
 		<?php endif; ?>
 	</div>
