@@ -1313,16 +1313,7 @@ nav.navigation .secondary-menu>li a.active-trail {
 
 .panel-panel .pane-content .views-row { padding: 0; }
 
-/* Enable overflow on front panel panes
-/* of width 4 unless specifically disabled */
-.front .grid-4 .panel-pane:not(.panel-pane-fluidheight) .pane-content {
-    height: 350px;
-    overflow-y: auto;
-}
-
-.panel-pane > h2.panel-title,
-.region-sidebar-first .block-title,
-.region-sidebar-second .block-title {
+.panel-pane > h2.panel-title {
     margin: 0;
     font-size: 26px;
     font-weight: 400;
@@ -1333,9 +1324,7 @@ nav.navigation .secondary-menu>li a.active-trail {
 /* Block/Panel Links */
 
 .panel-pane .views-field-title a,
-.panel-pane .pane-content .item-list li a,
-.region-sidebar-first .block .content .item-list li a,
-.region-sidebar-second .block .content .item-list li a {
+.panel-pane .pane-content .item-list li a {
     display: block;
     text-decoration: underline;
     border-bottom: none;
@@ -1369,15 +1358,11 @@ span.date-display-single {
 .panel-panel .pane-content p:first-child { padding-top: 10px; }
 
 .panel-pane .views-row:not(:last-child),
-.panel-pane .pane-content .item-list li:not(:last-child),
-.region-sidebar-first .block .content .item-list li:not(:last-child),
-.region-sidebar-second .block .content .item-list li:not(:last-child) {
+.panel-pane .pane-content .item-list li:not(:last-child) {
     margin-bottom: 0;
 }
 
-.panel-pane .pane-content .item-list li,
-.region-sidebar-first .block .content .item-list li,
-.region-sidebar-second .block .content .item-list li {
+.panel-pane .pane-content .item-list li {
     margin-left: 0;
 }
 
@@ -1389,16 +1374,6 @@ span.date-display-single {
 
 .panel-panel .pane-content .views-row:not(.views-row-last) {
     border-bottom: 1px solid #dddddd;
-}
-
-.panel-panel.grid-4 .pane-content li {
-    margin: 0;
-    padding: 0;
-}
-
-.panel-panel.grid-4 .pane-content li > a {
-    display: block;
-    padding: 10px;
 }
 
 .panel-panel iframe {
@@ -1903,6 +1878,31 @@ a.facetapi-limit-link.open:after {
 /* -------------------- */
 /* ## FACETS SIDEBAR
 /* -------------------- */
+
+.region-sidebar-first .block-title,
+.region-sidebar-second .block-title {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.region-sidebar-first .block .content .item-list li a,
+.region-sidebar-second .block .content .item-list li a {
+    display: block;
+    text-decoration: underline;
+    border-bottom: none;
+    overflow: hidden;
+}
+
+.region-sidebar-first .block .content .item-list li:not(:last-child),
+.region-sidebar-second .block .content .item-list li:not(:last-child) {
+    margin-bottom: 0;
+}
+
+.region-sidebar-first .block .content .item-list li,
+.region-sidebar-second .block .content .item-list li {
+    margin-left: 0;
+}
 
 .region-sidebar-first-inner .block,
 .region-sidebar-second-inner .block,
