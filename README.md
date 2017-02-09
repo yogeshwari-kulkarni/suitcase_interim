@@ -12,6 +12,10 @@ This theme requires the [Omega base theme (7.x-3.x-dev)].
 
 If you are using [Luggage_ISU] 5.x then Suitcase Interim and Omega have been automatically included.
 
+## Upgrading from Suitcase Classic
+
+If you are upgrading from [Suitcase Classic], included in [Luggage_ISU] prior to 5.x, see the [Upgrade page] of the wiki.
+
 ## Installation with Stock Drupal 7 or older versions of Luggage_ISU
 
 Please follow the directions on the [Installation page] of the wiki.
@@ -41,4 +45,6 @@ Join us on the FreeNode IRC network in the #luggage channel. If you need help se
 [IASTATE theme]:https://www.theme.iastate.edu
 [Luggage_ISU]:https://github.com/isubit/luggage_isu
 [Installation page]:https://github.com/isubit/suitcase_interim/wiki/Installation
+[Suitcase Classic]:https://github.com/isubit/suitcase
+[Upgrade page]:https://github.com/isubit/suitcase_interim/wiki/Upgrading-from-Suitcase-Classic
 [Omega base theme (7.x-3.x-dev)]:https://ftp.drupal.org/files/projects/omega-7.x-3.x-dev.zip
