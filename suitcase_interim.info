@@ -412,3 +412,4 @@ libraries[suitcase_image_floats][name] = 'Suitcase Image Floats'
 libraries[suitcase_image_floats][description] = 'Provides a javascript library that adds a class to floated images'
 libraries[suitcase_image_floats][js][0][file] = 'suitcase_image_floats.js'
 libraries[suitcase_image_floats][js][0][options][weight] = '30'
+scripts[] = js/suitcase_responsive_tables.js
