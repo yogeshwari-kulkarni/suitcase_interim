@@ -2021,6 +2021,213 @@ html.js input.form-autocomplete {
     background-position: 100% 12px;
 }
 
+* -------------------- */
+/* ## RESPONSIVE TABLES
+/* -------------------- */
+
+table.responsive-table  { 
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-collapse: collapse;
+}
+
+table.responsive-table,
+.responsive-table tbody,
+.responsive-table thead,
+.responsive-table tr,
+.responsive-table th,
+.responsive-table td {
+    border: none;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.responsive-table tr {
+    border-bottom: 1px solid #ccc;
+}
+
+.responsive-table tr:first-of-type {
+    border-top: 1px solid #ccc;
+}
+
+.responsive-table th, 
+.responsive-table td {
+    padding: 0.5rem 0.75rem;
+    border-left: 1px solid #ccc;
+}
+.responsive-table th:last-of-type,
+.responsive-table td:last-of-type {
+    border-right: 1px solid #ccc;
+}
+
+.responsive-table th {
+    background-color: #eee;
+}
+
+/* -------------------- */
+/* NO JS
+/* -------------------- */
+    
+    .field-items table {
+        display: block;
+        max-width: 100%;
+        overflow: hidden;
+        overflow-x: scroll;
+    }
+    
+    .field-items table tr {
+        width: 100%;
+    }
+    
+    .field-items table::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+    
+    .field-items table::-webkit-scrollbar:horizontal {
+        height: 11px;
+    }
+    
+    .field-items table::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        border: 2px solid white;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    .field-items table::-webkit-scrollbar-track {
+        background-color: #fff;
+        border-radius: 8px;
+    }
+    
+@media (min-width: 801px) {
+    .row-header { display: none; }
+    .both-row-header { display: none; }
+}
+
+@media (max-width: 800px) {
+    
+/* -------------------- */
+/* NONE
+/* -------------------- */
+    
+    .responsive-table.table-none { display: table; min-width: 75%; }
+    
+    .responsive-table.table-none tr { border-bottom: 3px solid #bbb; }
+    .responsive-table.table-none td { 
+        border-bottom: 1px solid #ddd; 
+        border-right: 1px solid #ddd;
+        display: block; 
+    }
+    
+    .responsive-table.table-none td:last-of-type { border-bottom: none; }
+
+/* -------------------- */
+/* FIRST ROW
+/* -------------------- */
+    
+    .responsive-table.table-row { display: table; min-width: 75%; }
+    
+    .responsive-table.table-row th { display: none; }
+    
+    .responsive-table.table-row tr {
+        display: block;
+        border-bottom: 3px solid #bbb;
+    }
+    
+    .responsive-table.table-row tr:first-of-type { border-bottom: 0; }
+    
+    .responsive-table.table-row td { 
+        display: flex; 
+        padding: 0;
+            border-bottom: 1px solid #ddd; 
+        border-right: 1px solid #ddd;
+    }
+    
+    .responsive-table.table-row td:last-of-type { border-bottom: none; }
+    
+    .cell-content { 
+        display: block; 
+        flex: 1 1 50%;
+        padding: 0.5rem 0.75rem;
+    }
+    
+    .row-header {
+        display: block;
+        flex: 0 1 45%;
+        padding: 0.5rem 0.75rem;
+        background: #eee;
+    }
+    
+    .table-row tr { border-bottom: 3px solid #bbb; }
+        
+/* -------------------- */
+/* FIRST COL
+/* -------------------- */
+    
+    .responsive-table.table-col { display: table; min-width: 75%; }
+    
+    .responsive-table.table-col th,
+    .responsive-table.table-col td { display: block; }
+    
+    .responsive-table.table-col th { border-bottom: 1px solid #bbb; }
+
+    .responsive-table.table-col tr {
+        display: block;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .responsive-table.table-col td { 
+        border-bottom: 1px solid #ddd; 
+        border-right: 1px solid #ddd;
+        display: block; 
+    }
+    
+    .responsive-table.table-col td:last-of-type { border-bottom: none; }
+    
+/* -------------------- */
+/* BOTH
+/* -------------------- */
+    
+    .responsive-table.table-both { display: table; min-width: 75%; }
+    
+    .responsive-table.table-both th,
+    .responsive-table.table-both td { display: block; }
+    
+    .responsive-table.table-both th { border-bottom: 1px solid #bbb; }
+    
+    .responsive-table.table-both tr {
+        display: block;
+        border-bottom: 3px solid #bbb;
+    }
+    
+    .responsive-table.table-both tr:first-of-type { display: none; }
+    
+    .responsive-table.table-both tr:first-of-type th:first-of-type { display: none; }
+    
+    .responsive-table.table-both tr:nth-of-type(2) { border-top: 1px solid #ddd; }
+    
+    .responsive-table.table-both td { 
+        display: flex; 
+        padding: 0;
+        border-bottom: 1px solid #ddd; 
+        border-right: 1px solid #ddd;
+    }
+    
+    .responsive-table.table-both td:last-of-type { border-bottom: none; }
+
+    .both-cell-content { 
+        display: block; 
+        flex: 1 1 50%;
+        padding: 0.5rem 0.75rem;
+    }
+    
+    .both-row-header {
+        display: block;
+        flex: 0 1 45%;
+        padding: 0.5rem 0.75rem;
+        background: #eee;
+    }
+}
+
 /* -------------------- */
 /* ## MEGAPANELS
 /* -------------------- */
