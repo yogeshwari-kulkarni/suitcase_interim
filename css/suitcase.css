@@ -2021,7 +2021,7 @@ html.js input.form-autocomplete {
     background-position: 100% 12px;
 }
 
-* -------------------- */
+/* -------------------- */
 /* ## RESPONSIVE TABLES
 /* -------------------- */
 
@@ -2072,7 +2072,7 @@ table.responsive-table,
         display: block;
         max-width: 100%;
         overflow: hidden;
-        overflow-x: scroll;
+        overflow-x: auto;
     }
     
     .field-items table tr {
