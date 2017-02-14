@@ -2154,6 +2154,7 @@ table.responsive-table,
         display: block;
         flex: 0 1 45%;
         padding: 0.5rem 0.75rem;
+        font-weight: 500;
         background: #eee;
     }
     
@@ -2224,6 +2225,7 @@ table.responsive-table,
         display: block;
         flex: 0 1 45%;
         padding: 0.5rem 0.75rem;
+        font-weight: 500;
         background: #eee;
     }
 }
