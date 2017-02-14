@@ -1580,6 +1580,22 @@ h2.node-title > a:visited { text-decoration: underline; }
 .field-item td { min-width: 100px; }
 
 /* -------------------- */
+/* Authors/Aliases */
+
+.field-name-field-hn-authors .media {
+    display: flex;
+}
+
+.media-left { 
+    display: block;
+    flex-shrink: 0; 
+}
+
+.media-body {
+    display: block;
+}
+
+/* -------------------- */
 /* ## NODE - BIBLIO 
 /* -------------------- */
 
