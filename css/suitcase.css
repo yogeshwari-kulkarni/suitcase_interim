@@ -1775,14 +1775,12 @@ footer.submitted > span .placeholder {
 
 .read-more {
     display: inline;
-    font-size: 0.9em;
     clear: both;
 }
 
 .read-more > a { float: none; }
 
 .read-more > a > strong {
-    font-weight: normal;
     white-space: nowrap;
 }
 
