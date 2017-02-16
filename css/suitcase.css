@@ -1163,6 +1163,20 @@ nav.navigation .secondary-menu>li a.active-trail {
     z-index: 2;
 }
 
+.flex-pauseplay { float: left; }
+
+.flex-pauseplay a {
+    width: 0.85rem;
+    height: 1rem;
+    font-size: 1rem;
+}
+
+.flex-pauseplay a:before {
+    font-size: 1rem;
+    line-height: 1rem;
+    float: left;
+}
+
 /* -------------------- */
 /* ## SIDEBAR 
 /* -------------------- */
