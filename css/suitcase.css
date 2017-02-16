@@ -1782,7 +1782,6 @@ footer.submitted > span .placeholder {
 .read-more > a { float: none; }
 
 .read-more > a > strong {
-    font-weight: normal;
     white-space: nowrap;
 }
 
