@@ -1431,6 +1431,18 @@ span.date-display-single {
 
 .view-id-my_resources .view-content { overflow-x: auto; }
 
+/* Certain block views on in panels/homepage */
+
+.panel-pane .views-row:only-of-type {
+    margin-top: 0;
+    border-bottom: 0;
+}
+
+.panel-pane .views-row:only-of-type h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
 /* -------------------- */
 /* Grid for Views */
 
