@@ -1531,6 +1531,33 @@ span.date-display-single {
     margin-left: 75px !important;
 }
 
+/* Book Section Links */
+
+.book-navigation { 
+    padding: 1rem 0;
+}
+
+.book-navigation .menu {
+    margin: 0 0 1rem;
+    padding: 0;
+    border: 0;
+}
+
+.book-navigation .menu li {
+    list-style-type: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+}
+
+.book-navigation .menu li a {
+    display: block;
+    margin-bottom: 0.5rem;
+    padding: 10px 16px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+}
+
 /* Sidebar */
 
 .block-book .block-title {
