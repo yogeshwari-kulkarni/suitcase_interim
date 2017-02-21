@@ -1531,6 +1531,42 @@ span.date-display-single {
     margin-left: 75px !important;
 }
 
+/* Sidebar */
+
+.block-book .block-title {
+    margin-bottom: 1rem;
+}
+
+.block-book .menu li {
+    list-style-type: none;
+    list-style-image: none;
+    margin: 0;
+}
+
+.block-book .menu li a {
+    display: block;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 15px;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+}
+
+.block-book .menu li a:hover {
+    text-decoration: underline;
+}
+
+.block-book ul li.collapsed a:after {
+    content: '›';
+    float: right;
+    margin-top: -8px;
+    font-size: 24px;
+}
+
+.block-book ul ul {
+    margin-left: 1rem;
+}
+
 /* -------------------- */
 /* ## NODE - GENERAL 
 /* -------------------- */
