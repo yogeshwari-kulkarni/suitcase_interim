@@ -1594,6 +1594,69 @@ span.date-display-single {
     margin-left: 1rem;
 }
 
+/* Pagination */
+
+.book-navigation .page-links {
+    border-top: 0;
+    border-bottom: 0;
+    padding: 0;
+}
+
+.book-navigation .page-next,
+.book-navigation .page-previous,
+.book-navigation .page-up {
+    display: inline-block;
+    width: auto;
+    margin-top: 1rem;
+    padding: 10px 16px;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.book-navigation .page-up {
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
+}
+
+.book-navigation .page-next:hover,
+.book-navigation .page-previous:hover,
+.book-navigation .page-up:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 550px) {
+    .book-navigation .page-links {
+        display: flex;
+        flex-wrap: wrap;
+    }
+       
+    .book-navigation .page-next,
+    .book-navigation .page-previous,
+    .book-navigation .page-up {
+        display: block;
+        float: none;
+    }
+
+    .book-navigation .page-next,
+    .book-navigation .page-previous {
+        width: calc(50% - 10px);
+    }
+
+    .book-navigation .page-previous {
+        margin-right: 20px;
+    }
+
+    .book-navigation .page-up {
+        width: 100%;
+        order: -1;
+    }
+}
+
 /* -------------------- */
 /* ## NODE - GENERAL 
 /* -------------------- */
