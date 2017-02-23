@@ -857,6 +857,42 @@ nav.navigation .secondary-menu>li a.active-trail {
     text-decoration: none;
 }
 
+/* Social and Footer Icon Menus */
+
+.pane-menu-menu-social .menu {
+    padding-left: 0;
+}
+
+.pane-menu-menu-social .menu li {
+    list-style-image: none;
+    list-style-type: none;
+    margin-bottom: 0.75rem;
+    margin-right: 0;
+}
+
+.pane-menu-menu-social .menu a,
+#block-menu-menu-social .menu a {
+    display: flex;
+    color: #333;
+    text-decoration: none;
+}
+
+.pane-menu-menu-social .menu a > i,
+#block-menu-menu-social .menu a > i {
+    margin-top: -0.1em;
+    font-size: 2rem;
+}
+
+.pane-menu-menu-social .menu a:hover,
+#block-menu-menu-social .menu a:hover {
+    text-decoration: none;
+}
+
+.pane-menu-menu-social .menu a:hover span,
+#block-menu-menu-social .menu a:hover span {
+    text-decoration: underline;
+}
+
 /* -------------------- */
 /* ## CARETS 
 /* -------------------- */
