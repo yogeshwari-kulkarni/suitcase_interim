@@ -857,6 +857,145 @@ nav.navigation .secondary-menu>li a.active-trail {
     text-decoration: none;
 }
 
+/* Social and Footer Icon Menus */
+
+.pane-menu-menu-social .menu {
+    padding-left: 0;
+}
+
+.pane-menu-menu-social .menu li {
+    list-style-image: none;
+    list-style-type: none;
+    margin-bottom: 0.75rem;
+    margin-right: 0;
+}
+
+.pane-menu-menu-social .menu a,
+#block-menu-menu-social .menu a {
+    display: flex;
+    color: #333;
+    text-decoration: none;
+}
+
+.pane-menu-menu-social .menu a > i,
+#block-menu-menu-social .menu a > i {
+    margin-top: -0.1em;
+    font-size: 2rem;
+}
+
+.pane-menu-menu-social .menu a:hover,
+#block-menu-menu-social .menu a:hover {
+    text-decoration: none;
+}
+
+.pane-menu-menu-social .menu a:hover span,
+#block-menu-menu-social .menu a:hover span {
+    text-decoration: underline;
+}
+
+a:hover > .fa-facebook-official { color: #3b5998; }
+
+a:hover > .fa-twitter-square { color: #1da1f2; }
+
+a:hover > .fa-github-square { color: #4078c0; }
+
+a:hover > .fa-pinterest-square { color: #bd081c; }
+
+a:hover > .fa-youtube-square { color: #cd201f; }
+
+a:hover > .fa-rss-square { color: #f77737; }
+
+a:hover > .fa-instagram {
+    background: 
+    -webkit-radial-gradient(
+        circle farthest-corner at 35% 90%, 
+        #fec564, 
+        transparent 50%
+        ),
+    -webkit-radial-gradient(
+        circle farthest-corner at 0 140%, 
+        #fec564, 
+        transparent 50%
+        ),
+    -webkit-radial-gradient(
+        ellipse farthest-corner at 0 -25%, 
+        #5258cf, 
+        transparent 50%
+        ),
+    -webkit-radial-gradient(
+        ellipse farthest-corner at 20% -50%, 
+        #5258cf, 
+        transparent 50%
+        ),
+    -webkit-radial-gradient(
+        ellipse farthest-corner at 100% 0, 
+        #893dc2, 
+        transparent 50%
+        ),
+    -webkit-radial-gradient(
+        ellipse farthest-corner at 60% -20%, 
+        #893dc2, 
+        transparent 50%
+        ),
+    -webkit-radial-gradient(
+        ellipse farthest-corner at 100% 100%, 
+        #d9317a, 
+        transparent
+        ),
+    -webkit-linear-gradient(
+        #6559ca, 
+        #bc318f 30%, 
+        #e33f5f 50%, 
+        #f77638 70%, 
+        #fec66d 100%
+        );
+    background: 
+    radial-gradient(
+        circle farthest-corner at 35% 90%, 
+        #fec564, 
+        transparent 50%
+        ),
+    radial-gradient(
+        circle farthest-corner at 0 140%, 
+        #fec564, 
+        transparent 50%
+        ),
+    radial-gradient(
+        ellipse farthest-corner at 0 -25%, 
+        #5258cf, 
+        transparent 50%
+        ),
+    radial-gradient(
+        ellipse farthest-corner at 20% -50%, 
+        #5258cf, 
+        transparent 50%
+        ),
+    radial-gradient(
+        ellipse farthest-corner at 100% 0, 
+        #893dc2, 
+        transparent 50%
+        ),
+    radial-gradient(
+        ellipse farthest-corner at 60% -20%, 
+        #893dc2, 
+        transparent 50%
+        ),
+    radial-gradient(
+        ellipse farthest-corner at 100% 100%, 
+        #d9317a, 
+        transparent)
+    ,
+    linear-gradient(
+        #6559ca, 
+        #bc318f 30%, 
+        #e33f5f 50%, 
+        #f77638 70%, 
+        #fec66d 100%
+        );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 /* -------------------- */
 /* ## CARETS 
 /* -------------------- */

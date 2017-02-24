@@ -305,10 +305,6 @@
         font-size: 1.1em;
     }
 
-    #region-footer-fourth ul li.leaf a:hover {
-        text-decoration: underline;
-    }
-
     .caret {
         border-top: 6px solid #000;
         border-right: 6px solid transparent;
