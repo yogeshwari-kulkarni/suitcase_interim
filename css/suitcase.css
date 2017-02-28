@@ -1512,8 +1512,6 @@ span.date-display-single {
     color: #777777;
 }
 
-.panel-panel .pane-content > p { padding: 0 10px; }
-
 .panel-panel .pane-content p:first-child { padding-top: 10px; }
 
 .panel-pane .views-row:not(:last-child) {
