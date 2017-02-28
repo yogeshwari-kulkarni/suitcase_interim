@@ -362,6 +362,17 @@ figure.image.floated-left img,
 figure.image.floated-right img { margin: 0; }
 
 /* -------------------- */
+/* :focus */
+/* -------------------- */
+
+*:focus {
+    -webkit-box-shadow: 0 0 5px 0 #0066ff;
+    -moz-box-shadow: 0 0 5px 0 #0066ff;
+    box-shadow: 0 0 5px 0 #0066ff !important;
+    outline: 0 !important;
+}
+
+/* -------------------- */
 /* ## UTILITY 
 /* -------------------- */
 
