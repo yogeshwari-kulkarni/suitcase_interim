@@ -76,12 +76,6 @@ span { color: #333333; }
 a, a:link, a:visited { color: #cc0000; }
 a em, a:link em, a:hover em, a:visited em { color: inherit; }
 
-a:focus {
-    outline-style: solid;
-    outline-color: #F1BE48;
-    outline-width: 2px;
-}
-
 a > .fa { margin-right: 10px; }
 
 a.button {
@@ -299,16 +293,6 @@ input[type=text], textarea {
     border: 1px solid #DDDDDD;
 }
 
-input[type=text]:focus, textarea:focus {
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    border: 1px solid #F1BE48;
-    outline-style: solid;
-    outline-color: #F1BE48;
-    outline-width: 1px;
-}
-
 input[type="password"] {
     height: 3em;
     padding: 0;
@@ -339,10 +323,6 @@ figure .insert-default-image-styling + figcaption {
     height: auto !important;
     max-width: 100%; 
     margin: 0.5rem;
-}
-
-a img:focus {
-    border: 2px #F1BE48;
 }
 
 /* CK Editor Enhanced Images */
@@ -485,12 +465,6 @@ figure.image.floated-right img { margin: 0; }
     color: #fff;
     background: #777;
     transition: all 0.25s ease;
-}
-
-#isu-menu-nav .sm ul a:focus,
-#isu-menu-nav .sm ul a:active,
-#isu-menu-nav .sm ul a.highlighted {
-    border: 2px #F1BE48;
 }
 
 #isu-menu-nav #isu-index-menu { float: left; }
@@ -1174,21 +1148,13 @@ a:hover > .fa-instagram {
 }
 .form-text.transparent:focus { border: none; }
 
-.region-search-inner input[type=submit],
-.region-search-inner input[type=submit]:focus {
+.region-search-inner input[type=submit] {
     margin: 0 0 0 20px;
     background-color: transparent;
     background-image: url(../images/search.png);
     background-repeat: no-repeat;
     background-position: 0 center;
     background-size: contain;
-    border: none;
-    box-shadow: none;
-}
-
-.region-search-inner input[type=text],
-.region-search-inner input[type=text]:focus,
-.region-search-inner textarea:focus {
     border: none;
     box-shadow: none;
 }
