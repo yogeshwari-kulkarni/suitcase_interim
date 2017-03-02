@@ -540,6 +540,7 @@ figure.image.floated-right img { margin: 0; }
 #region-branding .site-name-slogan a {
     display: block;
     color: #fff;
+    line-height: 1.25;
     text-decoration: none;
 }
 
