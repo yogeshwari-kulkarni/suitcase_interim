@@ -311,6 +311,42 @@ input[type="submit"] {
     color: #000000;
 }
 
+/* --------------------- */
+/* Fieldsets */
+
+/* Collapsed */
+
+html.js fieldset.collapsed { height: auto; }
+
+fieldset.vertical-tabs-pane fieldset.collapsed legend {
+    width: 100%;
+}
+
+html.js fieldset.collapsed .fieldset-legend {
+    padding: 0.5rem;
+    padding-left: 20px;
+    border: 1px solid #dddddd;
+}
+
+fieldset.collapsible { border: 1px solid #dddddd; }
+
+/* Open */
+
+fieldset.collapsible:not(.collapsed) {
+    padding: 1rem;
+}
+
+fieldset.collapsible:not(.collapsed) legend {
+    width: auto;
+}
+
+/* Indicator */
+
+html.js fieldset.collapsible .fieldset-legend {
+    padding-left: 20px;
+    background-size: 10px;
+}
+
 /* -------------------- */
 /* ## FIGURES and IMAGES 
 /* -------------------- */
