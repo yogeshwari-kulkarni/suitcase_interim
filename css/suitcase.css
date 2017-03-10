@@ -2356,6 +2356,63 @@ a.facetapi-limit-link.open:after {
     border-radius: 0 3px 3px 0;
 }
 
+/* ------------------- */
+/* BLOG */
+/* ------------------- */
+
+/* Picture/name component */
+
+.media { display: flex; }
+
+.media-left { flex-shrink: 0; }
+
+.region-content .media-left img { margin-left: 0; }
+
+.media-heading { margin-top: 0; }
+
+/* Blog List */
+
+.view-id-blog.view-display-id-page .views-row,
+.view-id-blog.view-display-id-person_blog_page .views-row {
+    padding: 1rem;
+    border: 1px solid #ddd;
+}
+
+.view-id-blog.view-display-id-page .views-row span,
+.view-id-blog.view-display-id-person_blog_page .views-row span { color: inherit; }
+
+/* Blog Author Header */
+
+.view-display-id-person_blog_page_hero_attachment .views-field-field-people-image img {
+    margin: 0;
+    padding-left: 1rem;
+    border-radius: 0;
+}
+
+/* Blog Author Components */
+
+.views-field-field-lug-blog-author .field-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.view-display-id-page .views-field-field-lug-blog-author .media {
+    display: block;
+}
+
+.view-bloggers .media {
+    display: flex;
+    align-items: center;
+}
+
+.view-bloggers .media-heading { margin-bottom: 0; }
+
+.img-circle {
+    height: 56px;
+    width: 56px;
+    border: 1px solid #ddd;
+}
+
 /* -------------------- */
 /* ## THROBBER
 /* -------------------- */
