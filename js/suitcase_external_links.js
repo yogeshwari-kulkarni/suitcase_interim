@@ -7,9 +7,9 @@
 
 	$(document).ready(function() {
 
-		$('a:not(:has(img)').filter(function() {
+		$('a').filter(function() {
 			return this.hostname && this.hostname !== location.hostname;
-		}).addClass('external');
+		}).not('a:has(img)').addClass('external');
 	});
 
 })(jQuery);
