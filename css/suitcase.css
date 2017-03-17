@@ -304,6 +304,13 @@ input[type="submit"] {
     border-radius: 2px;
 }
 
+.region-search-inner input[type=text],
+.region-search-inner input[type=text]:focus,
+.region-search-inner textarea:focus {
+    border: none;
+    box-shadow: none;
+}
+
 /* Help Text */
 .filter-guidelines-wysiwyg .tips,
 .form-item .description {
