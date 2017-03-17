@@ -7,7 +7,7 @@
 
 	$(document).ready(function() {
 
-		$('a').filter(function() {
+		$('a:not(:has(img)').filter(function() {
 			return this.hostname && this.hostname !== location.hostname;
 		}).addClass('external');
 	});
