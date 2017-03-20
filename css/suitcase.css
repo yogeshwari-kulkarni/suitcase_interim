@@ -1207,6 +1207,13 @@ a:hover > .fa-instagram {
     box-shadow: none;
 }
 
+.region-search-inner input[type=text],
+.region-search-inner input[type=text]:focus,
+.region-search-inner textarea:focus {
+    border: none;
+    box-shadow: none;
+}
+
 .page-search input#edit-keys,
 .page form#search-block-form .form-item-search-block-form input.form-text {
     width: calc(100% - 62px);
