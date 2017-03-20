@@ -78,6 +78,30 @@ a em, a:link em, a:hover em, a:visited em { color: inherit; }
 
 a > .fa { margin-right: 10px; }
 
+a.button {
+    display: inline-block;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    color: #ffffff !important;
+    font-size: 1rem;
+    font-family: inherit;
+    font-weight: bold;
+    border-radius: 2px;
+    border: 0;
+    outline: none;
+    text-shadow: none;
+    text-decoration: none !important;
+    background: #cc0000;
+    float: none;
+    transition: background 0.1s ease;
+    cursor: pointer;
+}
+
+a.button:hover {
+    background: #333333;
+}
+
 .more-link ,
 .read-more {
     display: inline-block;
