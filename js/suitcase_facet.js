@@ -1,31 +1,55 @@
 /**
- * @todo
+ * Function controlling how collapsible facet blocks work.
  */
 
 (function($) {
-  /**
-   * @todo
-   */
+ 
   Drupal.behaviors.suitcaseFacet = {
     attach: function (context) {
       $('body', context).once('suitcaseFacet', function() {
-        $('.zone-content section.block').addClass('js-suitcase-facet');
-        var touched = false;
 
+        // Add a javascript class to blocks
+        $('.zone-content section.block').addClass('js-suitcase-facet');
+
+        // Add the caret to facet titles
         $('.js-suitcase-facet .block-title').each(function() {
           $(this).append('<span class="caret"></span>');
-        }).bind('click touchend', function(e) {
-          if(touched) {e.preventDefault();touched=false;return;
-          }
-          $(this).parent().find('.content').toggle();
-          $(this).toggleClass('block-title-open');
-          touched = (e.type == 'touchend');
+        }).click(function() { // And when the title is clicked...
+
+          // Add class to title (which helps for open/closed CSS styling)
+          $(this).toggleClass('block-title-open')
         });
 
+        // If the window is less than than 980px wide...
         if($(window).width() < 980) {
-          $('.js-suitcase-facet .content').toggle();
-        }
+          // Add a class to .content in blocks NOT open by default
+          $('.js-suitcase-facet:not(.block-default-open) .content').addClass('block-closed');
+        };
+
+        // If a block should be closed by default, add the closed class to .content
+        $('.block-default-closed .content').addClass('block-closed');
+
+        // When the title is clicked...
+        $('.block-title').click(function() {
+          // Toggle the closed class to open/closed
+          $(this).parent().find('.content').toggleClass('block-closed');
+        });
+
       });
     }
   };
 })(jQuery);
+
+/**
+ * NOTES:
+ * 1. If javascript is disabled, all blocks are always open.
+ * 2. If javascript is enabled, and the screen is narrow, all blocks are closed by default.
+ * 3. If javascript is enabled, blocks closed by default begin closed
+ * 4. If javascript is enabled, blocks can be open/closed on click/tap
+
+ * To set a block closed by default (on screens wider than 980px), give the .js-suitcase-facet 
+ * block the .block-default-closed class.
+
+ * To force a block to begin opened on mobile, give the .js-suitcase-facet block the
+ * .block-default-open class.
+*/
