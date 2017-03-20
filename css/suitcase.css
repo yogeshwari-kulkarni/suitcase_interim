@@ -304,13 +304,6 @@ input[type="submit"] {
     border-radius: 2px;
 }
 
-.region-search-inner input[type=text],
-.region-search-inner input[type=text]:focus,
-.region-search-inner textarea:focus {
-    border: none;
-    box-shadow: none;
-}
-
 /* Help Text */
 .filter-guidelines-wysiwyg .tips,
 .form-item .description {
@@ -1210,6 +1203,13 @@ a:hover > .fa-instagram {
     background-repeat: no-repeat;
     background-position: 0 center;
     background-size: contain;
+    border: none;
+    box-shadow: none;
+}
+
+.region-search-inner input[type=text],
+.region-search-inner input[type=text]:focus,
+.region-search-inner textarea:focus {
     border: none;
     box-shadow: none;
 }
