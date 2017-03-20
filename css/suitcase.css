@@ -2306,6 +2306,19 @@ a.facetapi-limit-link.open:after {
 .block-inner .block-title-open .caret:after { opacity: 100; }
 
 /* -------------------- */
+/* ## COLLAPSIBLE BLOCKS
+/* -------------------- */
+
+.js-suitcase-facet .content.block-closed {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* -------------------- */
 /* ## EVENTS
 /* -------------------- */
 
