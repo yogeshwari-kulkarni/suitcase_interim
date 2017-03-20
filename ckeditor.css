@@ -1,0 +1,147 @@
+/* -------------------- */
+/* ## Typography */
+/* -------------------- */
+
+body {
+  font-family: 'Nimbus Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+h2 { font-size: 1.625em; }
+h3 { font-size: 1.25em; }
+
+ol, ul {
+  padding-left: 3em
+}
+
+blockquote {
+  margin: 0 0 0 16px;
+  padding: 8px 16px 0 13px;
+  color: #555555;
+  border: 3px solid #f1be48;
+  border-width: 0 0 0 3px;
+}
+
+blockquote p { margin-top: 0; }
+
+/* -------------------- */
+/* ## General indentation & positioning classes */
+/* -------------------- */
+
+.rteindent1 {
+  margin-left: 40px;
+}
+.rteindent2 {
+  margin-left: 80px;
+}
+.rteindent3 {
+  margin-left: 120px;
+}
+.rteindent4 {
+  margin-left: 160px;
+}
+.rteleft {
+  text-align: left;
+}
+.rteright {
+  text-align: right;
+}
+.rtecenter {
+  text-align: center;
+}
+.rtejustify {
+  text-align: justify;
+}
+.ibimage_left {
+  float: left;
+}
+.ibimage_right {
+  float: right;
+}
+
+/* -------------------- */
+/* ## Images and Captions */
+/* -------------------- */
+
+figure.image {
+  display: table;
+  margin: 1rem;
+}
+
+figure.image img {
+  max-width: 100%;
+  display: block;
+  margin: 0;
+}
+
+img.cke_editable {
+  margin: 1rem;
+}
+
+figure.image figcaption {
+  display: table-caption;
+  caption-side: bottom;
+  padding: 0.5rem;
+  color: #333;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid #ddd;
+  border-top: 0;
+  background-color: #eee;
+}
+
+figure.image br {
+  display: none;
+}
+
+figure.image.floated-left { margin: 0.25rem 1rem 0.25rem 0; }
+
+figure.image.floated-right { margin: 0.25rem 0 0.25rem 1rem; }
+
+figure.image.floated-left img,
+figure.image.floated-right img { margin: 0; }
+
+/* -------------------- */
+/* ## Tables */
+/* -------------------- */
+
+body.cke_editable table {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-collapse: collapse;
+}
+
+body.cke_editable table,
+body.cke_editable tbody,
+body.cke_editable thead,
+body.cke_editable tr,
+body.cke_editable th,
+body.cke_editable td {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body.cke_editable tr {
+  border-bottom: 1px solid #ccc;
+}
+
+body.cke_editable tr:first-of-type {
+  border-top: 1px solid #ccc;
+}
+
+body.cke_editable th,
+body.cke_editable td {
+  padding: 0.5rem 0.75rem;
+  border-left: 1px solid #ccc;
+}
+
+body.cke_editable th:last-of-type,
+body.cke_editable td:last-of-type {
+  border-right: 1px solid #ccc;
+}
+
+body.cke_editable th {
+  background-color: #eee;
+}
