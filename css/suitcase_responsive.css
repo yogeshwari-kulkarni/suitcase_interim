@@ -332,3 +332,17 @@
     }
 
 }
+
+@media only screen and (min-width: 769px) {
+    .luggage-gridrow,
+    .luggage-gridrow3,
+    .luggage-gridrow4{ flex-basis: 48.6%; }
+}
+
+@media only screen and (min-width: 1024px) {
+    .luggage-gridrow4{ flex-basis: 23.6%; }
+}
+
+@media only screen and (min-width: 1024px) {
+    .luggage-gridrow3{ flex-basis: 31.4%; }
+}
