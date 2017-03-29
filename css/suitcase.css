@@ -1611,7 +1611,7 @@ span.date-display-single {
 .luggage-gridrow4 {
     background: rgba(255, 255, 255, 0.7);
     box-sizing: border-box;
-    padding: 10px 5px;
+    padding: 15px;
     margin: 0 0.7%;
     outline: 1px solid #ddd;
     flex: 0 0 100%;
