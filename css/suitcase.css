@@ -109,6 +109,23 @@ a > .fa { margin-right: 10px; }
     background: #333333;
 }
 
+/* External Links */
+
+#section-content a.external:after {
+    content: '\f08e';
+    font-family: 'FontAwesome';
+    font-size: 0.75em;
+    display: inline-block;
+    margin-left: 4px;
+    vertical-align: text-top;
+}
+
+#section-content .pane-menu-menu-social a.external:after,
+#section-content .view-resources a.external:after,
+#section-content .biblio-entry a.external:after {
+    content: '';
+}
+
 /* --------------------- */
 /* Lists */
 
