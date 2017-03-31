@@ -106,12 +106,6 @@
     .flexslider {
         display: block;
     }
-
-
-    .luggage-grid .luggage-gridrow {
-        width: 49.5%;
-    }
-
 }
 
 @media all and (max-width: 739px) {
@@ -331,4 +325,33 @@
         margin-right: auto !important;
     }
 
+}
+
+@media only screen and (min-width: 769px) {
+    .luggage-gridrow,
+    .luggage-gridrow3,
+    .luggage-gridrow4 {
+        flex-basis: 48.6%;
+        min-width: 48.6%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .luggage-gridrow4 {
+        flex-basis: 23.5%;
+        min-width: 23.5%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .luggage-gridrow3 {
+        flex-basis: 31.3%;
+        min-width: 31.3%;
+    }
+
+    .luggage-gridrow3 .views-field-field-uri-1,
+    .luggage-gridrow4 .views-field-field-uri-1 {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
 }
