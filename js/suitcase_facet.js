@@ -14,10 +14,6 @@
         // Add the caret to facet titles
         $('.js-suitcase-facet .block-title').each(function() {
           $(this).append('<span class="caret"></span>');
-        }).click(function() { // And when the title is clicked...
-
-          // Add class to title (which helps for open/closed CSS styling)
-          $(this).toggleClass('block-title-open')
         });
 
         // If the window is less than than 980px wide...
@@ -26,11 +22,16 @@
           $('.js-suitcase-facet:not(.block-default-open) .content').addClass('block-closed');
         };
 
+        // If a block is open by default, add the open class to the title
+        $('.block-default-open .block-title').addClass('block-title-open');
+
         // If a block should be closed by default, add the closed class to .content
         $('.block-default-closed .content').addClass('block-closed');
 
         // When the title is clicked...
         $('.block-title').click(function() {
+          // Toggle the title class
+          $(this).toggleClass('block-title-open');
           // Toggle the closed class to open/closed
           $(this).parent().find('.content').toggleClass('block-closed');
         });
