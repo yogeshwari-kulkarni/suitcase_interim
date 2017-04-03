@@ -2301,9 +2301,9 @@ a.facetapi-limit-link.open:after {
 
 .js-suitcase-facet .caret:after { transform: rotate(90deg); }
 
-.block-title .caret:after { opacity: 0; }
+.block-title .caret:after { opacity: 1; }
 
-.block-inner .block-title-open .caret:after { opacity: 100; }
+.block-title.block-title-open .caret:after { opacity: 0; }
 
 /* -------------------- */
 /* ## COLLAPSIBLE BLOCKS
