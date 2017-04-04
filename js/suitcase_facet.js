@@ -18,20 +18,19 @@
 
         // If the window is less than than 980px wide...
         if($(window).width() < 980) {
-          // Add a class to .content in blocks NOT open by default
+          // Close all blocks not open by default
+          $('.js-suitcase-facet:not(.block-default-open) .block-title').addClass('block-title-closed');
           $('.js-suitcase-facet:not(.block-default-open) .content').addClass('block-closed');
         };
 
-        // If a block is open by default, add the open class to the title
-        $('.block-default-open .block-title').addClass('block-title-open');
-
-        // If a block should be closed by default, add the closed class to .content
+        // If a block is closed by defatul, close everything
+        $('.block-default-closed .block-title').addClass('block-title-closed');
         $('.block-default-closed .content').addClass('block-closed');
 
         // When the title is clicked...
         $('.block-title').click(function() {
           // Toggle the title class
-          $(this).toggleClass('block-title-open');
+          $(this).toggleClass('block-title-closed');
           // Toggle the closed class to open/closed
           $(this).parent().find('.content').toggleClass('block-closed');
         });
