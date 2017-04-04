@@ -2268,11 +2268,27 @@ a.facetapi-limit-link.open:after {
     background: #cccccc;
 }
 
-.js-suitcase-facet .caret:after { transform: rotate(90deg); }
+.js-suitcase-facet .caret:after { 
+    transform: rotate(90deg); 
+    opacity: 0;
+}
 
-.block-title .caret:after { opacity: 0; }
+.js-suitcase-facet .block-title-closed .caret:after {
+    opacity: 1;
+}
 
-.block-inner .block-title-open .caret:after { opacity: 100; }
+/* -------------------- */
+/* ## COLLAPSIBLE BLOCKS
+/* -------------------- */
+
+.js-suitcase-facet .content.block-closed {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
 
 /* -------------------- */
 /* ## EVENTS
