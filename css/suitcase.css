@@ -2299,11 +2299,14 @@ a.facetapi-limit-link.open:after {
     background: #cccccc;
 }
 
-.js-suitcase-facet .caret:after { transform: rotate(90deg); }
+.js-suitcase-facet .caret:after { 
+    transform: rotate(90deg); 
+    opacity: 0;
+}
 
-.block-title .caret:after { opacity: 1; }
-
-.block-title.block-title-open .caret:after { opacity: 0; }
+.js-suitcase-facet .block-title-closed .caret:after {
+    opacity: 1;
+}
 
 /* -------------------- */
 /* ## COLLAPSIBLE BLOCKS
