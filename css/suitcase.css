@@ -406,7 +406,6 @@ img {
     height: auto;
     max-width: calc(100% - 1rem);
     margin: 0.5rem;
-    border: 3px solid mediumorchid !important;
 }
 
 /* --- CKEditor Enhanced Images --- */
