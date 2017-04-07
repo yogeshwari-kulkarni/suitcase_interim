@@ -476,7 +476,7 @@ input[type=submit].form-submit {
 }
 
     input[type=submit].form-submit:hover {
-        background: #ddd;
+        background-color: #ddd;
     }
 
 /* Select  */
@@ -813,7 +813,6 @@ input[type=submit].form-submit {
     background-size: contain;
     border: 0;
     box-shadow: none;
-
 }
 
 /* -------------------- */
