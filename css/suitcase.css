@@ -1,4 +1,4 @@
-/* TESTING VERSION 3.2 */
+/* TESTING VERSION 3.3 */
 
 /* ---------------------------------------- */
 /* ## Table of Contents 
@@ -1571,7 +1571,7 @@ aside.region {
     margin-bottom: 1rem;
 }
 
-.views-row > .node {
+.view-display-id-page .views-row {
     padding: 1rem;
     border: 1px solid #dddddd;
 }
@@ -2084,13 +2084,6 @@ h2.node-title {
 .submitted > span > em,
 .view-id-news.view-display-id-page .views-field-created > em {
     font-style: normal;
-}
-
-/* --- News with Views --- */
-
-.view-id-news.view-display-id-page .views-row {
-    padding: 1rem;
-    border: 1px solid #ddd;
 }
 
 /* -------------------- */
