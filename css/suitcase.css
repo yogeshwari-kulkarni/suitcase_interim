@@ -328,12 +328,6 @@ ol,
     background-color: #eeeeee; 
 }
 
-/* Reset odd/even backgrounds */
-
-tr.even td {
-    background: #ffffff;
-}
-
 /* --- Panel Tables --- */
 
 .pane-content td {
