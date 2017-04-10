@@ -490,6 +490,10 @@ input[type=submit].form-submit {
     border: 1px solid #ddd;
 }
 
+.form-type-select select[multiple] {
+    padding-right: 0.5rem;
+}
+
 /* Views Forms */
 /* Overrides styles from views.css */
 
