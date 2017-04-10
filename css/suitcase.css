@@ -207,8 +207,8 @@ a:hover {
     padding: 0.15rem 0.25rem;
     font-size: 0.9rem;
     color: #333;
-    background: #eee;
-    border: 1px solid #ddd;
+    background: #ddd;
+    border: 1px solid #ccc;
     border-radius: 3px;
     cursor: pointer;
     transition: background 0.2s ease;
