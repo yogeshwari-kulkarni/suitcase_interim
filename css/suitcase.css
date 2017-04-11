@@ -349,8 +349,7 @@ figure .insert-default-image-styling + figcaption {
 
 .region-content img {
     height: auto !important;
-    max-width: calc(100% - 1rem); 
-    margin: 0.5rem;
+    max-width: 100%;
 }
 
 /* CK Editor Enhanced Images */
