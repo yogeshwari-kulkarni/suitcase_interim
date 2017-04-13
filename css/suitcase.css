@@ -2411,6 +2411,11 @@ td.views-field-field-resource-screenshot img {
     padding: 0.5rem 1rem;
 }
 
+.node-biblio .content h3 {
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
 /* -------------------- */
 /* ## BLOG 
 /* -------------------- */
