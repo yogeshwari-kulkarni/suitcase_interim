@@ -1491,8 +1491,7 @@ h2.block-title {
     transition: all 100ms ease;
 }
 
-.block-facetapi .item-list li a.facetapi-active,
-.block-facetapi .item-list li a:hover {
+.block-facetapi .item-list li a.facetapi-active {
     color: #ffffff;
     background: #006ba6;
 }
@@ -1501,7 +1500,8 @@ h2.block-title {
     font-weight: 700;
 }
 
-.block-facetapi .item-list li a.facetapi-active:hover {
+.block-facetapi .item-list li a.facetapi-active:hover,
+.block-facetapi .item-list li a:hover {
     color: #333;
     background: #eee;
     border-color: #ddd;
@@ -1549,10 +1549,12 @@ h2.block-title {
 .block-facetapi .item-list li a.facetapi-active:before,
 .block-facetapi .item-list li a:hover:before {
     content: '✓';
+    border-color: #bbb;
 }
 
 .block-facetapi .item-list li a.facetapi-active:hover:before {
     content: '✕';
+    border-color: #bbb;
 }
 
 .facetapi-x { 
