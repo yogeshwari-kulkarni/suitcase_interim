@@ -502,6 +502,10 @@ input[type=submit].form-submit {
     margin-top: 0;
 }
 
+.form-required {
+    color: #cc0000;
+}
+
 
 /* -------------------- */
 /* ## COMPONENTS 
@@ -1787,6 +1791,7 @@ ul.menu li {
 
 fieldset legend {
     width: 100%;
+    font-weight: bold;
 }
 
 fieldset.collapsed {
