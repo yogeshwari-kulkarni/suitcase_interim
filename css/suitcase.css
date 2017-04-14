@@ -1089,6 +1089,9 @@ a:hover > .fa-instagram {
 }
 
 /* In search */
+.page-search article {
+    position: relative;
+}
 
 .content-type-indicator.ct-search {
     margin-top: 5px;
