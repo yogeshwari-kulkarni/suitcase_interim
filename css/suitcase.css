@@ -2015,6 +2015,10 @@ h2.node-title > a:visited { text-decoration: underline; }
 
 .field-item td { min-width: 100px; }
 
+.field-type-entityreference {
+    position: relative;
+}
+
 /* -------------------- */
 /* ## NODE - BIBLIO 
 /* -------------------- */
