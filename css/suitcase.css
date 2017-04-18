@@ -101,7 +101,7 @@ body {
 }
 
 #page {
-    background: #ffffff;
+    background: #fff;
 }
 
 /* -------------------- */
@@ -180,7 +180,7 @@ a:hover {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     padding: 0.25rem 0.5rem;
-    color: #ffffff;
+    color: #fff;
     font-weight: 700;
     border-radius: 3px;
     background: #cc0000;
@@ -301,11 +301,11 @@ ol,
 }
 
 .content tr { 
-    border-bottom: 1px solid #cccccc; 
+    border-bottom: 1px solid #ccc; 
 }
 
 .content tr:first-of-type { 
-    border-top: 1px solid #cccccc; 
+    border-top: 1px solid #ccc; 
 }
 
 .content tr.even,
@@ -316,12 +316,12 @@ ol,
 .content th, 
 .content td {
     padding: 0.5rem 0.75rem;
-    border-left: 1px solid #cccccc;
+    border-left: 1px solid #ccc;
 }
 
 .content th:last-of-type,
 .content td:last-of-type { 
-    border-right: 1px solid #cccccc; 
+    border-right: 1px solid #ccc; 
 }
 
 .content th { 
@@ -379,7 +379,7 @@ hr {
     height: 0;
     margin: 1rem 0;
     border: 0;
-    border-top: 1px solid #cccccc;
+    border-top: 1px solid #ccc;
 }
 
 sub, sup { font-size: 0.75em; }
@@ -555,7 +555,7 @@ input[type=submit].form-submit {
     border-top: 1px solid #ddd;
     border-right: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
-    background: #ffffff;
+    background: #fff;
 }
 
 .pager li.pager-current,
@@ -655,7 +655,7 @@ input[type=submit].form-submit {
 /* ISU MENU BAR */ 
 
 .zone-isu-menu-wrapper {
-    color: #cccccc;
+    color: #ccc;
     background: #333333;
 }
 
@@ -668,7 +668,7 @@ input[type=submit].form-submit {
 #isu-menu-nav .sm a:focus,
 #isu-menu-nav .sm a:active {
     padding: 4px 8px;
-    color: #cccccc;
+    color: #ccc;
     font-size: 13px;
     font-weight: 400;
     line-height: 20px;
@@ -767,11 +767,11 @@ input[type=submit].form-submit {
 
 .site-name-level-2 a,
 .site-name-level-3 a {
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
 }
     .site-name-level-2 a:hover,
-    .site-name-level-3 a:hover { color: #ffffff; }
+    .site-name-level-3 a:hover { color: #fff; }
 
 .region-branding-inner hr {
     margin: 14px 0;
@@ -795,7 +795,7 @@ input[type=submit].form-submit {
     width: 100%;
     max-width: 400px;
     float: right;
-    background: #ffffff;
+    background: #fff;
     border-radius: 2px;
 }
 
@@ -827,7 +827,7 @@ input[type=submit].form-submit {
 
 .region-search .block-menu .block-title {
     margin-bottom: 0;
-    color: #ffffff;
+    color: #fff;
     text-align: right;
 }
 
@@ -848,7 +848,7 @@ input[type=submit].form-submit {
 }
 
 .region-search .block-menu .menu a {
-    color: #ffffff;
+    color: #fff;
     font-weight: bold;
     text-decoration: underline;
 }
@@ -857,7 +857,7 @@ input[type=submit].form-submit {
 /* ## MENU 
 /* -------------------- */
 
-.zone-menu-wrapper { background: #eeeeee; }
+.zone-menu-wrapper { background: #eee; }
 .zone-menu-wrapper .sm { z-index: 498 !important; }
 
 #main-menu a,
@@ -926,7 +926,7 @@ input[type=submit].form-submit {
     letter-spacing: .5px;
     text-decoration: none;
     background: transparent;
-border-bottom: none;
+    border-bottom: none;
 }
 
 #main-menu ul a:hover,
@@ -1006,13 +1006,13 @@ border-bottom: none;
         vertical-align: text-top;
     }
 
-    #secondary-menu.links a:hover { background: #cccccc; }
+    #secondary-menu.links a:hover { background: #ccc; }
 
 #secondary-menu.links a.active,
 #secondary-menu.links a.active-trail {
-    color: #000000;
+    color: #000;
     font-weight: 700;
-    background: #cccccc;
+    background: #ccc;
 }
 
 /* -------------------- */
@@ -1075,16 +1075,16 @@ ul.tabs > li > a {
     margin-bottom: -1px;
     padding: 0.5rem 1rem;
     text-decoration: none;
-    background: #ffffff;
+    background: #fff;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
-    border: 1px solid #cccccc;
+    border: 1px solid #ccc;
     border-bottom: 0;
 }
     ul.tabs > li > a:hover { background: #eee; }
 
 ul.tabs > li > a.active {
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px solid #fff;
 }
 
 /* --------------------- */
@@ -1219,7 +1219,7 @@ ul.tabs.secondary img {
 .flexslider .flex-prev,
 .flexslider .flex-next {
     height: inherit;
-    color: rgba(51, 51, 51, 0.9);
+    color: #333;
 }
 
 .flex-control-nav {
@@ -1251,7 +1251,7 @@ ul.tabs.secondary img {
 
 .pane-content .views-field-created {
     display: block;
-    color: #666;
+    color: #676767;
 }
 
 /* .panel-pane-overflow must be set
@@ -1441,7 +1441,7 @@ h2.block-title {
     position: absolute;
     width: 18px;
     height: 4px;
-    background: #cccccc;
+    background: #ccc;
 }
 
 .js-suitcase-facet .caret:after {
@@ -1492,7 +1492,7 @@ h2.block-title {
 }
 
 .block-facetapi .item-list li a.facetapi-active {
-    color: #ffffff;
+    color: #fff;
     background: #006ba6;
 }
 
@@ -1648,7 +1648,7 @@ ul.menu li {
     padding: inherit;
     font-size: inherit;
     font-weight: normal;
-    color: #616161;
+    color: #676767;
     text-align: inherit;
     border: 0;
     opacity: inherit;
@@ -1769,9 +1769,9 @@ ul.menu li {
     margin-right: 0.5em;
     margin-bottom: 0.5rem;
     padding: 0.25rem 0.5rem;
-    color: #666;
+    color: #676767;
     text-decoration: none;
-    background: #ffffff;
+    background: #fff;
     border-radius: 2px;
     border: 1px solid #e2e2e2;
     transition: background 0.25s ease;
@@ -2165,7 +2165,7 @@ h2.node-title {
 .multi-day .calendar.monthview a,
 .multi-day .calendar.weekview a,
 .multi-day .calendar.dayview a {
-    color: #ffffff;
+    color: #fff;
 }
 
 /* --- Events Pagination --- */
@@ -2176,7 +2176,7 @@ h2.node-title {
     position: static;
     margin: 0;
     padding: 0;
-    background: #ffffff;
+    background: #fff;
     border: 0;
 }
 
