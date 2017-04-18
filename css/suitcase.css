@@ -136,14 +136,14 @@ li.leaf {
 h1, h2, h3, h4, h5, h6 {
     margin: 0 0 0.5em;
     font-family: 'Nimbus Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: normal;
+    font-weight: 400;
 }
 
 h1 { font-size: 2.25rem; line-height: 1.25; }
 h2 { font-size: 1.75rem; line-height: 1.25; }
 h3 { font-size: 1.35rem; line-height: 1.25; }
 h4 { font-size: 1.25rem; line-height: 1.25; }
-h5 { font-size: 1.15; line-height: 1.25; }
+h5 { font-size: 1.15rem; line-height: 1.25; }
 h6 { font-size: 1rem; line-height: 1.25; }
 
 p {
@@ -218,7 +218,7 @@ a:hover {
         background: #ccc;
     }
 
-.read-more strong { font-weight: normal; }
+.read-more strong { font-weight: 400; }
 
 .read-more a,
 .more-link a {
@@ -361,7 +361,7 @@ pre {
     padding: 0.75rem 1rem;
     color: #333333;
     font-size: 0.85rem;
-    font-family: Menlo, Consolas, 'Courier New', monospace;
+    font-family: Menlo, Consolas, "Courier New", monospace;
     word-break: break-all;
     word-wrap: break-word;
     background: rgba(102, 128, 153, 0.1); /* #668099 */
@@ -947,7 +947,7 @@ input[type=submit].form-submit {
     padding: 16px 12px;
     color: #444;
     font-size: 15px;
-    font-weight: normal;
+    font-weight: 400;
     text-indent: 40px;
     
 }
@@ -1001,7 +1001,7 @@ input[type=submit].form-submit {
         content: ' | ';
         margin-top: 0.5rem;
         margin-right: 0.5rem;
-        font-size: 0.75rem;
+        font-size: 0.75em;
         color: #333333;
         vertical-align: text-top;
     }
@@ -1647,7 +1647,7 @@ ul.menu li {
     margin-bottom: 1rem;
     padding: inherit;
     font-size: inherit;
-    font-weight: normal;
+    font-weight: 400;
     color: #676767;
     text-align: inherit;
     border: 0;
@@ -2393,7 +2393,7 @@ td.views-field-field-resource-screenshot img {
     content: '›';
     float: right;
     margin-top: -8px;
-    font-size: 24px;
+    font-size: 1.5em;
 }
 
 /* -------------------- */
