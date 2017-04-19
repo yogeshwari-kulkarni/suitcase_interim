@@ -1665,9 +1665,9 @@ ul.menu li {
 /* ## CONTENT TYPE INDICATOR
 /* -------------------- */
 
-.region-inner {
+.region-inner.region-content-inner {
     /* Prevents margin collapse */
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 .content-type-indicator.ct-search,
