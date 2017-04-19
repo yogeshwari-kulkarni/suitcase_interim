@@ -1074,9 +1074,9 @@ a:hover > .fa-instagram {
 /* ## CONTENT TYPE INDICATORS
 /* -------------------- */
 
-.region-content {
+.region-inner.region-content-inner{
     /* Prevents border collapse */
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 .content-type-indicator {
