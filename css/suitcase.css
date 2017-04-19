@@ -1615,7 +1615,8 @@ a.facetapi-limit-link:not(.open):after {
 /* ---------------------------------------- */
 
 #page-title {
-    margin-top: 1.5rem;
+    /* Steer clear of the content-type-indicator */
+    padding-top: 1.5rem;
     margin-bottom: 1rem;
 }
 
@@ -1664,11 +1665,6 @@ ul.menu li {
 /* -------------------- */
 /* ## CONTENT TYPE INDICATOR
 /* -------------------- */
-
-.region-inner {
-    /* Prevents margin collapse */
-    overflow: hidden;
-}
 
 .content-type-indicator.ct-search,
 .content-type-indicator.ct-node {
