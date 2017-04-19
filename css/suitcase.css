@@ -55,6 +55,13 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     font-weight: normal; 
 }
 
+#page-title {
+    margin-top: 0;
+    margin-right: 0;
+    /* Steer clear of content-type-indocator */
+    padding-top: 1.5rem;
+}
+
 /* --------------------- */
 /* Text */
 
@@ -1073,11 +1080,6 @@ a:hover > .fa-instagram {
 /* -------------------- */
 /* ## CONTENT TYPE INDICATORS
 /* -------------------- */
-
-.region-content {
-    /* Prevents border collapse */
-    overflow: hidden;
-}
 
 .content-type-indicator {
     position: absolute;
