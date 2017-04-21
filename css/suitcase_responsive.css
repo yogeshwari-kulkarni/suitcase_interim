@@ -163,6 +163,10 @@
     .panel-2col-bricks .panel-col-last .inside {
         margin: 0;
     }
+
+    .view-luggage-announcements .flexslider .flex-caption {
+          position: static;
+    }
 }
 
 @media all and (max-width: 979px) {
@@ -171,11 +175,6 @@
         word-wrap: break-word;
         -ms-word-break: break-all;
         word-break: break-all;
-    }
-
-    .view .field-content a {
-        display: block;
-        width: 100%;
     }
 
     .zone-content h2.block-title {
