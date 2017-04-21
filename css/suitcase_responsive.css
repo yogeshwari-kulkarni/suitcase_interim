@@ -108,6 +108,25 @@
     }
 }
 
+@media all and (max-width: 550px) {
+
+    .node-people .field-label-inline .field-label,
+    .node-people .field-lable-inline .field-items,
+    .node-people .field-label-above .field-label,
+    .node-people .field-lable-above .field-items {
+        display: block;
+        width: auto;
+        margin-bottom: 0.5rem;
+        float: none;
+        text-align: left;
+    }
+
+    .node-people .field-label-inline,
+    .node-people .field-label-above {
+        padding: 1rem;
+    }
+}
+
 @media all and (max-width: 739px) {
 
     .region-isu-menu {
