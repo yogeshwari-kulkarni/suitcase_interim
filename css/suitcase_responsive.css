@@ -106,12 +106,25 @@
     .flexslider {
         display: block;
     }
+}
 
+@media all and (max-width: 550px) {
 
-    .luggage-grid .luggage-gridrow {
-        width: 49.5%;
+    .node-people .field-label-inline .field-label,
+    .node-people .field-lable-inline .field-items,
+    .node-people .field-label-above .field-label,
+    .node-people .field-lable-above .field-items {
+        display: block;
+        width: auto;
+        margin-bottom: 0.5rem;
+        float: none;
+        text-align: left;
     }
 
+    .node-people .field-label-inline,
+    .node-people .field-label-above {
+        padding: 1rem;
+    }
 }
 
 @media all and (max-width: 739px) {
@@ -150,6 +163,10 @@
     .panel-2col-bricks .panel-col-last .inside {
         margin: 0;
     }
+
+    .view-luggage-announcements .flexslider .flex-caption {
+          position: static;
+    }
 }
 
 @media all and (max-width: 979px) {
@@ -158,11 +175,6 @@
         word-wrap: break-word;
         -ms-word-break: break-all;
         word-break: break-all;
-    }
-
-    .view .field-content a {
-        display: block;
-        width: 100%;
     }
 
     .zone-content h2.block-title {
@@ -331,4 +343,33 @@
         margin-right: auto !important;
     }
 
+}
+
+@media only screen and (min-width: 769px) {
+    .luggage-gridrow,
+    .luggage-gridrow3,
+    .luggage-gridrow4 {
+        flex-basis: 48.6%;
+        min-width: 48.6%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .luggage-gridrow4 {
+        flex-basis: 23.5%;
+        min-width: 23.5%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .luggage-gridrow3 {
+        flex-basis: 31.3%;
+        min-width: 31.3%;
+    }
+
+    .luggage-gridrow3 .views-field-field-uri-1,
+    .luggage-gridrow4 .views-field-field-uri-1 {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
 }
