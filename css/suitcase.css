@@ -1768,6 +1768,17 @@ span.date-display-single {
     width: 100%;
 }
 
+.views-field-field-uri-1 {
+    margin-bottom: 1rem;
+}
+
+.views-field-field-uri-1 a {
+    color: #616161;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-all;
+}
+
 /* -------------------- */
 /* ## VIEWS - PEOPLE 
 /* -------------------- */
